@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/jln/.vim'
+let g:netrw_dirhist_2='/home/jln/Downloads/asd'
+let g:netrw_dirhist_3='/home/jln/Uni/Eclipse Workspace/.metadata'
+let g:netrw_dirhist_4='/home/jln/.xbindkeys_config'
+let g:netrw_dirhist_5='/home/jln/.ncmpcpp'
+let g:netrw_dirhist_6='/home/jln/.mpdscribble'
+let g:netrw_dirhist_7='/home/jln'

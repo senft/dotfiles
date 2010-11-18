@@ -1,0 +1,1 @@
+dmenu -i -fn '-*-terminus-medium-*-*-*-*-120-*-*-*-*-*-*' -nb '#000' -nf '#FFF' -sb '#3399FF' -sf '#000'
