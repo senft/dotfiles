@@ -34,10 +34,7 @@ alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
-alias myftp="mc ftp://w00c3016@julian.musikwulfheide.de"
 alias snoopy='sudo snoopy-nox eth0 `id -u` `id -g`'
-
-alias ssh_uni='ssh ja51yxij@clientssh1.rbg.informatik.tu-darmstadt.de'
 
 # edit xmonad config
 alias cx="vim ~/.xmonad/xmonad.hs"
