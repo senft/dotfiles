@@ -46,7 +46,7 @@ bind Mod4+23 exec /usr/bin/dmenu_mpc
 bind Mod4+Shift+36 exec /usr/bin/urxvtc
 
 # Mod1+v starts dmenu
-bind Mod4+33 exec dmenu_run -fn '-*-terminus-medium-*-*-*-*-120-*-*-*-*-*-*' -nb '#000' -nf '#FFF' -sb '#3399FF' -sf '#000'
+bind Mod4+33 exec dmenu_run
 
 # Toggle Headphone channel
 bind Mod4+38 exec /usr/bin/amixer -q set Headphone toggle

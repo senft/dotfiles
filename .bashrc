@@ -7,15 +7,6 @@ eval $(dircolors -b)
 
 PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
 
-# Less Colors for Man Pages
-export LESS_TERMCAP_mb=$'\E[0;31m'       # begin blinking
-export LESS_TERMCAP_md=$'\E[1;37;34m'    # begin bold
-export LESS_TERMCAP_me=$'\E[0m'          # end mode
-export LESS_TERMCAP_se=$'\E[0m'          # end standout-mode
-export LESS_TERMCAP_so=$'\E[1;36m'       # begin standout-mode - info box
-export LESS_TERMCAP_ue=$'\E[0m'          # end underline
-export LESS_TERMCAP_us=$'\E[4;37;1;37m'  # begin underline
-
 # ls
 alias ls='ls -hF --color=always'
 alias lr='ls -R'                    # recursive ls
@@ -66,5 +57,3 @@ clyde() {
 }
 
 mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
-
-
