@@ -28,8 +28,9 @@ alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 
 # programs
+alias Syu='clyde -Syu --aur'
+alias Rns='clyde -Rns'
 alias grep='grep --color=auto'
-#alias more='less'
 alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
@@ -44,6 +45,9 @@ alias home='cd ~'
 alias done="cd ~/Downloads/"
 alias back='cd -'
 alias ..='cd ..'
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
 
 # safety features
 alias cp='cp -i'
@@ -61,6 +65,6 @@ clyde() {
    esac
 }
 
-alias Syu='clyde -Syu --aur'
-alias Rns='clyde -Rns'
+mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
 

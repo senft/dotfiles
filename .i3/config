@@ -26,6 +26,7 @@ assign Chrome 2
 assign Eclipse 4
 assign Vlc 5
 assign feh ~
+assign sun-awt-X11-XFramePeer ~
 
 #
 # Application starter

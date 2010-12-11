@@ -20,21 +20,20 @@ set modeline 		" use vim-directives in files
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set expandtab
 
 filetype plugin on
 syntax on
 set hlsearch
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
 if has("gui_running")
 	:set guioptions-=T "remove toolbar
 	:set guioptions-=r "remove right-hand scroll-bar
 	:set guifont=Envy\ Code\ R\ 10
-	:color railscasts
-else
-	:color delek
+    :set mousehide
 endif
+
+:color railscasts
 
 " Press Space to disable hilighting (after search)
 :noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -52,9 +51,6 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
-  " For all text files set 'textwidth' to 80 characters.
-  autocmd FileType text setlocal textwidth=80
-
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
@@ -68,29 +64,8 @@ if has("autocmd")
   augroup END
 
 else
-
   set autoindent		" always set autoindenting on
-
 endif " has("autocmd")
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-
-" force using hjkl$
-map <Up> <nop>
-map <Down> <nop>
-map <Left> <nop>
-map <Right> <nop>
-imap <Up> <nop>
-imap <Down> <nop>
-imap <Left> <nop>
-imap <Right> <nop>
 
 " Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
 nnoremap <silent> <F10> :BufExplorer<CR>
@@ -103,15 +78,8 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 let Tlist_WinWidth = 50
 
-" PYTHON
-" Start python on F5
-autocmd FileType python map <F5> :w<CR>:!python "%"<CR>
-autocmd FileType sh   map <F5> :w<CR>:!/bin/bash "%"<CR>
-
-" autoindent "next" line
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
-
-" C/C++
-" Start on F5
+" Start shit on F5
 autocmd FileType c map <F5> \rr
+autocmd FileType cpp map <F5> \rr
+autocmd FileType python map <F5> :w<CR>:!python2 "%"<CR>
+autocmd FileType sh map <F5> :w<CR>:!bash "%"<CR>
