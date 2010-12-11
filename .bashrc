@@ -37,9 +37,7 @@ alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias snoopy='sudo snoopy-nox eth0 `id -u` `id -g`'
 alias w='wicd-curses'
-
-# edit xmonad config
-alias cx="vim ~/.xmonad/xmonad.hs"
+alias ssh_uni='ssh clientssh3.rbg.informatik.tu-darmstadt.de'
 
 # cd
 alias home='cd ~'
