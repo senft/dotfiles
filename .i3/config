@@ -26,6 +26,7 @@ assign Chrome 2
 assign Eclipse 4
 assign Vlc 5
 assign feh ~
+assign sun-awt-X11-XFramePeer ~
 
 #
 # Application starter
@@ -172,5 +173,7 @@ ipc-socket ~/.i3/ipc.sock
 # Autostart
 #
 
-exec conky | dzen2 -x 0 -y 1024 -w 1180 -fn -*-terminus-medium-*-normal-*-12-*-*-*-*-*-*-* -ta r -bg black -fg '#1793d1'
-exec i3-wsbar -c "dzen2 -x 0 -y 1024 -w 340  -fn -*-terminus-medium-*-normal-*-12-*-*-*-*-*-*-* -ta l -bg black -fg '#1793d1'"
+#exec conky | dzen2 -x 0 -y 1024 -w 1180 -fn -*-terminus-medium-*-normal-*-12-*-*-*-*-*-*-* -ta r -bg black -fg '#1793d1'
+#exec i3-wsbar -c "dzen2 -x 0 -y 1024 -w 340  -fn -*-terminus-medium-*-normal-*-12-*-*-*-*-*-*-* -ta l -bg black -fg '#1793d1'"
+
+exec ~/.i3/i3-sbar

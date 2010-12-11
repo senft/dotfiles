@@ -112,7 +112,8 @@ else
 endif
 "
 let s:C_CExtension     				= 'c'                    " C file extension; everything else is C++
-let s:C_CFlags         				= '-Wall -g -O0 -c'      " compiler flags: compile, don't optimize
+"let s:C_CFlags         				= '-Wall -g -O0 -c'      " compiler flags: compile, don't optimize
+let s:C_CFlags         				= '-g -c'									" compiler flags: compile, don't optimize
 let s:C_CodeCheckExeName      = 'check'
 let s:C_CodeCheckOptions      = '-K13'
 let s:C_LFlags         				= '-Wall -g -O0'         " compiler flags: link   , don't optimize
