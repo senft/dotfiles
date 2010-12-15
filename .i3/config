@@ -6,7 +6,7 @@ focus_follows_mouse no
 
 # ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font --terminus-medium--normal--12------iso10646-1 
+#font -misc-terminus-medium--normal--12------iso10646-1 
 
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod4
@@ -32,21 +32,17 @@ assign sun-awt-X11-XFramePeer ~
 # Application starter
 #
 
+bind Mod4+Shift+36 exec /usr/bin/urxvtc
 bind Mod4+25 exec /usr/bin/chromium-browser
 bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
 bind Mod4+53 exec /usr/bin/mpc toggle
 bind Mod4+20 exec /usr/bin/mpd-osd
+bind Mod4+33 exec /usr/bin/dmenu_run
 bind Mod4+23 exec /usr/bin/dmenu_mpc
 
 #
 # Custom Binds
 #
-
-# Mod+Enter starts a new terminal
-bind Mod4+Shift+36 exec /usr/bin/urxvtc
-
-# Mod1+v starts dmenu
-bind Mod4+33 exec dmenu_run
 
 # Toggle Headphone channel
 bind Mod4+38 exec /usr/bin/amixer -q set Headphone toggle
