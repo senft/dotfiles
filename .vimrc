@@ -73,10 +73,13 @@ nnoremap <silent> <F11> :bn<CR>
 nnoremap <silent> <F12> :bp<CR>
  
 " taglist
-nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F4> :TlistToggle<CR>
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 let Tlist_WinWidth = 50
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+" Build tags for current directory
+map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " Start shit on F5
 autocmd FileType c map <F5> \rr

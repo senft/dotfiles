@@ -1,6 +1,7 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
+export LC_MESSAGES=en_US.utf8
 export GREP_COLOR="1;34"
 export EDITOR="vim"
 eval $(dircolors -b)
@@ -19,14 +20,13 @@ alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 
 # programs
-alias Syu='clyde -Syu --aur'
-alias Rns='clyde -Rns'
+alias Syu='packer -Syu'
+alias Rns='packer -Rns'
 alias grep='grep --color=auto'
 alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
-alias snoopy='sudo snoopy-nox eth0 `id -u` `id -g`'
 alias w='wicd-curses'
 alias ssh_uni='ssh clientssh3.rbg.informatik.tu-darmstadt.de'
 
@@ -47,12 +47,12 @@ alias rm='rm -i'
 
 grepp() { [ $# -eq 1 ] && perl -00ne "print if /$1/i" || perl -00ne "print if /$1/i" < "$2";}
 
-clyde() {
+packer() {
    case $1 in
-	(-Ss | -Si | -Q* | -T | -G)
-	        /usr/bin/clyde "$@" ;;
-        (-S* | -R* | -U | *)
-		/usr/bin/sudo /usr/bin/clyde "$@" ;;
+	(-Ss | -Si | -G)
+	        /usr/bin/packer "$@" ;;
+        (-S* | *)
+		/usr/bin/sudo /usr/bin/packer "$@" ;;
    esac
 }
 
