@@ -50,12 +50,14 @@ alias rm='rm -i'
 
 grepp() { [ $# -eq 1 ] && perl -00ne "print if /$1/i" || perl -00ne "print if /$1/i" < "$2";}
 
-clyde() {
+packer() {
    case $1 in
-	(-Ss | -Si | -Q* | -T | -G)
-	        /usr/bin/packer "$@" ;;
-        (-S* | -R* | -U | *)
+	(-Ss | -Si | -G)
+        /usr/bin/packer "$@" ;;
+    (-S*)
 		/usr/bin/sudo /usr/bin/packer "$@" ;;
+    (*)
+        /usr/bin/packer "$@" ;;
    esac
 }
 
