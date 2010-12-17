@@ -23,13 +23,13 @@ alias pacman='sudo pacman'
 
 # programs
 alias Syu='packer -Syu'
-alias Rns='packer -Rns'
-alias grep='grep --color=auto'
+alias Rns='pacman -Rns'
+#alias grep='grep --color=auto'
+alias todo='gitodo'
 alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
-alias snoopy='sudo snoopy-nox eth0 `id -u` `id -g`'
 alias w='wicd-curses'
 alias ssh_uni='ssh clientssh3.rbg.informatik.tu-darmstadt.de'
 
