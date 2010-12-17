@@ -56,8 +56,10 @@ packer() {
    case $1 in
 	(-Ss | -Si | -G)
 	    /usr/bin/packer "$@" ;;
-    (-S* | *)
-	    /usr/bin/sudo /usr/bin/packer "$@" ;;
+    (-S*)
+		/usr/bin/sudo /usr/bin/packer "$@" ;;
+    (*)
+        /usr/bin/packer "$@" ;;
    esac
 }
 
