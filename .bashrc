@@ -19,10 +19,15 @@ alias lz='ll -rS'                   # sort by size
 alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 
+alias pacman='sudo pacman'
+
 # programs
 alias Syu='packer -Syu'
 alias Rns='packer -Rns'
+
 alias grep='grep --color=auto'
+alias Rns='pacman -Rns'
+alias todo='gitodo'
 alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
@@ -50,9 +55,9 @@ grepp() { [ $# -eq 1 ] && perl -00ne "print if /$1/i" || perl -00ne "print if /$
 packer() {
    case $1 in
 	(-Ss | -Si | -G)
-	        /usr/bin/packer "$@" ;;
-        (-S* | *)
-		/usr/bin/sudo /usr/bin/packer "$@" ;;
+	    /usr/bin/packer "$@" ;;
+    (-S* | *)
+	    /usr/bin/sudo /usr/bin/packer "$@" ;;
    esac
 }
 
