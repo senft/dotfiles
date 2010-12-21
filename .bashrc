@@ -6,7 +6,11 @@ export GREP_COLOR="1;34"
 export EDITOR="vim"
 eval $(dircolors -b)
 
-PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
+if [ `id -u` == 0 ]; then
+    PS1="\[\033[1;31m\][\u@\H \W]\$ \[\033[0m\]"
+else
+    PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
+fi
 
 # ls
 alias ls='ls -hF --color=always'
