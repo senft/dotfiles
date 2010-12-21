@@ -6,7 +6,7 @@ export GREP_COLOR="1;34"
 export EDITOR="vim"
 eval $(dircolors -b)
 
-if [ `id -u` == 0 ]; then
+if [ $UID -eq 0 ]; then
     PS1="\[\033[1;31m\][\u@\H \W]\$ \[\033[0m\]"
 else
     PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
