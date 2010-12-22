@@ -1,0 +1,46 @@
+! terminal colors ------------------------------------------------------------
+#*background: rgb:00/00/00
+#*foreground: rgb:ff/ff/ff
+#*color0:     rgb:00/00/00
+#*color1:     rgb:cd/5c/5c
+#*color2:     rgb:2e/8b/57
+#*color3:     rgb:f0/e6/8c
+#*color4:     rgb:10/40/70
+#*color5:     rgb:ba/55/d3
+#*color6:     rgb:41/81/79
+#*color7:     rgb:ff/ff/ff
+#*color8:     rgb:66/66/66
+#*color9:     rgb:ff/6a/6a
+#*color10:    rgb:8f/bc/8f
+#*color11:    rgb:ff/fa/cd
+#*color12:    rgb:41/86/be
+#*color13:    rgb:db/70/93
+#*color14:    rgb:be/be/be
+#*color15:    rgb:ca/ca/ca
+
+! Xft settings ---------------------------------------------------------------
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+URxvt*background:       black
+URxvt*foreground:       white
+URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
+URxvt*shading:	   	    20 
+URxvt*saveLines:		12000
+URxvt*visualBell:		true
+URxvt*urgentOnBell:		true
+URxvt*scrollBar:		false
+URxvt*loginShell:		true
+URxvt*inheritPixmap:    true
+URxvt*print-pipe:		cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*perl-lib:         /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:  default,matcher
+URxvt*perl-ext: 		selection,mark-yank-urls,clipboard
+URxvt*keysym.M-u: 		perl:mark-yank-urls:activate_mark_mode
+URxvt*urlLauncher:      /usr/bin/chromium
+URxvt*matcher.button:   1
+URxvt*colorUL: 			2
+URxvt*cutchars: 		`""()'*'<>[]{|}
