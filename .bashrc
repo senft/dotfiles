@@ -1,9 +1,9 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
-export LC_MESSAGES=en_US.utf8
+export LC_MESSAGES="en_US.utf8"
 export GREP_COLOR="1;34"
-export EDITOR="vim"
+export EDITOR="/usr/bin/vim"
 eval $(dircolors -b)
 
 PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
