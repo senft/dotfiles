@@ -1,22 +1,29 @@
 ! terminal colors ------------------------------------------------------------
-#*background: rgb:00/00/00
-#*foreground: rgb:ff/ff/ff
-#*color0:     rgb:00/00/00
-#*color1:     rgb:cd/5c/5c
-#*color2:     rgb:2e/8b/57
-#*color3:     rgb:f0/e6/8c
-#*color4:     rgb:10/40/70
-#*color5:     rgb:ba/55/d3
-#*color6:     rgb:41/81/79
-#*color7:     rgb:ff/ff/ff
-#*color8:     rgb:66/66/66
-#*color9:     rgb:ff/6a/6a
-#*color10:    rgb:8f/bc/8f
-#*color11:    rgb:ff/fa/cd
-#*color12:    rgb:41/86/be
-#*color13:    rgb:db/70/93
-#*color14:    rgb:be/be/be
-#*color15:    rgb:ca/ca/ca
+! tangoesque scheme
+*background: #000000
+*foreground: #FFFFFF
+! Black (not tango) + DarkGrey
+*color0:  #000000
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ff6565
+!*color9:  #ff8d8d
+! DarkGreen + Green
+*color2:  #93d44f
+! DarkYellow + Yellow
+*color3:  #eab93d
+*color11: #ffc123
+! DarkBlue + Blue
+*color4:  #204a87
+! DarkMangenta + Mangenta
+*color5:  #ce5c00
+*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+*color6:  #89b6e2
+*color14: #46a4ff
+! LightGrey + White
+*color7:  #cccccc
+*color15: #ffffff
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -25,6 +32,7 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
+! urxvt ----------------------------------------------------------------------
 URxvt*background:       black
 URxvt*foreground:       white
 URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*

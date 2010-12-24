@@ -3,7 +3,8 @@
 
 export LC_MESSAGES="en_US.utf8"
 export GREP_COLOR="1;34"
-export EDITOR="/usr/bin/vim"
+export EDITOR=vim
+export PATH=$PATH:$HOME/.bin/
 eval $(dircolors -b)
 
 if [ $UID -eq 0 ]; then

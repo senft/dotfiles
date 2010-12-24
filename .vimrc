@@ -54,4 +54,3 @@ set showmode
 
 " Toggle spellcheck with F11
 map <F11> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
-

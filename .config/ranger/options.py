@@ -53,7 +53,7 @@ show_hidden_bookmarks = True
 # Which colorscheme to use?  These colorschemes are available by default:
 # default, default88, texas, jungle, snow
 # Snow is monochrome, texas and default88 use 88 colors.
-colorscheme = 'default'
+colorscheme = 'default88'
 
 # Preview files on the rightmost column?
 # And collapse (shrink) the last column if there is nothing to preview?
@@ -65,7 +65,7 @@ collapse_preview = True
 save_console_history = True
 
 # Draw borders around columns?
-draw_borders = False
+draw_borders = True
 draw_bookmark_borders = True
 
 # Display the directory name in tabs?
