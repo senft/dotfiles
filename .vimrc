@@ -45,9 +45,6 @@ let Tlist_WinWidth = 50
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 nnoremap <silent> <F4> :TlistToggle<CR>
 
-" Build tags for current directory
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
 " Toggle paste mode with F2
 nnoremap <F12> :set invpaste paste?<CR>
 set pastetoggle=<F12>

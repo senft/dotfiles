@@ -12,6 +12,14 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier Mod4
 
 #
+# Colors
+#
+# class        border  backgr. text
+#bar.focused    #ca0000 #FFFFFF #000000
+#bar.unfocused
+#bar.urgent
+
+#
 # Workspaces
 # 
 workspace 1 term
@@ -28,6 +36,10 @@ assign Vlc 5
 assign feh ~
 assign sun-awt-X11-XFramePeer ~
 
+#
+# Binds
+#
+
 # Application starter
 bind Mod4+Shift+36 exec /usr/bin/urxvtc
 bind Mod4+25 exec /usr/bin/chromium-browser
@@ -43,10 +55,7 @@ bind 174 exec aumix -v -2
 bind 176 exec aumix -v +2
 bind 160 exec amixer -q set Master toggle
 
-
-#
-# Custom Binds
-#
+bind Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
 
 # Toggle Headphone channel
 bind Mod4+38 exec /usr/bin/amixer -q set Headphone toggle

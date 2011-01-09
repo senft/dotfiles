@@ -40,6 +40,8 @@ alias mkdir='mkdir -p'
 alias w='wicd-curses'
 alias ssh_uni='ssh clientssh3.rbg.informatik.tu-darmstadt.de'
 
+alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
+
 # cd
 alias home='cd ~'
 alias done="cd ~/Downloads/"

@@ -64,7 +64,7 @@ class CustomApplications(Applications):
 			if f.extension in ('xml', ):
 				return self.either(c, 'editor')
 			if f.extension in ('html', 'htm', 'xhtml'):
-				return self.either(c, 'firefox', 'opera', 'elinks')
+				return self.either(c, 'chromium', 'opera', 'elinks')
 			if f.extension in ('swf', ):
 				return self.either(c, 'firefox', 'opera')
 			if f.extension == 'nes':
@@ -79,10 +79,13 @@ class CustomApplications(Applications):
 		if f.container:
 			return self.either(c, 'aunpack', 'file_roller')
 
-		if f.video or f.audio:
-			if f.video:
-				c.flags += 'd'
+		if f.video:
+			c.flags += 'd'
+			return self.either(c, 'vlc', 'totem')
+
+		if f.audio:
 			return self.either(c, 'mplayer', 'totem')
+
 
 		if f.image:
 			return self.either(c, 'feh', 'eog', 'mirage')
