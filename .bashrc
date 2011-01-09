@@ -3,7 +3,8 @@
 
 export LC_MESSAGES="en_US.utf8"
 export GREP_COLOR="1;34"
-export EDITOR="/usr/bin/vim"
+export EDITOR="vim"
+export PATH=$PATH:$HOME/.bin/
 eval $(dircolors -b)
 
 if [ $UID -eq 0 ]; then
@@ -38,6 +39,8 @@ alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
 alias ssh_uni='ssh clientssh3.rbg.informatik.tu-darmstadt.de'
+
+alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
 
 # cd
 alias home='cd ~'

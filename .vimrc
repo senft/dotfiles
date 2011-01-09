@@ -17,6 +17,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set smartindent
 
 "filetype plugin on
 set hlsearch
@@ -44,9 +45,6 @@ let Tlist_WinWidth = 50
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 nnoremap <silent> <F4> :TlistToggle<CR>
 
-" Build tags for current directory
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
 " Toggle paste mode with F2
 nnoremap <F12> :set invpaste paste?<CR>
 set pastetoggle=<F12>
@@ -54,4 +52,3 @@ set showmode
 
 " Toggle spellcheck with F11
 map <F11> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
-

@@ -1,22 +1,38 @@
 ! terminal colors ------------------------------------------------------------
-#*background: rgb:00/00/00
-#*foreground: rgb:ff/ff/ff
-#*color0:     rgb:00/00/00
-#*color1:     rgb:cd/5c/5c
-#*color2:     rgb:2e/8b/57
-#*color3:     rgb:f0/e6/8c
-#*color4:     rgb:10/40/70
-#*color5:     rgb:ba/55/d3
-#*color6:     rgb:41/81/79
-#*color7:     rgb:ff/ff/ff
-#*color8:     rgb:66/66/66
-#*color9:     rgb:ff/6a/6a
-#*color10:    rgb:8f/bc/8f
-#*color11:    rgb:ff/fa/cd
-#*color12:    rgb:41/86/be
-#*color13:    rgb:db/70/93
-#*color14:    rgb:be/be/be
-#*color15:    rgb:ca/ca/ca
+*background:    #000000
+*foreground:    #FFFFFF
+
+! Black + DarkGrey
+*color0:        #000000
+*color8:        #555753
+
+! DarkRed + Red
+*color1:        #ff6565
+*color9:        #AD0000
+
+! DarkGreen + Green
+*color2:        #93d44f
+*color10:       #66CC00
+
+! DarkYellow + Yellow
+*color3:        #eab93d
+*color11:       #ffc123
+
+! DarkBlue + Blue
+*color4:        #204a87
+*color12:       #0054A8
+
+! DarkMangenta + Mangenta
+*color5:        #ce5c00
+*color13:       #f57900
+
+!DarkCyan + Cyan
+*color6:        #89b6e2
+*color14:       #46a4ff
+
+! LightGrey + White
+*color7:        #cccccc
+*color15:       #ffffff
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -25,22 +41,54 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
+! urxvt ----------------------------------------------------------------------
 URxvt*background:       black
 URxvt*foreground:       white
 URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
-URxvt*shading:	   	    20 
-URxvt*saveLines:		12000
-URxvt*visualBell:		true
-URxvt*urgentOnBell:		true
-URxvt*scrollBar:		false
-URxvt*loginShell:		true
+URxvt*shading:          10 
+URxvt*saveLines:        12000
+URxvt*visualBell:       true
+URxvt*urgentOnBell:     true
+URxvt*scrollBar:        false
+URxvt*loginShell:       true
 URxvt*inheritPixmap:    true
-URxvt*print-pipe:		cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*print-pipe:       cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-lib:         /usr/lib/urxvt/perl/
 URxvt*perl-ext-common:  default,matcher
-URxvt*perl-ext: 		selection,mark-yank-urls,clipboard
-URxvt*keysym.M-u: 		perl:mark-yank-urls:activate_mark_mode
+URxvt*perl-ext:         selection,mark-yank-urls,clipboard
+URxvt*keysym.M-u:       perl:mark-yank-urls:activate_mark_mode
 URxvt*urlLauncher:      /usr/bin/chromium
 URxvt*matcher.button:   1
-URxvt*colorUL: 			2
-URxvt*cutchars: 		`""()'*'<>[]{|}
+URxvt*colorUL:          2
+URxvt*cutchars:         `""()'*'<>[]{|}
+
+
+! xscreensaver ---------------------------------------------------------------
+!
+! !font settings
+ xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+ xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+ xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+ xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+ xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+ xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+ xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+ !general dialog box (affects main hostname, username, password text)
+ xscreensaver.Dialog.foreground:         #ffffff
+ xscreensaver.Dialog.background:         #111111
+ xscreensaver.Dialog.topShadowColor:     #111111
+ xscreensaver.Dialog.bottomShadowColor:  #111111
+ xscreensaver.Dialog.Button.foreground:  #666666
+ xscreensaver.Dialog.Button.background:  #ffffff
+ !username/password input box and date text colour
+ xscreensaver.Dialog.text.foreground:    #666666
+ xscreensaver.Dialog.text.background:    #ffffff
+ xscreensaver.Dialog.internalBorderWidth:24
+ xscreensaver.Dialog.borderWidth:        20
+ xscreensaver.Dialog.shadowThickness:    2
+ !timeout bar (background is actually determined by Dialog.text.background)
+ xscreensaver.passwd.thermometer.foreground:  #ff0000
+ xscreensaver.passwd.thermometer.background:  #000000
+ xscreensaver.passwd.thermometer.width:       8
+ !datestamp format--see the strftime(3) manual page for details
+ xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y

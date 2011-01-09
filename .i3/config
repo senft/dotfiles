@@ -31,7 +31,7 @@ assign sun-awt-X11-XFramePeer ~
 
 
 #
-# Custom Binds
+# Binds
 #
 
 # Application starter
@@ -48,6 +48,8 @@ bind 212 exec ~/.sudo_video_brightnessup.sh
 bind 174 exec aumix -v -2
 bind 176 exec aumix -v +2
 bind 160 exec amixer -q set Master toggle
+
+bind Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
 
 # Toggle Headphone channel
 bind Mod4+38 exec /usr/bin/amixer -q set Headphone toggle
