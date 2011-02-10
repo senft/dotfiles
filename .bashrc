@@ -3,8 +3,10 @@
 
 export LC_MESSAGES="en_US.utf8"
 export GREP_COLOR="1;34"
-export EDITOR="vim"
-export PATH=$PATH:$HOME/.bin/
+export EDITOR=vim
+export BROWSER="chromium-browser"
+export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
+
 eval $(dircolors -b)
 
 if [ $UID -eq 0 ]; then
@@ -13,6 +15,15 @@ else
     PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
 fi
 
+# support colors in less
+export LESS_TERMCAP_mb=$'\E[01;34m'
+export LESS_TERMCAP_md=$'\E[01;34m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;35m'
+
 # ls
 alias ls='ls -hF --color=always'
 alias lr='ls -R'                    # recursive ls
@@ -20,25 +31,30 @@ alias ll='ls -l'
 alias la='ll -A'
 alias lz='ll -rS'                   # sort by size
 
-# shutdown
-alias off="sudo shutdown -h now"
-alias reboot="sudo reboot"
-
-alias pacman='sudo pacman'
+# pacman
+alias pacman='sudo pacman-color'
+alias Syu='packer -Syu'
+alias Rns='pacman -Rns'
+alias pas='packer -S'
+alias paqs='pacman -Qs'
+alias pass='packer -Ss'
+alias pau='pacman -U'
 
 # programs
-alias Syu='packer -Syu'
-alias Rns='packer -Rns'
-
+alias off="sudo shutdown -h now"
+alias reboot="sudo reboot"
+alias moff="xset dpms force standby"
+alias mount="sudo mount"
+alias umount="sudo umount"
 alias grep='grep --color=auto'
-alias Rns='pacman -Rns'
-alias todo='gitodo'
+alias t='gitodo'
 alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
-alias ssh_uni='ssh clientssh3.rbg.informatik.tu-darmstadt.de'
+alias vlc='vlc --extraintf=luahttp'
+alias ssh_uni='ssh clientssh1.rbg.informatik.tu-darmstadt.de'
 
 alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
 
@@ -57,7 +73,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-grepp() { [ $# -eq 1 ] && perl -00ne "print if /$1/i" || perl -00ne "print if /$1/i" < "$2";}
+# git
+alias gitps="git push origin master"
+alias gitp="git pull"
+alias gitc="git commit -a"
 
 packer() {
    case $1 in
@@ -70,4 +89,10 @@ packer() {
    esac
 }
 
-mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+mkdircd () { mkdir "$@" && eval cd "\"\$$#\""; }
+
+# Creates an archive from given directory
+mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
+mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
+
