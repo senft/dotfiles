@@ -4,8 +4,14 @@
 export LC_MESSAGES="en_US.utf8"
 export GREP_COLOR="1;34"
 export EDITOR=vim
-export BROWSER="chromium-browser"
+export VISUAL=gvim
+export BROWSER=chromium-browser
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
+export HISTCONTROL=ignoredups
+set -o vi
+
+complete -cf sudo
+complete -cf man
 
 eval $(dircolors -b)
 
@@ -29,6 +35,7 @@ alias ls='ls -hF --color=always'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
+alias ld='ll -t'
 alias lz='ll -rS'                   # sort by size
 
 # pacman
