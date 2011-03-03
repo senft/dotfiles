@@ -8,10 +8,10 @@ export VISUAL=gvim
 export BROWSER=chromium-browser
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
 export HISTCONTROL=ignoredups
-set -o vi
 
 complete -cf sudo
 complete -cf man
+complete -cf Rns
 
 eval $(dircolors -b)
 

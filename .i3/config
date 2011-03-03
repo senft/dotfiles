@@ -44,17 +44,16 @@ bind 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
 bind Mod4+Shift+36 exec /usr/bin/urxvtc
 bind Mod4+25 exec /usr/bin/chromium-browser
 bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
-#bind Mod4+32 exec /usr/bin/ario
 bind Mod4+53 exec /usr/bin/mpc toggle
 bind Mod4+20 exec /usr/bin/mpd-osd
 bind Mod4+33 exec /usr/bin/dmenu_run
 bind Mod4+23 exec /usr/bin/dmenu_mpc
 
-bind 101 exec ~/.sudo_video_brightnessdown.sh
-bind 212 exec ~/.sudo_video_brightnessup.sh
-bind 174 exec aumix -v -2
-bind 176 exec aumix -v +2
-bind 160 exec amixer -q set Master toggle
+bind 232 exec ~/.sudo_video_brightnessdown.sh
+bind 233 exec ~/.sudo_video_brightnessup.sh
+bind 122 exec aumix -v -2
+bind 123 exec aumix -v +2
+bind 121 exec amixer -q set Master toggle
 
 bind Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
 
