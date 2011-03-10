@@ -35,7 +35,7 @@ alias ls='ls -hF --color=always'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
-alias ld='ll -t'
+alias ld='ll -rct'
 alias lz='ll -rS'                   # sort by size
 
 # pacman
