@@ -51,8 +51,6 @@ alias pau='pacman -U'
 alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias moff="xset dpms force standby"
-alias mount="sudo mount"
-alias umount="sudo umount"
 alias grep='grep --color=auto'
 alias t='gitodo'
 alias feh='feh -F'
@@ -60,7 +58,8 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
-alias vlc='vlc --extraintf=luahttp'
+#alias vlc='vlc --extraintf=luahttp'
+alias gmp='gnome-mplayer'
 alias ssh_uni='ssh clientssh1.rbg.informatik.tu-darmstadt.de'
 
 alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
