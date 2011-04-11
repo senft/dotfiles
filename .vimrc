@@ -28,7 +28,7 @@ set guifont=Envy\ Code\ R\ 10
 "set mousehide
 set mouse=a
 
-color railscasts
+color blackboard
 
 " Press Space to disable hilighting (after search)
 :noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -73,3 +73,23 @@ map <F11> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spel
 " noremap <A-9>   9gt
 " inoremap <A-9>  9gt
 "
+
+fun! Surround(s1, s2) range
+  exe "normal vgvmboma\<Esc>"
+  normal `a
+  let lineA = line(".")
+  let columnA = col(".")
+  normal `b
+  let lineB = line(".")
+  let columnB = col(".")
+  " exchange marks
+  if lineA > lineB || lineA <= lineB && columnA > columnB
+    " save b in c
+    normal mc
+    " store a in b
+    normal `amb
+    " set a to old b
+    normal `cma
+  endif
+  exe "normal `ba" . a:s2 . "\<Esc>`ai" . a:s1 . "\<Esc>"
+endfun

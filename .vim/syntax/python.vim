@@ -125,6 +125,8 @@ syn keyword pythonPreCondit	import from
 syn keyword pythonException	try except finally
 syn keyword pythonOperator	and in is not or
 
+syn keyword pythonConstant	False None True
+
 " Decorators (new in Python 2.4)
 syn match   pythonDecorator	"@" display nextgroup=pythonDottedName skipwhite
 syn match   pythonDottedName "[a-zA-Z_][a-zA-Z0-9_]*\(\.[a-zA-Z_][a-zA-Z0-9_]*\)*" display contained

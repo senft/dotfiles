@@ -31,7 +31,7 @@ assign Eclipse 4
 assign Vlc 5
 assign feh ~
 assign sun-awt-X11-XFramePeer ~
-
+assign python2.7 ~
 #
 # Binds
 #

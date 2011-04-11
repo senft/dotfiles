@@ -1,25 +1,19 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
-export LC_MESSAGES="en_US.utf8"
-export GREP_COLOR="1;34"
-export EDITOR=vim
-export VISUAL=gvim
-export BROWSER=firefox-beta-bin
-export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
-export HISTCONTROL=ignoredups
-
-complete -cf sudo
-complete -cf man
-complete -cf Rns
-
-eval $(dircolors -b)
-
 if [ $UID -eq 0 ]; then
     PS1="\[\033[1;31m\][\u@\H \W]\$ \[\033[0m\]"
 else
     PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
 fi
+
+export LC_MESSAGES="en_US.utf8"
+export GREP_COLOR="1;34"
+export EDITOR=vim
+export VISUAL=vim
+export BROWSER=chromium-browser
+export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
+export HISTCONTROL=ignoredups
 
 # support colors in less
 export LESS_TERMCAP_mb=$'\E[01;34m'
@@ -29,6 +23,12 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;35m'
+
+complete -cf sudo
+complete -cf man
+complete -cf Rns
+
+eval $(dircolors -b)
 
 # ls
 alias ls='ls -hF --color=always'
@@ -52,15 +52,15 @@ alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias moff="xset dpms force standby"
 alias grep='grep --color=auto'
-alias t='gitodo'
 alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
-#alias vlc='vlc --extraintf=luahttp'
-alias gmp='gnome-mplayer'
-alias ssh_uni='ssh clientssh1.rbg.informatik.tu-darmstadt.de'
+alias vlc='vlc --extraintf=luahttp'
+
+alias mnt="sudo mount"
+alias umnt="sudo umount -l"
 
 alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
 
@@ -84,6 +84,10 @@ alias gitps="git push origin master"
 alias gitp="git pull"
 alias gitc="git commit -a"
 
+#
+# Functions
+#
+
 packer() {
    case $1 in
 	(-Ss | -Si | -G)
@@ -102,3 +106,7 @@ mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 
+# usage.: remindme 10m "omg, the pizza"
+function remindme(){
+        sleep $1 && zenity --info --text "$2" &
+}
