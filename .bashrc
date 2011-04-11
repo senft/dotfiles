@@ -5,7 +5,7 @@ export LC_MESSAGES="en_US.utf8"
 export GREP_COLOR="1;34"
 export EDITOR=vim
 export VISUAL=gvim
-export BROWSER=firefox-beta-bin
+export BROWSER=chromium
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
 export HISTCONTROL=ignoredups
 set -o vi
@@ -51,16 +51,13 @@ alias pau='pacman -U'
 alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias moff="xset dpms force standby"
-alias mount="sudo mount"
-alias umount="sudo umount"
 alias grep='grep --color=auto'
-alias t='gitodo'
 alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
-alias vlc='vlc --extraintf=luahttp'
+alias gmp='gnome-mplayer'
 alias ssh_uni='ssh clientssh1.rbg.informatik.tu-darmstadt.de'
 
 alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
@@ -70,10 +67,6 @@ alias home='cd ~'
 alias done="cd ~/Downloads/"
 alias back='cd -'
 alias ..='cd ..'
-alias ..2='cd ../..'
-alias ..3='cd ../../..'
-alias ..4='cd ../../../..'
-alias ..5='cd ../../../../..'
 
 # safety features
 alias cp='cp -i'
@@ -103,3 +96,7 @@ mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 
+function remindme()
+{
+     sleep $1 && zenity --info --text "$2" &
+}
