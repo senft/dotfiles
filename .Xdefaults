@@ -1,38 +1,22 @@
 ! terminal colors ------------------------------------------------------------
-*background:    #000000
-*foreground:    #FFFFFF
-
-! Black + DarkGrey
-*color0:        #000000
-*color8:        #555753
-
-! DarkRed + Red
-*color1:        #ff6565
-*color9:        #AD0000
-
-! DarkGreen + Green
-*color2:        #93d44f
-*color10:       #66CC00
-
-! DarkYellow + Yellow
+*background: #000000
+*foreground: #FFFFFF
+*color0:     rgb:00/00/00
+*color1:     rgb:d3/62/65
+*color2:     rgb:ae/ce/91
 *color3:        #eab93d
+*color4:     rgb:7a/7a/b0
+*color5:     rgb:96/3c/59
+*color6:     rgb:41/81/79
+*color7:     rgb:be/be/be
+*color8:     rgb:66/66/66
+*color9:     rgb:ef/81/71
+*color10:    rgb:e5/f7/79
 *color11:       #ffc123
-
-! DarkBlue + Blue
-*color4:        #204a87
-*color12:       #0054A8
-
-! DarkMangenta + Mangenta
-*color5:        #ce5c00
-*color13:       #f57900
-
-!DarkCyan + Cyan
-*color6:        #89b6e2
-*color14:       #46a4ff
-
-! LightGrey + White
-*color7:        #cccccc
-*color15:       #ffffff
+*color12:    rgb:41/86/be
+*color13:    rgb:ef/9e/be
+*color14:    rgb:71/be/be
+*color15:    rgb:ff/ff/ff
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -46,11 +30,9 @@ Xft.lcdfilter:  lcddefault
 ! urxvt ----------------------------------------------------------------------
 URxvt*background:       black
 URxvt*foreground:       white
-!URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
-
-URxvt.font:             xft:terminus:pixelsize=14
+URxvt*font:             -*-terminus-medium-*-normal-*-12-*-*-*-*-*-*-*
+!URxvt.font:             xft:terminus:pixelsize=13
 URxvt.xftAntialias:     true
-
 URxvt*shading:          20 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true

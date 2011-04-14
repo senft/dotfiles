@@ -4,9 +4,6 @@ workspace_bar no
 # Disable focus follows mouse
 focus_follows_mouse no
 
-# Disable borders
-new_window bp
-
 # ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-*
@@ -42,8 +39,7 @@ assign sun-awt-X11-XFramePeer ~
 
 bind 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
 bind Mod4+Shift+36 exec /usr/bin/urxvtc
-#bind Mod4+25 exec /usr/bin/chromium-browser
-bind Mod4+25 exec /usr/bin/firefox-beta-bin
+bind Mod4+25 exec /usr/bin/chromium-browser
 bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
 bind Mod4+53 exec /usr/bin/mpc toggle
 bind Mod4+20 exec /usr/bin/mpd-osd
