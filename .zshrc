@@ -8,6 +8,14 @@ export BROWSER=chromium
 
 eval $(dircolors -b)
 
+bindkey "\e[1~" beginning-of-line # Home
+bindkey "\e[4~" end-of-line # End
+bindkey "\e[3~" delete-char # Del
+bindkey "\e[5C" forward-word
+bindkey "\e[5D" backward-word
+bindkey "\e[7~" beginning-of-line # Home
+bindkey "\e[8~" end-of-line # End
+
 setopt ALL_EXPORT
 
 # Set/unset  shell options
@@ -23,16 +31,9 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -a zsh/mapfile mapfile
 
-PATH="/usr/local/bin:/usr/local/sbin/:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/cross/bin:$PATH"
-PATH=$HOME/local/node/bin:$PATH
-TZ="America/Toronto"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
-HOSTNAME="`hostname`"
-PAGER='less'
-TERM='xterm-color'
-EDITOR='emacs'
 
 autoload colors zsh/terminfo
 if [[ "$terminfo[colors]" -ge 8 ]]; then
