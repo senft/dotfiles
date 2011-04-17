@@ -1,19 +1,26 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
+export LC_MESSAGES="en_US.utf8"
+export GREP_COLOR="1;34"
+export EDITOR=vim
+export VISUAL=gvim
+export BROWSER=chromium
+export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
+export HISTCONTROL=ignoredups
+set -o vi
+
+complete -cf sudo
+complete -cf man
+complete -cf Rns
+
+eval $(dircolors -b)
+
 if [ $UID -eq 0 ]; then
     PS1="\[\033[1;31m\][\u@\H \W]\$ \[\033[0m\]"
 else
     PS1="\[\033[1;34m\][\u@\H \W]\$ \[\033[0m\]"
 fi
-
-export LC_MESSAGES="en_US.utf8"
-export GREP_COLOR="1;34"
-export EDITOR=vim
-export VISUAL=vim
-export BROWSER=chromium-browser
-export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
-export HISTCONTROL=ignoredups
 
 # support colors in less
 export LESS_TERMCAP_mb=$'\E[01;34m'
@@ -24,18 +31,12 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;35m'
 
-complete -cf sudo
-complete -cf man
-complete -cf Rns
-
-eval $(dircolors -b)
-
 # ls
 alias ls='ls -hF --color=always'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
-alias ld='ll -t'
+alias ld='ll -rct'
 alias lz='ll -rS'                   # sort by size
 
 # pacman
@@ -57,6 +58,7 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
+<<<<<<< HEAD
 alias vlc='vlc --extraintf=luahttp'
 
 alias mnt="sudo mount"
@@ -69,10 +71,6 @@ alias home='cd ~'
 alias done="cd ~/Downloads/"
 alias back='cd -'
 alias ..='cd ..'
-alias ..2='cd ../..'
-alias ..3='cd ../../..'
-alias ..4='cd ../../../..'
-alias ..5='cd ../../../../..'
 
 # safety features
 alias cp='cp -i'
@@ -107,6 +105,7 @@ mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 
 # usage.: remindme 10m "omg, the pizza"
-function remindme(){
-        sleep $1 && zenity --info --text "$2" &
+function remindme()
+{
+     sleep $1 && zenity --info --text "$2" &
 }
