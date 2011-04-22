@@ -24,29 +24,29 @@ workspace 4 dev
 workspace 5 misc
 
 # Assign applications to workspaces
+assign feh ~
+assign sun-awt-X11-XFramePeer ~
+assign python2.7 ~
 assign Pidgin ~3
 assign Chrome 2
 assign Firefox 2
 assign Eclipse 4
 assign Vlc 5
-assign feh ~
-assign sun-awt-X11-XFramePeer ~
-assign python2.7 ~
+
 #
 # Binds
 #
-
 # Application starter
 
 bind 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
 bind Mod4+Shift+36 exec /usr/bin/urxvtc
 bind Mod4+25 exec /usr/bin/chromium-browser
-#bind Mod4+25 exec /usr/bin/firefox-beta-bin
 bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
 bind Mod4+53 exec /usr/bin/mpc toggle
 bind Mod4+20 exec /usr/bin/mpd-osd
 bind Mod4+33 exec /usr/bin/dmenu_run
 bind Mod4+23 exec /usr/bin/dmenu_mpc
+bind Mod4+27 exec ~/.bin/mpd-random-album
 
 bind 232 exec ~/.sudo_video_brightnessdown.sh
 bind 233 exec ~/.sudo_video_brightnessup.sh
@@ -65,9 +65,7 @@ bind Mod4+Shift+86 exec mpc volume +5
 bind Mod4+82 exec aumix -v -2
 bind Mod4+86 exec aumix -v +2
 
-#
 # i3 Binds
-#
 
 # Mod+Shift+q exits i3
 bind Mod4+Shift+24 exit

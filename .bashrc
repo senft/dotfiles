@@ -58,7 +58,6 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
-<<<<<<< HEAD
 alias vlc='vlc --extraintf=luahttp'
 
 alias mnt="sudo mount"
