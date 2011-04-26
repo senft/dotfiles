@@ -1,6 +1,9 @@
 # Disable built-in statusbar
 workspace_bar no
 
+# Disable borders
+new_window bp
+
 # Disable focus follows mouse
 focus_follows_mouse no
 

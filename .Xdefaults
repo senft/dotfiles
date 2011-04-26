@@ -1,22 +1,29 @@
-! terminal colors ------------------------------------------------------------
 *background: #000000
 *foreground: #FFFFFF
-*color0:     rgb:00/00/00
-*color1:     rgb:d3/62/65
-*color2:     rgb:ae/ce/91
-*color3:        #eab93d
-*color4:     rgb:7a/7a/b0
-*color5:     rgb:96/3c/59
-*color6:     rgb:41/81/79
-*color7:     rgb:be/be/be
-*color8:     rgb:66/66/66
-*color9:     rgb:ef/81/71
-*color10:    rgb:e5/f7/79
-*color11:       #ffc123
-*color12:    rgb:41/86/be
-*color13:    rgb:ef/9e/be
-*color14:    rgb:71/be/be
-*color15:    rgb:ff/ff/ff
+! Black + DarkGrey
+*color0:  #000000
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ff6565
+*color9:  #DC143C
+! DarkGreen + Green
+*color2:  #93d44f
+*color10: #ADFF2F
+! DarkYellow + Yellow
+*color3:  #eab93d
+*color11: #ffc123
+! DarkBlue + Blue
+*color4:  #4169E1
+*color12: #1E90FF
+! DarkMangenta + Mangenta
+*color5:  #9932CC
+*color13: #8B008B
+!DarkCyan + Cyan (both not tango)
+*color6:  #89b6e2
+*color14: #46a4ff
+! LightGrey + White
+*color7:  #cccccc
+*color15: #ffffff
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -24,14 +31,14 @@ Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
-Xft.autohint: 0
+Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 
 ! urxvt ----------------------------------------------------------------------
 URxvt*background:       black
 URxvt*foreground:       white
-URxvt*font:             -*-terminus-medium-*-normal-*-12-*-*-*-*-*-*-*
-!URxvt.font:             xft:terminus:pixelsize=13
+URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
+!URxvt.font:             xft:Bitstream Vera Sans Mono:pixelsize=12
 URxvt.xftAntialias:     true
 URxvt*shading:          20 
 URxvt*saveLines:        12000
@@ -80,3 +87,7 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       8
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+
+
+
+
