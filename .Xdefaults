@@ -1,38 +1,29 @@
-! terminal colors ------------------------------------------------------------
-*background:    #000000
-*foreground:    #FFFFFF
-
+*background: #000000
+*foreground: #FFFFFF
 ! Black + DarkGrey
-*color0:        #000000
-*color8:        #555753
-
+*color0:  #000000
+*color8:  #555753
 ! DarkRed + Red
-*color1:        #ff6565
-*color9:        #AD0000
-
+*color1:  #ff6565
+*color9:  #DC143C
 ! DarkGreen + Green
-*color2:        #93d44f
-*color10:       #66CC00
-
+*color2:  #93d44f
+*color10: #ADFF2F
 ! DarkYellow + Yellow
-*color3:        #eab93d
-*color11:       #ffc123
-
+*color3:  #eab93d
+*color11: #ffc123
 ! DarkBlue + Blue
-*color4:        #204a87
-*color12:       #0054A8
-
+*color4:  #4169E1
+*color12: #1E90FF
 ! DarkMangenta + Mangenta
-*color5:        #ce5c00
-*color13:       #f57900
-
-!DarkCyan + Cyan
-*color6:        #89b6e2
-*color14:       #46a4ff
-
+*color5:  #9932CC
+*color13: #8B008B
+!DarkCyan + Cyan (both not tango)
+*color6:  #89b6e2
+*color14: #46a4ff
 ! LightGrey + White
-*color7:        #cccccc
-*color15:       #ffffff
+*color7:  #cccccc
+*color15: #ffffff
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -46,11 +37,9 @@ Xft.lcdfilter:  lcddefault
 ! urxvt ----------------------------------------------------------------------
 URxvt*background:       black
 URxvt*foreground:       white
-!URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
-
-URxvt.font:             xft:terminus:pixelsize=14
+URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
+!URxvt.font:             xft:Bitstream Vera Sans Mono:pixelsize=12
 URxvt.xftAntialias:     true
-
 URxvt*shading:          20 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
@@ -98,3 +87,7 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       8
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+
+
+
+

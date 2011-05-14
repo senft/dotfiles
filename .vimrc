@@ -50,46 +50,8 @@ nnoremap <F12> :set invpaste paste?<CR>
 set pastetoggle=<F12>
 set showmode
 
-" Toggle spellcheck with F11
-map <F11> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
-
-" switch to tab N with Alt-N
-" noremap <A-1>   1gt
-" inoremap <A-1>  1gt
-" noremap <A-2>   2gt
-" inoremap <A-2>  2gt
-" noremap <A-3>   3gt
-" inoremap <A-3>  3gt
-" noremap <A-4>   4gt
-" inoremap <A-4>  4gt
-" noremap <A-5>   5gt
-" inoremap <A-5>  5gt
-" noremap <A-6>   6gt
-" inoremap <A-6>  6gt
-" noremap <A-7>   7gt
-" inoremap <A-7>  7gt
-" noremap <A-8>   8gt
-" inoremap <A-8>  8gt
-" noremap <A-9>   9gt
-" inoremap <A-9>  9gt
-"
-
-fun! Surround(s1, s2) range
-  exe "normal vgvmboma\<Esc>"
-  normal `a
-  let lineA = line(".")
-  let columnA = col(".")
-  normal `b
-  let lineB = line(".")
-  let columnB = col(".")
-  " exchange marks
-  if lineA > lineB || lineA <= lineB && columnA > columnB
-    " save b in c
-    normal mc
-    " store a in b
-    normal `amb
-    " set a to old b
-    normal `cma
-  endif
-  exe "normal `ba" . a:s2 . "\<Esc>`ai" . a:s1 . "\<Esc>"
-endfun
+" Move between windows with crtl+{hjkl}
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h

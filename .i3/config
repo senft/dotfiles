@@ -38,9 +38,10 @@ assign Vlc 5
 #
 # Application starter
 
-bind 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
+bind Mod4+118 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
 bind Mod4+Shift+36 exec /usr/bin/urxvtc
 bind Mod4+25 exec /usr/bin/chromium-browser
+bind Mod4+31 exec /usr/bin/pidgin
 bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
 bind Mod4+53 exec /usr/bin/mpc toggle
 bind Mod4+20 exec /usr/bin/mpd-osd
