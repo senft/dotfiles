@@ -2,7 +2,7 @@
 " Original: blackboard by Ben Wyrosdick
 " (http://www.vim.org/scripts/script.php?script_id=2280)
 "
-" Modified by Julian Wulfheide, 01.04.2011
+" Modified by senft, 01.04.2011
 
 set bg=dark
 hi clear
