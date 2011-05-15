@@ -1,5 +1,12 @@
 #!/bin/bash
 # Lists current mpd playlist in vertical dmenu and play the chosen song
-song=`mpc playlist | dmenu -l 10`
+
+if [ -f $HOME/.dmenurc ]; then
+	. $HOME/.dmenurc
+else
+	DMENU='dmenu -i'
+fi
+
+song=`mpc playlist | $DMENU -l 10`
 # Add trailing numbers and grep it to give mpc an id to play
 mpc play `mpc playlist | awk '{print NR, $0}' | grep "$song" | awk '{print $1}'`

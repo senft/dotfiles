@@ -47,7 +47,7 @@ bind Mod4+53 exec /usr/bin/mpc toggle
 bind Mod4+20 exec /usr/bin/mpd-osd
 bind Mod4+27 exec /usr/bin/dmenu_run
 bind Mod4+23 exec /usr/bin/dmenu_mpc
-bind Mod4+27 exec ~/.bin/mpd-random-album
+bind Mod4+33 exec ~/.bin/dmenu_playlist
 
 bind 232 exec ~/.sudo_video_brightnessdown.sh
 bind 233 exec ~/.sudo_video_brightnessup.sh
