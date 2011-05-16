@@ -40,7 +40,7 @@ URxvt*foreground:       white
 URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
 !URxvt.font:             xft:Bitstream Vera Sans Mono:pixelsize=12
 URxvt.xftAntialias:     true
-URxvt*shading:          20 
+URxvt*shading:          40 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
 URxvt*urgentOnBell:     true
@@ -57,17 +57,7 @@ URxvt*matcher.button:   1
 URxvt*colorUL:          2
 URxvt*cutchars:         `""()'*'<>[]{|}
 
-
 ! xscreensaver ---------------------------------------------------------------
-!
-! !font settings
-xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
 !general dialog box (affects main hostname, username, password text)
 xscreensaver.Dialog.foreground:         #ffffff
 xscreensaver.Dialog.background:         #111111
@@ -87,7 +77,3 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       8
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-
-
-
-

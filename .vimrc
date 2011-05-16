@@ -19,16 +19,17 @@ set softtabstop=4
 set expandtab
 set smartindent
 
-"filetype plugin on
 set hlsearch
 
 set guioptions-=T   " remove toolbar
 set guioptions-=r   " remove right-hand scroll-bar
 set guifont=Envy\ Code\ R\ 10
-"set mousehide
 set mouse=a
 
-color railscasts
+color blackboard
+
+set foldmethod=indent
+set foldlevel=99
 
 " Press Space to disable hilighting (after search)
 :noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -50,26 +51,8 @@ nnoremap <F12> :set invpaste paste?<CR>
 set pastetoggle=<F12>
 set showmode
 
-" Toggle spellcheck with F11
-map <F11> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
-
-" switch to tab N with Alt-N
-" noremap <A-1>   1gt
-" inoremap <A-1>  1gt
-" noremap <A-2>   2gt
-" inoremap <A-2>  2gt
-" noremap <A-3>   3gt
-" inoremap <A-3>  3gt
-" noremap <A-4>   4gt
-" inoremap <A-4>  4gt
-" noremap <A-5>   5gt
-" inoremap <A-5>  5gt
-" noremap <A-6>   6gt
-" inoremap <A-6>  6gt
-" noremap <A-7>   7gt
-" inoremap <A-7>  7gt
-" noremap <A-8>   8gt
-" inoremap <A-8>  8gt
-" noremap <A-9>   9gt
-" inoremap <A-9>  9gt
-"
+" Move between windows with crtl+{hjkl}
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h

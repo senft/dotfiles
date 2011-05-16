@@ -5,6 +5,16 @@
 export EDITOR=vim
 export VISUAL=vim
 export BROWSER=chromium
+export PAGER=less
+
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+export LESS=-r
 
 eval $(dircolors -b)
 
@@ -17,6 +27,10 @@ bindkey "\e[7~" beginning-of-line # Home
 bindkey "\e[8~" end-of-line # End
 
 setopt ALL_EXPORT
+
+autoload      edit-command-line
+zle -N        edit-command-line
+bindkey '\ee' edit-command-line
 
 # Set/unset  shell options
 setopt   notify globdots correct pushdtohome cdablevars autolist
@@ -46,6 +60,14 @@ for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
     (( count = $count + 1 ))
 done
 
+unsetopt ALL_EXPORT
+
+export EDITOR=vim
+export VISUAL=vim
+export BROWSER=chromium
+export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
+
+
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
 RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
@@ -53,10 +75,6 @@ LC_ALL='en_US.UTF-8'
 LANG='en_US.UTF-8'
 LC_CTYPE=C
 
-unsetopt ALL_EXPORT
-alias yaourt="color='' yaourt"
-alias man='LC_ALL=C LANG=C man'
-alias ls='ls --color=auto '
 
 alias =clear
 autoload -U compinit
@@ -155,15 +173,13 @@ alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias moff="xset dpms force standby"
 alias grep='grep --color=auto'
-alias feh='feh -F'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
-alias gmp='gnome-mplayer'
-alias ssh_uni='ssh clientssh1.rbg.informatik.tu-darmstadt.de'
 
-alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
+alias mnt="sudo mount"
+alias umnt="sudo umount -l"
 
 # cd
 alias home='cd ~'
@@ -176,10 +192,8 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-# git
-alias gitps="git push origin master"
-alias gitp="git pull"
-alias gitc="git commit -a"
+alias -g G='| grep'
+alias -g L='| less'
 
 packer() {
    case $1 in
@@ -198,6 +212,7 @@ mkdircd () { mkdir "$@" && eval cd "\"\$$#\""; }
 mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
+mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 function remindme()
 {
