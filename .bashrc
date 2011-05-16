@@ -12,6 +12,7 @@ set -o vi
 
 complete -cf sudo
 complete -cf man
+complete -cf Rns
 
 eval $(dircolors -b)
 
@@ -57,8 +58,10 @@ alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
-alias gmp='gnome-mplayer'
-alias ssh_uni='ssh clientssh1.rbg.informatik.tu-darmstadt.de'
+alias vlc='vlc --extraintf=luahttp'
+
+alias mnt="sudo mount"
+alias umnt="sudo umount -l"
 
 alias bassdrive='mplayer http://bassdrive.com/v2/streams/BassDrive.pls'  
 
@@ -78,6 +81,10 @@ alias gitps="git push origin master"
 alias gitp="git pull"
 alias gitc="git commit -a"
 
+#
+# Functions
+#
+
 packer() {
    case $1 in
 	(-Ss | -Si | -G)
@@ -96,6 +103,7 @@ mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 
+# usage.: remindme 10m "omg, the pizza"
 function remindme()
 {
      sleep $1 && zenity --info --text "$2" &
