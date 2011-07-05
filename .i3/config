@@ -32,16 +32,13 @@ assign Chrome 2
 assign Firefox 2
 assign Eclipse 4
 assign Vlc 5
-<<<<<<< HEAD
 assign sun-awt-X11-XFramePeer ~
-=======
->>>>>>> 9c66c81b983fedf4565d805657d4b81cda5bdbfa
+#assign Writer_ALL.py ~
 
 #
 # Binds
 #
 # Application starter
-<<<<<<< HEAD
 bind Mod4+20 exec /usr/bin/mpd-osd
 bind Mod4+23 exec /usr/bin/dmenu_mpc
 bind Mod4+25 exec /usr/bin/chromium-browser
@@ -56,7 +53,6 @@ bind Mod4+114 exec /usr/bin/mpc next
 bind Mod4+113 exec /usr/bin/mpc prev
 
 bind 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
-=======
 
 bind Mod4+118 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
 bind Mod4+Shift+36 exec /usr/bin/urxvtc
@@ -68,12 +64,11 @@ bind Mod4+20 exec /usr/bin/mpd-osd
 bind Mod4+27 exec /usr/bin/dmenu_run
 bind Mod4+23 exec /usr/bin/dmenu_mpc
 bind Mod4+33 exec ~/.bin/dmenu_playlist
->>>>>>> 9c66c81b983fedf4565d805657d4b81cda5bdbfa
 
 bind 232 exec ~/.sudo_video_brightnessdown.sh
 bind 233 exec ~/.sudo_video_brightnessup.sh
-bind 122 exec aumix -v -2
-bind 123 exec aumix -v +2
+bind Mod4+82 exec aumix -v -2
+bind Mod4+86 exec aumix -v +2
 bind 121 exec amixer -q set Master toggle
 
 bind Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 

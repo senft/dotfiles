@@ -1,11 +1,8 @@
-# kcbanner's zshrc file v0.1, based on:
-# jdong's zshrc file v0.2.1 and
-# mako's zshrc file, v0.1
-
 export EDITOR=vim
 export VISUAL=vim
 export BROWSER=chromium
 export PAGER=less
+export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -15,6 +12,20 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS=-r
+
+export LC_MESSAGES=en_US.UTF-8
+export LC_NUMERIC=de_DE.UTF-8
+export LC_TIME=de_DE.UTF-8
+export LC_COLLATE=de_DE.UTF-8
+export LC_MONETARY=de_DE.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export LC_PAPER=de_DE.UTF-8
+export LC_NAME=de_DE.UTF-8
+export LC_ADDRESS=de_DE.UTF-8
+export LC_TELEPHONE=de_DE.UTF-8
+export LC_MEASUREMENT=de_DE.UTF-8
+export LC_IDENTIFICATION=de_DE.UTF-8
+
 
 eval $(dircolors -b)
 
@@ -62,19 +73,9 @@ done
 
 unsetopt ALL_EXPORT
 
-export EDITOR=vim
-export VISUAL=vim
-export BROWSER=chromium
-export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
-
-
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
 RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
-LC_ALL='en_US.UTF-8'
-LANG='en_US.UTF-8'
-LC_CTYPE=C
-
 
 alias =clear
 autoload -U compinit
@@ -161,8 +162,8 @@ alias lz='ll -rS'                   # sort by size
 
 # pacman
 alias pacman='sudo pacman-color'
-alias Syu='packer -Syu'
-alias Rns='pacman -Rns'
+alias syu='packer -Syu'
+alias rns='pacman -Rns'
 alias pas='packer -S'
 alias paqs='pacman -Qs'
 alias pass='packer -Ss'
@@ -171,29 +172,34 @@ alias pau='pacman -U'
 # programs
 alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
-alias moff="xset dpms force standby"
 alias grep='grep --color=auto'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
+alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
+alias vpn-disconnect="sudo vpnc-disconnect"
 
 alias mnt="sudo mount"
 alias umnt="sudo umount -l"
 
 # cd
-alias home='cd ~'
+alias home="cd ~"
 alias done="cd ~/Downloads/"
-alias back='cd -'
-alias ..='cd ..'
+alias back="cd -"
+alias ..="cd .."
 
 # safety features
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
 
-alias -g G='| grep'
-alias -g L='| less'
+alias -g G="| grep"
+alias -g L="| less"
+
+# git
+alias gs="git status"
+alias gd="git diff"
 
 packer() {
    case $1 in

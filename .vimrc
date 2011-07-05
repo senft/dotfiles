@@ -12,6 +12,7 @@ set number			" display line numbers
 set incsearch		" do incremental searching
 
 set modeline 		" use vim-directives in files
+set cursorline
 
 set tabstop=4
 set shiftwidth=4
@@ -56,3 +57,16 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" Restore cursor position from previously edited files
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END

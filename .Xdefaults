@@ -40,11 +40,7 @@ URxvt*foreground:       white
 URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
 !URxvt.font:             xft:Bitstream Vera Sans Mono:pixelsize=12
 URxvt.xftAntialias:     true
-<<<<<<< HEAD
 URxvt*shading:          40 
-=======
-URxvt*shading:          20 
->>>>>>> 9c66c81b983fedf4565d805657d4b81cda5bdbfa
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
 URxvt*urgentOnBell:     true
@@ -81,7 +77,3 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       8
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-
-
-
-
