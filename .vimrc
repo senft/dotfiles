@@ -12,6 +12,7 @@ set number			" display line numbers
 set incsearch		" do incremental searching
 
 set modeline 		" use vim-directives in files
+set cursorline
 
 set tabstop=4
 set shiftwidth=4
@@ -19,16 +20,17 @@ set softtabstop=4
 set expandtab
 set smartindent
 
-"filetype plugin on
 set hlsearch
 
 set guioptions-=T   " remove toolbar
 set guioptions-=r   " remove right-hand scroll-bar
 set guifont=Envy\ Code\ R\ 10
-"set mousehide
 set mouse=a
 
 color blackboard
+
+set foldmethod=indent
+set foldlevel=99
 
 " Press Space to disable hilighting (after search)
 :noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -55,3 +57,16 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" Restore cursor position from previously edited files
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END

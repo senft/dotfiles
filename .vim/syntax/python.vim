@@ -126,6 +126,7 @@ syn keyword pythonException	try except finally
 syn keyword pythonOperator	and in is not or
 
 syn keyword pythonConstant	False None True
+syn keyword pythonSelf	self
 
 " Decorators (new in Python 2.4)
 syn match   pythonDecorator	"@" display nextgroup=pythonDottedName skipwhite
@@ -139,7 +140,7 @@ syn match   pythonCoding	"\%^.*\%(\n.*\)\?#.*coding[:=]\s*[0-9A-Za-z-_.]\+.*$"
 syn keyword pythonTodo		TODO FIXME XXX contained
 
 " Errors
-" syn match pythonError		"\<\d\+\D\+\>" display
+syn match pythonError		"\<\d\+\D\+\>" display
 syn match pythonError		"[$?]" display
 syn match pythonError		"[&|]\{2,}" display
 syn match pythonError		"[=]\{3,}" display
@@ -241,6 +242,8 @@ syn match   pythonFloat		"\<\d\+\.\d*\%([eE][+-]\=\d\+\)\=[jJ]\=" display
 
 syn match   pythonOctError	"\<0[oO]\=\o*[8-9]\d*\>" display
 syn match   pythonBinError	"\<0[bB][01]*[2-9]\d*\>" display
+
+
 
 if exists("python_highlight_builtin_objs") && python_highlight_builtin_objs != 0
   " Builtin objects and types
