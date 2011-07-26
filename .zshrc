@@ -163,7 +163,7 @@ alias lz='ll -rS'                   # sort by size
 # pacman
 alias pacman='sudo pacman-color'
 alias syu='packer -Syu'
-alias rns='pacman -Rns'
+alias rs='pacman -Rs'
 alias pas='packer -S'
 alias paqs='pacman -Qs'
 alias pass='packer -Ss'
@@ -173,6 +173,7 @@ alias pau='pacman -U'
 alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
 alias grep='grep --color=auto'
+alias ncdf='discus'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
@@ -200,6 +201,7 @@ alias -g L="| less"
 # git
 alias gs="git status"
 alias gd="git diff"
+alias gc="git commit -am"
 
 packer() {
    case $1 in
