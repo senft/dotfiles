@@ -163,7 +163,7 @@ alias lz='ll -rS'                   # sort by size
 # pacman
 alias pacman='sudo pacman-color'
 alias syu='packer -Syu'
-alias rns='pacman -Rns'
+alias rs='pacman -Rs'
 alias pas='packer -S'
 alias paqs='pacman -Qs'
 alias pass='packer -Ss'
@@ -200,6 +200,7 @@ alias -g L="| less"
 # git
 alias gs="git status"
 alias gd="git diff"
+alias gb="git branch"
 
 packer() {
    case $1 in
