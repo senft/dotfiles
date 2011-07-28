@@ -29,9 +29,6 @@ set mouse=a
 
 color blackboard
 
-set foldmethod=indent
-set foldlevel=99
-
 " Press Space to disable hilighting (after search)
 :noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
@@ -48,6 +45,9 @@ let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 nnoremap <silent> <F4> :TlistToggle<CR>
+
+let g:bufExplorerSortBy='name'
+nnoremap <silent> <F10> :BufExplorer<CR>
 
 " Toggle paste mode with F2
 nnoremap <F12> :set invpaste paste?<CR>
@@ -72,3 +72,7 @@ augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
 augroup END
+
+" Load Ulti Snips
+set runtimepath+=~/.vim/ultisnips_rep 
+

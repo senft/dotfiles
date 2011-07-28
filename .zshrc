@@ -200,6 +200,7 @@ alias -g L="| less"
 
 # git
 alias gs="git status"
+alias gb="git branch"
 alias gd="git diff"
 alias gc="git commit -am"
 

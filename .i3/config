@@ -41,7 +41,8 @@ assign sun-awt-X11-XFramePeer ~
 # Application starter
 bind Mod4+20 exec /usr/bin/mpd-osd
 bind Mod4+23 exec /usr/bin/dmenu_mpc
-bind Mod4+25 exec /usr/bin/chromium-browser
+#bind Mod4+25 exec /usr/bin/chromium-browser
+bind Mod4+25 exec /usr/bin/firefox
 bind Mod4+31 exec /usr/bin/pidgin
 bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
 bind Mod4+33 exec ~/.bin/dmenu_playlist
