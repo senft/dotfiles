@@ -37,10 +37,11 @@ Xft.lcdfilter:  lcddefault
 ! urxvt ----------------------------------------------------------------------
 URxvt*background:       black
 URxvt*foreground:       white
-URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
-!URxvt.font:             xft:Bitstream Vera Sans Mono:pixelsize=14
+!URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
+! URxvt.font:             xft:Envy Code R:pixelsize=12
+URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-*-*
 URxvt.xftAntialias:     true
-URxvt*shading:          40 
+URxvt*shading:          15 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
 URxvt*urgentOnBell:     true
