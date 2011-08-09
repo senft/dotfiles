@@ -1,8 +1,6 @@
-# Disable built-in statusbar
-workspace_bar no
-
 # Disable borders
-new_window bp
+new_window 1pixel
+workspace_layout tabbed
 
 # Disable focus follows mouse
 focus_follows_mouse no
@@ -13,111 +11,106 @@ font -xos4-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod4
 
-#
-# Workspaces
-# 
-#
-workspace 1 term
-workspace 2 www
-workspace 3 im
-workspace 4 dev
-workspace 5 misc
+# Colors
+client.focused                #ADFF2F #ADFF2F #000000
+client.focused_inactive       #333333 #333333 #999999
+client.unfocused              #333333 #333333 #999999
+client.urgent                 #FF0000 #8C5665 #999999
 
 # Assign applications to workspaces
 assign feh ~
+assign Pidgin ~im
+assign Chrome www
+assign Firefox www
+assign Eclipse dev 
+#assign Vlc misc
 assign sun-awt-X11-XFramePeer ~
-assign python2.7 ~
-assign Pidgin ~3
-assign Chrome 2
-assign Firefox 2
-assign Eclipse 4
-assign Vlc 5
-assign sun-awt-X11-XFramePeer ~
-#assign Writer_ALL.py ~
 
 #
 # Binds
 #
 # Application starter
-bind Mod4+20 exec /usr/bin/mpd-osd
-bind Mod4+23 exec /usr/bin/dmenu_mpc
-#bind Mod4+25 exec /usr/bin/chromium-browser
-bind Mod4+25 exec /usr/bin/firefox
-bind Mod4+31 exec /usr/bin/pidgin
-bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
-bind Mod4+33 exec ~/.bin/dmenu_playlist
-bind Mod4+27 exec /usr/bin/dmenu_run
-bind Mod4+Shift+36 exec /usr/bin/urxvtc
+bindcode Mod4+20 exec /usr/bin/mpd-osd
+bindcode Mod4+23 exec /usr/bin/dmenu_mpc
+bindcode Mod4+25 exec /usr/bin/chromium-browser
+#bind Mod4+25 exec /usr/bin/firefox
+bindcode Mod4+31 exec /usr/bin/pidgin
+bindcode Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
+bindcode Mod4+33 exec ~/.bin/dmenu_playlist
+bindcode Mod4+27 exec /usr/bin/dmenu_run
+bindcode Mod4+Shift+36 exec /usr/bin/urxvtc
 
-bind Mod4+53 exec /usr/bin/mpc toggle
-bind Mod4+114 exec /usr/bin/mpc next
-bind Mod4+113 exec /usr/bin/mpc prev
+bindcode Mod4+53 exec /usr/bin/mpc toggle
+bindcode Mod4+114 exec /usr/bin/mpc next
+bindcode Mod4+113 exec /usr/bin/mpc prev
 
-bind 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
+bindcode 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
 
-bind Mod4+118 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
-bind Mod4+Shift+36 exec /usr/bin/urxvtc
-bind Mod4+25 exec /usr/bin/chromium-browser
-bind Mod4+31 exec /usr/bin/pidgin
-bind Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
-bind Mod4+53 exec /usr/bin/mpc toggle
-bind Mod4+20 exec /usr/bin/mpd-osd
-bind Mod4+27 exec /usr/bin/dmenu_run
-bind Mod4+23 exec /usr/bin/dmenu_mpc
-bind Mod4+33 exec ~/.bin/dmenu_playlist
+bindcode Mod4+118 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
+bindcode Mod4+Shift+36 exec /usr/bin/urxvtc
+bindcode Mod4+25 exec /usr/bin/chromium-browser
+bindcode Mod4+31 exec /usr/bin/pidgin
+bindcode Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
+bindcode Mod4+53 exec /usr/bin/mpc toggle
+bindcode Mod4+20 exec /usr/bin/mpd-osd
+bindcode Mod4+27 exec /usr/bin/dmenu_run
+bindcode Mod4+23 exec /usr/bin/dmenu_mpc
+bindcode Mod4+33 exec ~/.bin/dmenu_playlist
 
-bind 232 exec ~/.sudo_video_brightnessdown.sh
-bind 233 exec ~/.sudo_video_brightnessup.sh
-bind Mod4+82 exec aumix -v -2
-bind Mod4+86 exec aumix -v +2
-bind 121 exec amixer -q set Master toggle
+bindcode 232 exec ~/.sudo_video_brightnessdown.sh
+bindcode 233 exec ~/.sudo_video_brightnessup.sh
+bindcode Mod4+82 exec aumix -v -2
+bindcode Mod4+86 exec aumix -v +2
+bindcode 121 exec amixer -q set Master toggle
 
-bind Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
+bindcode Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
 
 # Toggle Headphone channel
-bind Mod4+38 exec /usr/bin/amixer -q set Headphone toggle
+bindcode Mod4+38 exec /usr/bin/amixer -q set Headphone toggle
 
 # Volume Binds for mpd and Master
-bind Mod4+Shift+82 exec mpc volume -5
-bind Mod4+Shift+86 exec mpc volume +5
-bind Mod4+82 exec aumix -v -2
-bind Mod4+86 exec aumix -v +2
+bindcode Mod4+Shift+82 exec mpc volume -5
+bindcode Mod4+Shift+86 exec mpc volume +5
+bindcode Mod4+82 exec aumix -v -2
+bindcode Mod4+86 exec aumix -v +2
 
 # i3 Binds
 
 # Mod+Shift+q exits i3
-bind Mod4+Shift+24 exit
+bindcode Mod4+Shift+24 exit
 
 # Mod+Shift+q restarts i3 inplace
-bind Mod4+24 restart
+bindcode Mod4+24 restart
+
+bindcode Mod4+54 exec i3-msg reload
 
 # Mod+ESC kills the current client
-bind Mod4+9 kill
+bindcode Mod4+9 kill
 
 # Fullscreen (Mod4+Enter)
-bind Mod4+41 f
+bindcode Mod4+41 fullscreen
 
 # Stacking (Mod4+s)
-bind Mod4+39 s
+bindcode Mod4+39 layout stacking
 
 # Tabbed (Mod4+t)
-bind Mod4+28 T
+bindcode Mod4+28 layout tabbed
 
 # Default (Mod4+d)
-bind Mod4+40 d
+bindcode Mod4+40 layout default
 
 # Toggle tiling/floating of the current window (Mod1+Shift+Space)
-bind Mod4+Shift+65 t
+bindcode Mod4+Shift+65 floating toggle
 
 # Go into the tiling layer / floating layer, depending on whether
 # the current window is tiling / floating (Mod1+t)
-bind Mod4+28 focus ft
+bindcode Mod4+28 focus mode_toggle
 
 # Focus (Mod4+j/k/l/;)
-bind Mod4+43 h
-bind Mod4+44 j
-bind Mod4+45 k
-bind Mod4+46 l
+bindcode Mod4+43 focus left
+bindcode Mod4+44 focus down
+bindcode Mod4+45 focus up
+bindcode Mod4+46 focus right
 
 # Focus Container (Mod3+j/k/l/;)
 #bind Mod4+43 wch
@@ -132,40 +125,40 @@ bind Mod4+46 l
 #bind Mod4+Control+46 sl
 
 # Move (Mod1+Shift+j/k/l/;)
-bind Mod4+Shift+43 mh
-bind Mod4+Shift+44 mj
-bind Mod4+Shift+45 mk
-bind Mod4+Shift+46 ml
+bindcode Mod4+Shift+43 move left
+bindcode Mod4+Shift+44 move down
+bindcode Mod4+Shift+45 move up
+bindcode Mod4+Shift+46 move right
 
 # Move Container (Mod4+Control+j/k/l/;)
-bind Mod4+Control+43 wcmh
-bind Mod4+Control+44 wcmj
-bind Mod4+Control+45 wcmk
-bind Mod4+Control+46 wcml
+bindcode Mod4+Control+43 focus parent; move left
+bindcode Mod4+Control+44 focus parent; move down
+bindcode Mod4+Control+45 focus parent; move up
+bindcode Mod4+Control+46 focus parent; move right
 
 # Workspaces (Mod1+1/2/…)
-bind Mod4+10 1
-bind Mod4+11 2
-bind Mod4+12 3
-bind Mod4+13 4
-bind Mod4+14 5
-bind Mod4+15 6
-bind Mod4+16 7
-bind Mod4+17 8
-bind Mod4+18 9
-bind Mod4+19 10
+bindcode Mod4+10 workspace term
+bindcode Mod4+11 workspace www
+bindcode Mod4+12 workspace im
+bindcode Mod4+13 workspace dev
+bindcode Mod4+14 workspace misc
+bindcode Mod4+15 workspace 6
+bindcode Mod4+16 workspace 7
+bindcode Mod4+17 workspace 8
+bindcode Mod4+18 workspace 9
+bindcode Mod4+19 workspace 10
 
 # Move to Workspaces
-bind Mod4+Shift+10 m1
-bind Mod4+Shift+11 m2
-bind Mod4+Shift+12 m3
-bind Mod4+Shift+13 m4
-bind Mod4+Shift+14 m5
-bind Mod4+Shift+15 m6
-bind Mod4+Shift+16 m7
-bind Mod4+Shift+17 m8
-bind Mod4+Shift+18 m9
-bind Mod4+Shift+19 m10
+bindcode Mod4+Shift+10 move workspace term
+bindcode Mod4+Shift+11 move workspace www
+bindcode Mod4+Shift+12 move workspace im
+bindcode Mod4+Shift+13 move workspace dev
+bindcode Mod4+Shift+14 move workspace misc
+bindcode Mod4+Shift+15 move workspace 6
+bindcode Mod4+Shift+16 move workspace 7
+bindcode Mod4+Shift+17 move workspace 8
+bindcode Mod4+Shift+18 move workspace 9
+bindcode Mod4+Shift+19 move workspace 10
 
 # The IPC interface allows programs like an external workspace bar
 # (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.

@@ -15,7 +15,7 @@ endif
 let colors_name = "blackboard"
 
 if version >= 700
-  hi CursorLine guibg=#222222 ctermbg=233 cterm=none
+  hi CursorLine guibg=#222222 ctermbg=234 cterm=none
   hi ColorColumn guibg=#222222 ctermbg=233
   hi MatchParen guifg=#333333 guibg=#cdff00 gui=bold ctermbg=119
   hi Pmenu 		guifg=#404040 guibg=#dcdcdc

@@ -75,4 +75,3 @@ augroup END
 
 " Load Ulti Snips
 set runtimepath+=~/.vim/ultisnips_rep 
-
