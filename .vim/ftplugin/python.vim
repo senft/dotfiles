@@ -13,6 +13,6 @@ set foldmethod=indent
 set foldlevel=99
 
 " For comment-indeting
-set cindent
-set cinkeys=0{,0},!^F,o,O,e " default is: 0{,0},0),:,0#,!^F,o,O,e
+"set cindent
+"set cinkeys=0{,0},!^F,o,O,e " default is: 0{,0},0),:,0#,!^F,o,O,e
 

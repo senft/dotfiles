@@ -76,3 +76,7 @@ augroup END
 " Load Ulti Snips
 set runtimepath+=~/.vim/ultisnips_rep 
 
+let g:UltiSnipsExpandTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<s-tab>"
+
+let g:SuperTabMappingForward='<tab>'
