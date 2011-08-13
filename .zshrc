@@ -172,6 +172,7 @@ alias pau='pacman -U'
 # programs
 alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
+alias suspend="sudo pm-suspend"
 alias grep='grep --color=auto'
 alias ncdf='discus'
 alias df='df -h'

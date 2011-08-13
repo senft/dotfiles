@@ -46,6 +46,9 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 nnoremap <silent> <F4> :TlistToggle<CR>
 
+let NERDTreeQuitOnOpen = 1
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
+
 let g:bufExplorerSortBy='name'
 nnoremap <silent> <F10> :BufExplorer<CR>
 
