@@ -14,10 +14,6 @@ set incsearch		" do incremental searching
 set modeline 		" use vim-directives in files
 set cursorline
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
 set smartindent
 
 set hlsearch
