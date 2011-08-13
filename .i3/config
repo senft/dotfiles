@@ -5,9 +5,6 @@ workspace_layout tabbed
 # Disable focus follows mouse
 focus_follows_mouse no
 
-# ISO 10646 = Unicode
-font -xos4-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
-
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod4
 
@@ -23,7 +20,7 @@ assign Pidgin ~im
 assign Chrome www
 assign Firefox www
 assign Eclipse dev 
-#assign Vlc misc
+assign Vlc misc
 assign sun-awt-X11-XFramePeer ~
 
 #

@@ -42,6 +42,9 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 nnoremap <silent> <F4> :TlistToggle<CR>
 
+let NERDTreeQuitOnOpen = 1
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
+
 let g:bufExplorerSortBy='name'
 nnoremap <silent> <F10> :BufExplorer<CR>
 
@@ -71,3 +74,8 @@ augroup END
 
 " Load Ulti Snips
 set runtimepath+=~/.vim/ultisnips_rep 
+
+let g:UltiSnipsExpandTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<s-tab>"
+
+let g:SuperTabMappingForward='<tab>'
