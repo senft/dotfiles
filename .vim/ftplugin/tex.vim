@@ -3,9 +3,6 @@ set textwidth=80
 let g:tex_flavor = "latex"
 let g:Tex_Folding = 0
 let g:Tex_AutoFolding = 0
-let g:Tex_DefaultTargetFormat = "pdf"
-let g:Tex_CompileRule_pdf = "pdflatex -interaction=nonstopmode $*"
-let g:Tex_ViewRule_pdf = "evince $*"
 
 let NERDTreeIgnore=['\.aux$', '\.log$', '\.lof$', '\.toc$']
 

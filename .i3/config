@@ -27,37 +27,26 @@ assign sun-awt-X11-XFramePeer ~
 # Binds
 #
 # Application starter
-bindcode Mod4+20 exec /usr/bin/mpd-osd
 bindcode Mod4+23 exec /usr/bin/dmenu_mpc
 bindcode Mod4+25 exec /usr/bin/chromium-browser
 #bind Mod4+25 exec /usr/bin/firefox
-bindcode Mod4+31 exec /usr/bin/pidgin
 bindcode Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
-bindcode Mod4+33 exec ~/.bin/dmenu_playlist
-bindcode Mod4+27 exec /usr/bin/dmenu_run
 bindcode Mod4+Shift+36 exec /usr/bin/urxvtc
 
 bindcode Mod4+53 exec /usr/bin/mpc toggle
 bindcode Mod4+114 exec /usr/bin/mpc next
 bindcode Mod4+113 exec /usr/bin/mpc prev
+bindcode Mod4+20 exec /usr/bin/mpd-osd
 
 bindcode 107 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
 
 bindcode Mod4+118 exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots'
-bindcode Mod4+Shift+36 exec /usr/bin/urxvtc
-bindcode Mod4+25 exec /usr/bin/chromium-browser
 bindcode Mod4+31 exec /usr/bin/pidgin
-bindcode Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
-bindcode Mod4+53 exec /usr/bin/mpc toggle
-bindcode Mod4+20 exec /usr/bin/mpd-osd
 bindcode Mod4+27 exec /usr/bin/dmenu_run
-bindcode Mod4+23 exec /usr/bin/dmenu_mpc
 bindcode Mod4+33 exec ~/.bin/dmenu_playlist
 
 bindcode 232 exec ~/.sudo_video_brightnessdown.sh
 bindcode 233 exec ~/.sudo_video_brightnessup.sh
-bindcode Mod4+82 exec aumix -v -2
-bindcode Mod4+86 exec aumix -v +2
 bindcode 121 exec amixer -q set Master toggle
 
 bindcode Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
@@ -101,7 +90,7 @@ bindcode Mod4+Shift+65 floating toggle
 
 # Go into the tiling layer / floating layer, depending on whether
 # the current window is tiling / floating (Mod1+t)
-bindcode Mod4+28 focus mode_toggle
+bindcode Mod4+Shift+28 focus mode_toggle
 
 # Focus (Mod4+j/k/l/;)
 bindcode Mod4+43 focus left

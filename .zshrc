@@ -181,6 +181,7 @@ alias mkdir='mkdir -p'
 alias w='wicd-curses'
 alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
 alias vpn-disconnect="sudo vpnc-disconnect"
+alias cal="cal -3"
 
 alias mnt="sudo mount"
 alias umnt="sudo umount -l"
