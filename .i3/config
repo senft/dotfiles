@@ -60,6 +60,9 @@ bindcode Mod4+Shift+86 exec mpc volume +5
 bindcode Mod4+82 exec aumix -v -2
 bindcode Mod4+86 exec aumix -v +2
 
+bindcode 122 exec aumix -v -2
+bindcode 123 exec aumix -v +2
+
 # i3 Binds
 
 # Mod+Shift+q exits i3
