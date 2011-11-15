@@ -9,6 +9,7 @@ map <F7> :!pep8 %<CR>
 
 map <F5> :w<CR>:!chmod +x "%"<CR>:!./"%"<CR>
 map <F6> :w<CR>:!./.run <CR>
+set textwidth=80
 set colorcolumn=80
 
 " Completion

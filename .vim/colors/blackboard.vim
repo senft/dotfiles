@@ -22,7 +22,7 @@ if version >= 700
   hi PmenuSel 	guifg=#ffffff guibg=#93b5bf
 endif
 
-hi Normal		guifg=white guibg=black ctermfg=white ctermbg=black
+hi Normal		guifg=white guibg=black ctermfg=white
 
 hi Comment	    guifg=#77b4c7 gui=italic
 hi Constant	    guifg=#d7fa41 gui=none ctermfg=119

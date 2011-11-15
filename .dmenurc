@@ -1,3 +1,2 @@
-#!/bin/bash
-
-DMENU='dmenu -i -fn -*-terminus-medium-*-*-*-*-120-*-*-*-*-*-* -nb #000 -nf #FFF -sb #3399FF -sf #000'
+#!/bin/sh
+DMENU='dmenu -i -fn -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-* -nb #151515 -nf #FFF -sb #303030 -sf #FFF'

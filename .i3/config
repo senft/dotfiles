@@ -1,3 +1,4 @@
+font -*-terminus-*-*-*-*-*-*-*-*-*-*-*-*
 # Disable borders
 new_window 1pixel
 workspace_layout tabbed
@@ -15,13 +16,13 @@ client.unfocused              #333333 #333333 #999999
 client.urgent                 #FF0000 #8C5665 #999999
 
 # Assign applications to workspaces
-assign feh ~
-assign Pidgin ~im
-assign Chrome www
-assign Firefox www
-assign Eclipse dev 
-assign Vlc misc
-assign sun-awt-X11-XFramePeer ~
+assign [class="feh"] ~
+assign [class="Pidgin"] im
+assign [class="Chrome"] www
+assign [class="Firefox"] www
+assign [class="Eclipse"] dev
+assign [class="Vlc"] misc
+assign [class="sun-awt-X11-XFramePeer"] ~
 
 #
 # Binds
@@ -29,7 +30,6 @@ assign sun-awt-X11-XFramePeer ~
 # Application starter
 bindcode Mod4+23 exec /usr/bin/dmenu_mpc
 bindcode Mod4+25 exec /usr/bin/chromium-browser
-#bind Mod4+25 exec /usr/bin/firefox
 bindcode Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
 bindcode Mod4+Shift+36 exec /usr/bin/urxvtc
 
@@ -45,9 +45,11 @@ bindcode Mod4+31 exec /usr/bin/pidgin
 bindcode Mod4+27 exec /usr/bin/dmenu_run
 bindcode Mod4+33 exec ~/.bin/dmenu_playlist
 
-bindcode 232 exec ~/.sudo_video_brightnessdown.sh
-bindcode 233 exec ~/.sudo_video_brightnessup.sh
-bindcode 121 exec amixer -q set Master toggle
+bindcode 232 exec ~/.bin/sudo_brightdown
+bindcode 233 exec ~/.bin/sudo_brightup
+
+bindcode Mod4+73 exec ~/.bin/sudo_brightdown
+bindcode Mod4+74 exec ~/.bin/sudo_brightup
 
 bindcode Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
 
@@ -55,6 +57,7 @@ bindcode Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock
 bindcode Mod4+38 exec /usr/bin/amixer -q set Headphone toggle
 
 # Volume Binds for mpd and Master
+bindcode 121 exec amixer -q set Master toggle
 bindcode Mod4+Shift+82 exec mpc volume -5
 bindcode Mod4+Shift+86 exec mpc volume +5
 bindcode Mod4+82 exec aumix -v -2
@@ -107,6 +110,10 @@ bindcode Mod4+46 focus right
 #bind Mod4+45 wck
 #bind Mod4+46 wcl
 
+# Create Container
+bindsym Mod4+v split vertical
+bindsym Mod4+m split horizontal
+
 # Snap (Mod1+Control+j/k/l/;)
 #bind Mod4+Control+43 sh
 #bind Mod4+Control+44 sj
@@ -148,6 +155,47 @@ bindcode Mod4+Shift+16 move workspace 7
 bindcode Mod4+Shift+17 move workspace 8
 bindcode Mod4+Shift+18 move workspace 9
 bindcode Mod4+Shift+19 move workspace 10
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # They resize the border in the direction you pressed, e.g.
+        # when pressing left, the window is resized so that it has
+        # more space on its left
+
+        bindsym j               resize shrink left 50 px or 50 ppt
+        bindsym Shift+j         resize grow   left 50 px or 50 ppt
+
+        bindsym k               resize shrink down 50 px or 50 ppt
+        bindsym Shift+k         resize grow   down 50 px or 50 ppt
+
+        bindsym l               resize shrink up 50 px or 50 ppt
+        bindsym Shift+l         resize grow   up 50 px or 50 ppt
+
+        bindsym semicolon       resize shrink right 50 px or 50 ppt
+        bindsym Shift+semicolon resize grow   right 50 px or 50 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink left 50 px or 50 ppt
+        bindsym Shift+Left  resize grow   left 50 px or 50 ppt
+
+        bindsym Down        resize shrink down 50 px or 50 ppt
+        bindsym Shift+Down  resize grow   down 50 px or 50 ppt
+
+        bindsym Up          resize shrink up 50 px or 50 ppt
+        bindsym Shift+Up    resize grow   up 50 px or 50 ppt
+
+        bindsym Right       resize shrink right 50 px or 50 ppt
+        bindsym Shift+Right resize grow   right 50 px or 50 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym Mod4+Shift+r mode "resize"
+
 
 # The IPC interface allows programs like an external workspace bar
 # (i3-wsbar) or i3-msg (can be used to "remote-control" i3) to work.

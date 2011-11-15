@@ -37,7 +37,7 @@ nnoremap <C-Tab> :bn<CR>
  
 " taglist
 let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Use_Right_Window = 1
+" let Tlist_Use_Right_Window = 1
 let Tlist_Sort_Type = "name"
 let Tlist_WinWidth = 40
 let Tlist_Close_On_Select = 1

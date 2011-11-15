@@ -18,7 +18,6 @@ export LC_NUMERIC=de_DE.UTF-8
 export LC_TIME=de_DE.UTF-8
 export LC_COLLATE=de_DE.UTF-8
 export LC_MONETARY=de_DE.UTF-8
-export LC_MESSAGES=en_US.UTF-8
 export LC_PAPER=de_DE.UTF-8
 export LC_NAME=de_DE.UTF-8
 export LC_ADDRESS=de_DE.UTF-8
@@ -182,6 +181,8 @@ alias w='wicd-curses'
 alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
 alias vpn-disconnect="sudo vpnc-disconnect"
 alias cal="cal -3"
+alias calc="gcalccmd"
+alias iptv="vlc --repeat --http-caching 2000 --http-reconnect --vout-filter deinterlace --deinterlace-mode yadif http://iptv.fbihome.de/playlists/iptv_tv_unicast.m3u"
 
 alias mnt="sudo mount"
 alias umnt="sudo umount -l"
