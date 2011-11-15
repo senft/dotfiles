@@ -14,6 +14,8 @@ set incsearch		" do incremental searching
 set modeline 		" use vim-directives in files
 set cursorline
 
+set laststatus=2
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -66,8 +68,10 @@ map <c-h> <c-w>h
 " Restore cursor position from previously edited files
 function! ResCur()
   if line("'\"") <= line("$")
-    normal! g`"
-    return 1
+      if filereadable(expand('%:p'))
+        normal! g`"
+        return 1
+      endif
   endif
 endfunction
 
@@ -76,10 +80,9 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
+let g:SuperTabMappingForward='<tab>'
+
 " Load Ulti Snips
 set runtimepath+=~/.vim/ultisnips_rep 
-
 let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<s-tab>"
-
-let g:SuperTabMappingForward='<tab>'
