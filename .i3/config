@@ -5,6 +5,9 @@ workspace_layout tabbed
 # Disable focus follows mouse
 focus_follows_mouse no
 
+# ISO 10646 = Unicode
+font -xos4-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
+
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod4
 
@@ -15,13 +18,15 @@ client.unfocused              #333333 #333333 #999999
 client.urgent                 #FF0000 #8C5665 #999999
 
 # Assign applications to workspaces
-assign feh ~
-assign Pidgin ~im
-assign Chrome www
-assign Firefox www
-assign Eclipse dev 
-assign Vlc misc
-assign sun-awt-X11-XFramePeer ~
+assign [class="feh"] ~
+assign [class="Pidgin"] im
+assign [class="Chrome"] www
+assign [class="Firefox"] www
+assign [class="Eclipse"] dev
+assign [class="Vlc"] misc
+assign [class="sun-awt-X11-XFramePeer"] ~
+
+# for_window [class="Pidgin"] floating enable
 
 #
 # Binds
@@ -121,6 +126,51 @@ bindcode Mod4+Control+43 focus parent; move left
 bindcode Mod4+Control+44 focus parent; move down
 bindcode Mod4+Control+45 focus parent; move up
 bindcode Mod4+Control+46 focus parent; move right
+
+# Resize container
+bindsym Mod4+v split vertical
+bindsym Mod4+m split horizontal
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # They resize the border in the direction you pressed, e.g.
+        # when pressing left, the window is resized so that it has
+        # more space on its left
+
+        bindsym j               resize shrink left 50 px or 50 ppt
+        bindsym Shift+j         resize grow   left 50 px or 50 ppt
+
+        bindsym k               resize shrink down 50 px or 50 ppt
+        bindsym Shift+k         resize grow   down 50 px or 50 ppt
+
+        bindsym l               resize shrink up 50 px or 50 ppt
+        bindsym Shift+l         resize grow   up 50 px or 50 ppt
+
+        bindsym semicolon       resize shrink right 50 px or 50 ppt
+        bindsym Shift+semicolon resize grow   right 50 px or 50 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink left 50 px or 50 ppt
+        bindsym Shift+Left  resize grow   left 50 px or 50 ppt
+
+        bindsym Down        resize shrink down 50 px or 50 ppt
+        bindsym Shift+Down  resize grow   down 50 px or 50 ppt
+
+        bindsym Up          resize shrink up 50 px or 50 ppt
+        bindsym Shift+Up    resize grow   up 50 px or 50 ppt
+
+        bindsym Right       resize shrink right 50 px or 50 ppt
+        bindsym Shift+Right resize grow   right 50 px or 50 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym Mod4+Shift+r mode "resize"
+
 
 # Workspaces (Mod1+1/2/…)
 bindcode Mod4+10 workspace term
