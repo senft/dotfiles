@@ -27,6 +27,9 @@ assign [class="Vlc"] misc
 assign [class="sun-awt-X11-XFramePeer"] ~
 
 # for_window [class="Pidgin"] floating enable
+for_window [class="xfce4-notifyd"] floating enable
+for_window [class="file_progress"] floating enable
+
 
 #
 # Binds

@@ -83,6 +83,9 @@ compinit
 bindkey "^r" history-incremental-search-backward
 bindkey '^I' complete-word # complete on tab, leave expansion to _expand
 
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
+
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
 
@@ -152,7 +155,8 @@ zstyle '*' single-ignored show
 
 
 # ls
-alias ls='ls -hF --color=always'
+#alias ls='ls -hF --color=always'
+alias ls='ls++'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
