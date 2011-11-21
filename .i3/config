@@ -23,10 +23,11 @@ assign [class="Chrome"] www
 assign [class="Firefox"] www
 assign [class="Eclipse"] dev
 assign [class="Vlc"] misc
-assign [class="sun-awt-X11-XFramePeer"] ~
 
-#for_window [class="Pidgin"] floating enable
+for_window [class"sun-awt-X11-XFramePeer"] floating enable
+for_window [class="Pidgin"] floating enable
 for_window [class="feh"] floating enable
+for_window [class="xfce4-notifyd"] floating enable
 
 #
 # Binds

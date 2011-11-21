@@ -25,7 +25,6 @@ export LC_TELEPHONE=de_DE.UTF-8
 export LC_MEASUREMENT=de_DE.UTF-8
 export LC_IDENTIFICATION=de_DE.UTF-8
 
-
 eval $(dircolors -b)
 
 bindkey "\e[1~" beginning-of-line # Home
@@ -82,6 +81,9 @@ compinit
 
 bindkey "^r" history-incremental-search-backward
 bindkey '^I' complete-word # complete on tab, leave expansion to _expand
+
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
 
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
