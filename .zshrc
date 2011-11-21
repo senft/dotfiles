@@ -152,7 +152,8 @@ zstyle '*' single-ignored show
 
 
 # ls
-alias ls='ls -hF --color=always'
+#alias ls='ls -hF --color=always'
+alias ls='ls++'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'

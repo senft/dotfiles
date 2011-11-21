@@ -18,7 +18,6 @@ client.unfocused              #333333 #333333 #999999
 client.urgent                 #FF0000 #8C5665 #999999
 
 # Assign applications to workspaces
-assign [class="feh"] ~
 assign [class="Pidgin"] im
 assign [class="Chrome"] www
 assign [class="Firefox"] www
@@ -26,7 +25,8 @@ assign [class="Eclipse"] dev
 assign [class="Vlc"] misc
 assign [class="sun-awt-X11-XFramePeer"] ~
 
-# for_window [class="Pidgin"] floating enable
+#for_window [class="Pidgin"] floating enable
+for_window [class="feh"] floating enable
 
 #
 # Binds

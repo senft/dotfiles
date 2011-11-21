@@ -1,7 +1,11 @@
-set guioptions+=B
+set guioptions+=BTN
+set hintkeys=asdfghjkl
 
 noremap <C-c> <C-v><C-c>
 noremap <C-v> <C-v><C-v>
+noremap <C-w>
+
+nnoremap <C-f> /
 
 nnoremap j 5j
 nnoremap k 5k
@@ -9,5 +13,5 @@ nnoremap k 5k
 noremap J <C-p>
 noremap K <C-n>
 
-autocmd LocationChange .* js modes.passAllKeys = /(www|mail)\.google\.com/.test(buffer.URL)
-autocmd LocationChange .* js modes.passAllKeys += /www\.google\.com\\reader/.test(buffer.URL)
+:set passkeys+=mail.google.com:jk<CR>,gi
+:set passkeys+=google.com/reader:jk<CR>,gi
