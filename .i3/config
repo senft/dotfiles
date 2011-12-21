@@ -33,7 +33,7 @@ assign [class="Vlc"] misc
 # Binds
 #
 # Application starter
-bindcode Mod4+23 exec /usr/bin/dmenu_mpc
+bindcode Mod4+23 exec dmenu_mpc
 bindcode Mod4+25 exec /usr/bin/chromium-browser
 bindcode Mod4+32 exec /usr/bin/urxvtc -e 'ncmpcpp'
 bindcode Mod4+Shift+36 exec /usr/bin/urxvtc
