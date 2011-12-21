@@ -3,7 +3,7 @@ set hintkeys=asdfghjkl
 
 noremap <C-c> <C-v><C-c>
 noremap <C-v> <C-v><C-v>
-noremap <C-w>
+noremap <C-w> d
 
 nnoremap <C-f> /
 
