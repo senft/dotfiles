@@ -4,6 +4,9 @@ export BROWSER=chromium
 export PAGER=less
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
 
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -13,6 +16,8 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export LESS=-r
 
+export LC_ALL=
+export LC_LANG=de_DE.UTF-8
 export LC_MESSAGES=en_US.UTF-8
 export LC_NUMERIC=de_DE.UTF-8
 export LC_TIME=de_DE.UTF-8
@@ -24,14 +29,15 @@ export LC_ADDRESS=de_DE.UTF-8
 export LC_TELEPHONE=de_DE.UTF-8
 export LC_MEASUREMENT=de_DE.UTF-8
 export LC_IDENTIFICATION=de_DE.UTF-8
+export LC_CTYPE=de_DE.UTF-8
 
 eval $(dircolors -b)
 
 bindkey "\e[1~" beginning-of-line # Home
 bindkey "\e[4~" end-of-line # End
 bindkey "\e[3~" delete-char # Del
-bindkey "\e[5C" forward-word
-bindkey "\e[5D" backward-word
+#bindkey "\e[5C" forward-word
+#bindkey "\e[5D" backward-word
 bindkey "\e[7~" beginning-of-line # Home
 bindkey "\e[8~" end-of-line # End
 
@@ -43,7 +49,7 @@ bindkey '\ee' edit-command-line
 
 # Set/unset  shell options
 setopt   notify globdots correct pushdtohome cdablevars autolist
-setopt   correctall autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
+setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
 setopt   autoresume histignoredups pushdsilent menucomplete
 setopt   autopushd pushdminus extendedglob rcquotes mailwarning
 unsetopt bgnice autoparamslash
@@ -55,8 +61,8 @@ zmodload -a zsh/zprof zprof
 zmodload -a zsh/mapfile mapfile
 
 HISTFILE=$HOME/.zhistory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 autoload colors zsh/terminfo
 if [[ "$terminfo[colors]" -ge 8 ]]; then
@@ -152,10 +158,9 @@ zstyle ':completion:*:ssh:*' tag-order users 'hosts:-host hosts:-domain:domain h
 zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
-
 # ls
 #alias ls='ls -hF --color=always'
-alias ls='ls++'
+alias ls='ls++ --potsf'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
@@ -174,9 +179,7 @@ alias pau='pacman -U'
 # programs
 alias off="sudo shutdown -h now"
 alias reboot="sudo reboot"
-alias suspend="sudo pm-suspend"
 alias grep='grep --color=auto'
-alias ncdf='discus'
 alias df='df -h'
 alias du='du -c -h'
 alias mkdir='mkdir -p'
@@ -190,9 +193,6 @@ alias iptv="vlc --repeat --http-caching 2000 --http-reconnect --vout-filter dein
 alias jungletrain="mplayer -playlist http://jungletrain.net/128kbps.m3u"
 alias bassdrive="mplayer -playlist http://www.bassdrive.com/v2/streams/BassDrive.pls"
 alias di.fm-liquid="mplayer -playlist http://www.di.fm/mp3/liquiddnb.pls"
-
-alias mnt="sudo mount"
-alias umnt="sudo umount -l"
 
 # cd
 alias home="cd ~"
@@ -234,41 +234,3 @@ mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 remindme() { sleep $1 && zenity --info --text "$2" & }
-
-# A shortcut function that simplifies usage of xclip.
-# - Accepts input from either stdin (pipe), or params.
-# - If the input is a filename that exists, then it
-#   uses the contents of that file.
-# ------------------------------------------------
-cb() {
-  local _scs_col="\e[0;32m"; local _wrn_col='\e[1;31m'; local _trn_col='\e[0;33m'
-  # Check that xclip is installed.
-  if ! type xclip > /dev/null 2>&1; then
-    echo -e "$_wrn_col""You must have the 'xclip' program installed.\e[0m"
-  # Check user is not root (root doesn't have access to user xorg server)
-  elif [[ "$USER" == "root" ]]; then
-    echo -e "$_wrn_col""Must be regular user (not root) to copy a file to the clipboard.\e[0m"
-  else
-    # If no tty, data should be available on stdin
-    if ! [[ "$( tty )" == /dev/* ]]; then
-      input="$(< /dev/stdin)"
-    # Else, fetch input from params
-    else
-      input="$*"
-    fi
-    if [ -z "$input" ]; then  # If no input, print usage message.
-      echo "Copies a string or the contents of a file to the clipboard."
-      echo "Usage: cb <string or file>"
-      echo "       echo <string or file> | cb"
-    else
-      # If the input is a filename that exists, then use the contents of that file.
-      if [ -f "$input" ]; then input="$(cat $input)"; fi
-      # Copy input to clipboard
-      echo -n "$input" | xclip -selection c
-      # Truncate text for status
-      if [ ${#input} -gt 80 ]; then input="$(echo $input | cut -c1-80)$_trn_col...\e[0m"; fi
-      # Print status.
-      echo -e "$_scs_col""Copied to clipboard:\e[0m $input"
-    fi
-  fi
-}

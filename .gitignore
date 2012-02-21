@@ -1,0 +1,7 @@
+.bin/ssh_uni
+.config/ranger/tagged
+.config/ranger/bookmarks
+.config/ranger/history
+.vim/.VimballRecord
+.vim/.netrwhist
+.i3/log

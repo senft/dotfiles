@@ -3,7 +3,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smartindent
-" set nosmartindent
 
 map <F7> :!pep8 %<CR>
 

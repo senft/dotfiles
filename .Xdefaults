@@ -39,6 +39,8 @@ URxvt*background:       black
 URxvt*foreground:       white
 URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-*-*
 !URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
+!URxvt.font: xft:envy code r:pixelsize=12
+!URxvt.boldFont: xft:envy code r:bold:pixelsize=12
 URxvt.xftAntialias:     true
 URxvt*shading:          15 
 URxvt*saveLines:        12000
@@ -49,7 +51,6 @@ URxvt*loginShell:       true
 URxvt*inheritPixmap:    true
 URxvt*print-pipe:       cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-lib:         /usr/lib/urxvt/perl/
-!URxvt*perl-ext-common:  matcher
 URxvt.perl-ext-common:  default,url-select
 URxvt*perl-ext:         selection,clipboard
 URxvt*urlLauncher:      /usr/bin/chromium-browser

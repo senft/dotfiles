@@ -8,7 +8,3 @@ let NERDTreeIgnore=['\.aux$', '\.log$', '\.lof$', '\.toc$']
 
 " Bind \ll (compile) and \lv (view) to F5
 :map <F5> \ll<CR>\lv
-
-:set spell
-:set spelllang=de,en
-:set spellfile+=~/.vim/spell/tex.add

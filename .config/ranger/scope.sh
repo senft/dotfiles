@@ -1,10 +1,11 @@
 #!/bin/bash
-# This script is called whenever you preview a file.
-# Its output is used as the preview.  ANSI color codes are supported.
+# ranger supports enhanced previews.  If the option "use_preview_script"
+# is set to True (by default it's False), this script will be called
+# and its output is displayed in ranger.  ANSI color codes are supported.
 
 # NOTES: This script is considered a configuration file.  If you upgrade
-# ranger, it will be left untouched. (You must update it yourself)
-# NEVER make this script interactive. (by starting mplayer or something)
+# ranger, it will be left untouched. (You must update it yourself.)
+# Also, ranger disables STDIN here, so interactive scripts won't work properly
 
 # Meanings of exit codes:
 # code | meaning    | action of ranger
@@ -30,30 +31,41 @@ extension=$(echo "$path" | grep '\.' | grep -o '[^.]\+$')
 # Functions:
 # "have $1" succeeds if $1 is an existing command/installed program
 function have { type -P "$1" > /dev/null; }
-# "sucess" returns the exit code of the first program in the last pipe chain
+# "success" returns the exit code of the first program in the last pipe chain
 function success { test ${PIPESTATUS[0]} = 0; }
 
 case "$extension" in
+    # RAR archives
+    rar)
+		unrar l -p- "$path" | head -n $maxln
+		success && exit 0 || acat "$path" | head -n $maxln && exit 3
+		exit 1;;
 	# Archive extensions:
 	7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
 	rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
-		atool -l "$path" | head -n $maxln && exit 3
+		als "$path" | head -n $maxln
+		success && exit 0 || acat "$path" | head -n $maxln && exit 3
 		exit 1;;
 	# PDF documents:
 	pdf)
-		pdftotext -q "$path" - | head -n $maxln
-		success && exit 3 || exit 1;;
+		pdftotext -l 10 -nopgbrk -q "$path" - | head -n $maxln | fmt -s -w $width
+		success && exit 0 || exit 1;;
+	# BitTorrent Files
+	torrent)
+		transmission-show "$path" | head -n $maxln && exit 3
+		success && exit 5 || exit 1;;
 	# HTML Pages:
 	htm|html|xhtml)
-		have lynx   && lynx   -dump "$path" | head -n $maxln && exit 5
-		have elinks && elinks -dump "$path" | head -n $maxln && exit 5
+		have w3m    && w3m    -dump "$path" | head -n $maxln | fmt -s -w $width && exit 4
+		have lynx   && lynx   -dump "$path" | head -n $maxln | fmt -s -w $width && exit 4
+		have elinks && elinks -dump "$path" | head -n $maxln | fmt -s -w $width && exit 4
 		;; # fall back to highlight/cat if theres no lynx/elinks
 esac
 
 case "$mimetype" in
 	# Syntax highlight for text files:
 	text/* | */xml)
-		highlight --ansi "$path" | head -n $maxln
+		highlight --out-format=ansi "$path" | head -n $maxln
 		success && exit 5 || exit 2;;
 	# Ascii-previews of images:
 	image/*)

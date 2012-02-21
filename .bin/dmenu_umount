@@ -1,0 +1,22 @@
+#!/bin/bash
+# Credit goes to steve___ for help with cleaning this up
+dmenu='dmenu -i'
+all_devices=$(udisks --enumerate-device-files | grep /dev/sd)
+selection=$(udisks --enumerate-device-files | grep /dev/sd | (while read dev; do
+    info=$(udisks --show-info $dev)
+    [[ $(awk '/system internal/ {print $3}'<<<"$info") == '0' ]] || continue
+    [[ $(awk '/usage/ {print $2}'<<<"$info") == 'filesystem' ]]  || continue
+    if [[ $(awk '/is mounted/ {print $3}'<<<"$info") == '0' ]]; then
+        echo "mount:$dev"
+    else
+        echo "unmount:$dev"
+    fi
+done) | sort | $dmenu "$@" -p umount)
+
+[[ $selection ]] || exit 1
+
+if [[ $selection == mount:* ]]; then
+    exec udisks --mount ${selection#mount:}
+else
+    exec udisks --unmount ${selection#unmount:}
+fi
