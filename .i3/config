@@ -56,9 +56,6 @@ bindcode Mod4+23 exec ~/.bin/dmenu_mpd
 bindcode 232 exec ~/.bin/sudo_brightdown
 bindcode 233 exec ~/.bin/sudo_brightup
 
-bindcode Mod4+73 exec ~/.bin/sudo_brightdown
-bindcode Mod4+74 exec ~/.bin/sudo_brightup
-
 bindcode Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
 
 # Toggle Headphone channel
@@ -72,9 +69,8 @@ bindcode Mod4+Shift+86 exec mpc volume +5
 bindcode Mod4+82 exec amixer sset 'Master' 2%-
 bindcode Mod4+86 exec amixer sset 'Master' 2%+
 
-bindcode 122 exec aumix -v -2
-bindcode 123 exec aumix -v +2
-
+bindcode 122 exec amixer sset 'Master' 2%-
+bindcode 123 exec amixer sset 'Master' 2%+
 
 # i3 Binds
 

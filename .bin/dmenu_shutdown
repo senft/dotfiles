@@ -1,0 +1,16 @@
+#!/bin/bash
+result=`printf "shutdown\nreboot\nsuspend" | dmenu`
+case $result in
+    shutdown)
+        sudo shutdown -h now
+        ;;
+    reboot)
+        sudo reboot
+        ;;
+    suspend)
+		xscreensaver-command -lock
+        sudo pm-suspend
+        ;;
+    *)
+        ;;
+    esac
