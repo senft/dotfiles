@@ -29,7 +29,7 @@ set guioptions-=e   " remove tabbar
 set guifont=Envy\ Code\ R\ 10
 set mouse=a
 
-color blackboard
+color badwolf
 
 " Press Space to toggle hilighting (after search)
 :nnoremap <Space> :set hlsearch!<CR>

@@ -38,9 +38,10 @@ Xft.lcdfilter:  lcddefault
 URxvt*background:       black
 URxvt*foreground:       white
 URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-*-*
+!URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-*-*
 !URxvt*font:             -*-terminus-medium-*-normal-*-14-*-*-*-*-*-*-*
-!URxvt.font: xft:envy code r:pixelsize=12
-!URxvt.boldFont: xft:envy code r:bold:pixelsize=12
+!URxvt.font: 			 xft:envy code r:pixelsize=12
+!URxvt.boldFont: 		 xft:envy code r:bold:pixelsize=12
 URxvt.xftAntialias:     true
 URxvt*shading:          15 
 URxvt*saveLines:        12000

@@ -33,8 +33,11 @@ export LC_CTYPE=de_DE.UTF-8
 
 eval $(dircolors -b)
 
-bindkey "\e[1~" beginning-of-line # Home
-bindkey "\e[4~" end-of-line # End
+# Vi(m) mode
+bindkey -v
+
+#bindkey "\e[1~" beginning-of-line # Home
+#bindkey "\e[4~" end-of-line # End
 bindkey "\e[3~" delete-char # Del
 #bindkey "\e[5C" forward-word
 #bindkey "\e[5D" backward-word
@@ -48,10 +51,15 @@ zle -N        edit-command-line
 bindkey '\ee' edit-command-line
 
 # Set/unset  shell options
-setopt   notify globdots correct pushdtohome cdablevars autolist
+#setopt   notify globdots correct pushdtohome cdablevars autolist
+#setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
+#setopt   autoresume histignoredups pushdsilent menucomplete
+#setopt   autopushd pushdminus extendedglob rcquotes mailwarning
+#unsetopt bgnice autoparamslash
+
+setopt   notify globdots correct cdablevars autolist
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
-setopt   autoresume histignoredups pushdsilent menucomplete
-setopt   autopushd pushdminus extendedglob rcquotes mailwarning
+setopt   menucomplete extendedglob rcquotes mailwarning
 unsetopt bgnice autoparamslash
 
 # Autoload zsh modules when they are referenced
@@ -79,14 +87,14 @@ unsetopt ALL_EXPORT
 
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
-RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
+#RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
 
-alias =clear
+#alias =clear
 autoload -U compinit
 compinit
 
 bindkey "^r" history-incremental-search-backward
-bindkey '^I' complete-word # complete on tab, leave expansion to _expand
+#bindkey '^I' complete-word # complete on tab, leave expansion to _expand
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
@@ -213,6 +221,7 @@ alias gs="git status"
 alias gb="git branch"
 alias gd="git diff"
 alias gc="git commit -am"
+alias gp="git push origin"
 
 packer() {
    case $1 in
@@ -234,3 +243,22 @@ mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 remindme() { sleep $1 && zenity --info --text "$2" & }
+
+
+### Loads all Zsh scripts
+#source ~/.zsh/scripts/*
+
+zle -N zle-keymap-select
+zle -N zle-line-init
+
+function zle-keymap-select () {
+    if [ $KEYMAP = vicmd ]; then
+      echo -ne "\033]12;#ff6565\007"
+    else
+      echo -ne "\033]12;White\007"
+  fi
+  zle reset-prompt
+} 
+function zle-line-init() {
+  zle -K viins
+}

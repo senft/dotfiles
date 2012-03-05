@@ -52,6 +52,7 @@ bindcode Mod4+31 exec /usr/bin/pidgin
 bindcode Mod4+27 exec /usr/bin/dmenu_run -i -fn "-*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*" -nb "#151515" -nf "#909090" -sb "#303030" -sf "#FFF"
 bindcode Mod4+33 exec ~/.bin/dmenu_playlist
 bindcode Mod4+23 exec ~/.bin/dmenu_mpd
+bindcode Mod4+Shift+9 exec ~/.bin/dmenu_shutdown
 
 bindcode 232 exec ~/.bin/sudo_brightdown
 bindcode 233 exec ~/.bin/sudo_brightup
