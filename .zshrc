@@ -244,10 +244,6 @@ mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 remindme() { sleep $1 && zenity --info --text "$2" & }
 
-
-### Loads all Zsh scripts
-#source ~/.zsh/scripts/*
-
 zle -N zle-keymap-select
 zle -N zle-line-init
 
