@@ -42,9 +42,10 @@ bindcode Mod4+Shift+36 exec /usr/bin/urxvtc
 bindcode Mod4+53 exec /usr/bin/mpc toggle
 bindcode Mod4+114 exec /usr/bin/mpc next
 bindcode Mod4+113 exec /usr/bin/mpc prev
-bindcode Mod4+20 exec mpd-osd
 
+# Desktop
 bindcode 107 exec scrot ~/Bilder/Screenshots/%Y-%m-%d-%H%M%S-screenshot.png
+# Laptop
 bindcode Mod4+118 exec scrot ~/Bilder/Screenshots/%Y-%m-%d-%H%M%S-screenshot.png
 
 bindcode Mod4+31 exec /usr/bin/pidgin
@@ -66,14 +67,17 @@ bindcode 121 exec amixer -q set Master toggle
 bindcode Mod4+Shift+82 exec mpc volume -5
 bindcode Mod4+Shift+86 exec mpc volume +5
 
+# Desktop
 bindcode Mod4+82 exec amixer sset 'Master' 2%-
 bindcode Mod4+86 exec amixer sset 'Master' 2%+
 
+# Laptop
 bindcode 122 exec amixer sset 'Master' 2%-
 bindcode 123 exec amixer sset 'Master' 2%+
 
+#
 # i3 Binds
-
+#
 # Mod+Shift+q exits i3
 bindcode Mod4+Shift+24 exit
 
@@ -110,33 +114,15 @@ bindcode Mod4+44 focus down
 bindcode Mod4+45 focus up
 bindcode Mod4+46 focus right
 
-# Focus Container (Mod3+j/k/l/;)
-#bind Mod1+43 wch
-#bind Mod1+44 wcj
-#bind Mod1+45 wck
-#bind Mod1+46 wcl
-
 # Create Container
 bindsym Mod4+v split vertical
 bindsym Mod4+m split horizontal
-
-# Snap (Mod1+Control+j/k/l/;)
-#bind Mod4+Control+43 sh
-#bind Mod4+Control+44 sj
-#bind Mod4+Control+45 sk
-#bind Mod4+Control+46 sl
 
 # Move (Mod1+Shift+j/k/l/;)
 bindcode Mod4+Shift+43 move left
 bindcode Mod4+Shift+44 move down
 bindcode Mod4+Shift+45 move up
 bindcode Mod4+Shift+46 move right
-
-# Move Container (Mod4+Control+j/k/l/;)
-#bindcode Mod4+Control+43 focus parent; move left
-#bindcode Mod4+Control+44 focus parent; move down
-#bindcode Mod4+Control+45 focus parent; move up
-#bindcode Mod4+Control+46 focus parent; move right
 
 # Workspaces (Mod1+1/2/…)
 bindcode Mod4+10 workspace term
@@ -208,7 +194,6 @@ bar {
     mode              dock
     workspace_buttons yes
 
-    #font -misc-envy code r-medium-r-normal--12-120-100-100-m-0-iso10646-1
 	font -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso10646-1
 
     colors {
@@ -231,7 +216,6 @@ ipc-socket ~/.i3/ipc.sock
 #
 # Autostart
 #
-
 exec feh --bg-scale ~/.bg.jpg
 exec urxvtc
 exec volumeicon
