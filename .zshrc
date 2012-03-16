@@ -36,11 +36,7 @@ eval $(dircolors -b)
 # Vi(m) mode
 bindkey -v
 
-#bindkey "\e[1~" beginning-of-line # Home
-#bindkey "\e[4~" end-of-line # End
 bindkey "\e[3~" delete-char # Del
-#bindkey "\e[5C" forward-word
-#bindkey "\e[5D" backward-word
 bindkey "\e[7~" beginning-of-line # Home
 bindkey "\e[8~" end-of-line # End
 
@@ -49,13 +45,6 @@ setopt ALL_EXPORT
 autoload      edit-command-line
 zle -N        edit-command-line
 bindkey '\ee' edit-command-line
-
-# Set/unset  shell options
-#setopt   notify globdots correct pushdtohome cdablevars autolist
-#setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
-#setopt   autoresume histignoredups pushdsilent menucomplete
-#setopt   autopushd pushdminus extendedglob rcquotes mailwarning
-#unsetopt bgnice autoparamslash
 
 setopt   notify globdots correct cdablevars autolist
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
@@ -89,12 +78,10 @@ PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
 #RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
 
-#alias =clear
 autoload -U compinit
 compinit
 
 bindkey "^r" history-incremental-search-backward
-#bindkey '^I' complete-word # complete on tab, leave expansion to _expand
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
