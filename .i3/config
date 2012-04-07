@@ -27,9 +27,11 @@ assign [class="Eclipse"] dev
 assign [class="Vlc"] misc
 assign [class="Thunderbird"] mail
 
+for_window [class="Xfce4-notifyd"] floating enable border none
 for_window [class="Pidgin"] floating enable
 for_window [class="Desura"] floating enable
 for_window [class="Speedcrunch"] floating enable
+for_window [title="Colonists"] floating enable
 
 #
 # Binds
@@ -190,7 +192,7 @@ bindsym Mod4+Shift+r mode "resize"
 
 bar {
     status_command    conky
-    position          bottom
+    position          top
     mode              dock
     workspace_buttons yes
 
