@@ -35,14 +35,15 @@ Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 
 ! urxvt ----------------------------------------------------------------------
-URxvt*iconFile: /usr/share/icons/Faenza/apps/96/lxterminal.png
+URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
 URxvt*background:       black
 URxvt*foreground:       white
+URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
 URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
-!URxvt*font:             -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
-!URxvt*font:             -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
 URxvt.xftAntialias:     false
+!URxvt.font: 			-xos4-terminus-medium-r-normal--14-140-72-72-*-*-*-*
+!URxvt.boldFont: 		-xos4-terminus-bold-r-normal--14-140-72-72-*-*-*-*
 URxvt*shading:          15 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true

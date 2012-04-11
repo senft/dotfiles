@@ -7,15 +7,6 @@ export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-t
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;47;34m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-export LESS=-r
-
 export LC_ALL=
 export LC_LANG=de_DE.UTF-8
 export LC_MESSAGES=en_US.UTF-8
@@ -36,11 +27,7 @@ eval $(dircolors -b)
 # Vi(m) mode
 bindkey -v
 
-#bindkey "\e[1~" beginning-of-line # Home
-#bindkey "\e[4~" end-of-line # End
 bindkey "\e[3~" delete-char # Del
-#bindkey "\e[5C" forward-word
-#bindkey "\e[5D" backward-word
 bindkey "\e[7~" beginning-of-line # Home
 bindkey "\e[8~" end-of-line # End
 
@@ -49,13 +36,6 @@ setopt ALL_EXPORT
 autoload      edit-command-line
 zle -N        edit-command-line
 bindkey '\ee' edit-command-line
-
-# Set/unset  shell options
-#setopt   notify globdots correct pushdtohome cdablevars autolist
-#setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
-#setopt   autoresume histignoredups pushdsilent menucomplete
-#setopt   autopushd pushdminus extendedglob rcquotes mailwarning
-#unsetopt bgnice autoparamslash
 
 setopt   notify globdots correct cdablevars autolist
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
@@ -86,15 +66,23 @@ done
 unsetopt ALL_EXPORT
 
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
-PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
+PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR] %(!.#.$) "
 #RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
 
-#alias =clear
+#------------------------------
+# Window title
+#------------------------------
+case $TERM in
+    *xterm*|rxvt|rxvt-unicode|rxvt-256color|rxvt-unicode-256color|(dt|k|E)term)
+		precmd () { print -Pn "\e]0;%n@%M [%~] \a" } 
+		preexec () { print -Pn "\e]0;%n@%M [%~] ($1)\a" }
+	;; 
+esac
+
 autoload -U compinit
 compinit
 
 bindkey "^r" history-incremental-search-backward
-#bindkey '^I' complete-word # complete on tab, leave expansion to _expand
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
@@ -110,7 +98,6 @@ zstyle -e ':completion:*:approximate:*' max-errors \
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 
 # Completion Styles
-
 # list of completers to use
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 

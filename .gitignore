@@ -2,6 +2,7 @@
 .config/ranger/tagged
 .config/ranger/bookmarks
 .config/ranger/history
+.config/ranger/__pycache__/
 .vim/.VimballRecord
 .vim/.netrwhist
 .i3/log
