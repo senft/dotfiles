@@ -190,7 +190,7 @@ bindsym Mod4+Shift+r mode "resize"
 
 bar {
     status_command    conky
-    position          bottom
+    position          top
     mode              dock
     workspace_buttons yes
 
