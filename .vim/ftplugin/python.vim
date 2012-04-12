@@ -2,14 +2,12 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set smartindent
-
-map <F7> :!pep8 %<CR>
+set nosmartindent
+set textwidth=80
+set colorcolumn=80
 
 map <F5> :w<CR>:!chmod +x "%"<CR>:!./"%"<CR>
 map <F6> :w<CR>:!./.run <CR>
-set textwidth=80
-set colorcolumn=80
 
 " Completion
 set omnifunc=pythoncomplete#Complete
