@@ -58,6 +58,9 @@ nnoremap <silent> <F10> :BufExplorer<CR>
 " Toggle paste mode with F2
 nnoremap <F12> :set invpaste paste?<CR>
 
+" Cose buffer on CRTL+w
+nnoremap <C-w> :bdelete<CR>
+
 " Move between windows with crtl+{hjkl}
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -79,6 +82,8 @@ map <A-0> :b10<CR>
 "Use Q for formatting the current paragraph (or selection)
 vmap Q gq
 nmap Q gqap
+
+let g:SuperTabClosePreviewOnPopupClose=1
 
 let g:SuperTabMappingForward='<tab>'
 

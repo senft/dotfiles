@@ -128,7 +128,6 @@ syn keyword pythonPreCondit	import from
 syn keyword pythonException	try except finally
 syn keyword pythonOperator	and in is not or
 
-syn keyword pythonConstant True False None
 syn keyword pythonSelf self
 
 " Decorators (new in Python 2.4)

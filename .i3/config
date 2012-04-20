@@ -224,4 +224,8 @@ exec volumeicon
 exec xset m 1 0
 exec xsetroot -cursor_name left_ptr
 exec xscreensaver -no-splash
+exec mpd
+exec mpc stop
+exec mpdscribble
+exec (sleep 20 && dropbox start)
 exec numlockx
