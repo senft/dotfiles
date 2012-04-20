@@ -87,8 +87,6 @@ let g:SuperTabClosePreviewOnPopupClose=1
 
 let g:SuperTabMappingForward='<tab>'
 
-" Load Ulti Snips
-"set runtimepath+=~/.vim/ultisnips_rep
 let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<s-tab>"
 

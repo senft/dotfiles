@@ -169,7 +169,6 @@ alias rs='pacman -Rs'
 alias pas='packer -S'
 alias paqs='pacman -Qs'
 alias paql='pacman -Ql'
-alias paqi='pacman -Qi'
 alias pass='packer -Ss'
 alias pau='pacman -U'
 
@@ -185,6 +184,9 @@ alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
 alias vpn-disconnect="sudo vpnc-disconnect"
 alias cal="cal -3"
 alias calc="gcalccmd"
+alias ipy='ipython -i'
+alias ipy2='ipython2 -i'
+alias t="todo.sh -c"
 
 alias iptv="vlc --repeat --http-caching 2000 --http-reconnect --vout-filter deinterlace --deinterlace-mode yadif http://iptv.fbihome.de/playlists/iptv_tv_unicast.m3u"
 alias jungletrain="mplayer -playlist http://jungletrain.net/128kbps.m3u"
@@ -231,7 +233,7 @@ mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
-remindme() { sleep $1 && zenity --info --text "$2" & }
+remindme() { (sleep $1 && zenity --info --text "$2") & }
 
 zle -N zle-keymap-select
 zle -N zle-line-init
