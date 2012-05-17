@@ -196,6 +196,7 @@ alias di.fm-liquid="mplayer -playlist http://www.di.fm/mp3/liquiddnb.pls"
 # cd
 alias home="cd ~"
 alias done="cd ~/Downloads/"
+alias uni="cd ~/Uni/"
 alias back="cd -"
 alias ..="cd .."
 

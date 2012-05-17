@@ -228,5 +228,6 @@ exec xscreensaver -no-splash
 exec mpd
 exec mpc stop
 exec mpdscribble
-exec (sleep 20 && dropbox start)
+exec (sleep 10 && dropbox start)
+exec volumeicon
 exec numlockx
