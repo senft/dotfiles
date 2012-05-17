@@ -221,7 +221,8 @@ ipc-socket ~/.i3/ipc.sock
 exec feh --bg-scale ~/.bg.jpg
 exec urxvtc
 exec volumeicon
-exec xset m 1 0
+exec xfce4-power-manager
+exec xset m 2 2
 exec xsetroot -cursor_name left_ptr
 exec xscreensaver -no-splash
 exec mpd
