@@ -229,5 +229,4 @@ exec mpd
 exec mpc stop
 exec mpdscribble
 exec (sleep 10 && dropbox start)
-exec volumeicon
 exec numlockx
