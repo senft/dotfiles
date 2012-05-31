@@ -173,7 +173,8 @@ alias pass='packer -Ss'
 alias pau='pacman -U'
 
 # programs
-alias off="sudo shutdown -h now"
+alias shutdown="sudo shutdown"
+alias off="shutdown -h now"
 alias reboot="sudo reboot"
 alias grep='grep --color=auto'
 alias df='df -h'
