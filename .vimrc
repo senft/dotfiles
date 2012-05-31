@@ -79,6 +79,10 @@ map <A-8> :b8<CR>
 map <A-9> :b9<CR>
 map <A-0> :b10<CR>
 
+" Arrow keys for buffer movement
+noremap <left> :bp<CR>
+noremap <right> :bn<CR>
+
 "Use Q for formatting the current paragraph (or selection)
 vmap Q gq
 nmap Q gqap
