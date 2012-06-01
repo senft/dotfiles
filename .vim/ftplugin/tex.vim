@@ -1,5 +1,8 @@
 filetype plugin indent on
 
+set spell
+set spelllang=de
+
 set formatoptions=tcq
 set textwidth=80
 
