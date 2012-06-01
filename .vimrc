@@ -19,7 +19,7 @@ set cursorline
 
 set laststatus=2
 
-set tabstop=4       " a tab is two spaces (or set this to 4)
+set tabstop=4       " a tab is 4 spaces
 set shiftwidth=4
 set smartindent
 
@@ -49,17 +49,10 @@ let Tlist_Show_One_File = 1
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 nnoremap <silent> <F4> :TlistToggle<CR>
 
-let NERDTreeQuitOnOpen = 1
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
-
-let g:bufExplorerSortBy='name'
-nnoremap <silent> <F10> :BufExplorer<CR>
+nnoremap <C-t> :CommandT<CR>
 
 " Toggle paste mode with F2
 nnoremap <F12> :set invpaste paste?<CR>
-
-" Cose buffer on CRTL+w
-" nnoremap <C-w> :bdelete<CR>
 
 " Move between windows with crtl+{hjkl}
 nnoremap <C-j> <C-w>j
@@ -67,28 +60,15 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
-" Move between buffers
-map <A-1> :b1<CR>
-map <A-2> :b2<CR>
-map <A-3> :b3<CR>
-map <A-4> :b4<CR>
-map <A-5> :b5<CR>
-map <A-6> :b6<CR>
-map <A-7> :b7<CR>
-map <A-8> :b8<CR>
-map <A-9> :b9<CR>
-map <A-0> :b10<CR>
-
 " Arrow keys for buffer movement
-noremap <left> :bp<CR>
-noremap <right> :bn<CR>
+noremap <left> :bp!<CR>
+noremap <right> :bn!<CR>
 
 "Use Q for formatting the current paragraph (or selection)
 vmap Q gq
 nmap Q gqap
 
 let g:SuperTabClosePreviewOnPopupClose=1
-
 let g:SuperTabMappingForward='<tab>'
 
 let g:UltiSnipsExpandTrigger="<s-tab>"
