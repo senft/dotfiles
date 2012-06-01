@@ -187,7 +187,7 @@ alias cal="cal -3"
 alias calc="gcalccmd"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
-alias t="todo.sh -c"
+alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 
 alias iptv="vlc --repeat --http-caching 2000 --http-reconnect --vout-filter deinterlace --deinterlace-mode yadif http://iptv.fbihome.de/playlists/iptv_tv_unicast.m3u"
 alias jungletrain="mplayer -playlist http://jungletrain.net/128kbps.m3u"
