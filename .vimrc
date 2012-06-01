@@ -59,7 +59,7 @@ nnoremap <silent> <F10> :BufExplorer<CR>
 nnoremap <F12> :set invpaste paste?<CR>
 
 " Cose buffer on CRTL+w
-nnoremap <C-w> :bdelete<CR>
+" nnoremap <C-w> :bdelete<CR>
 
 " Move between windows with crtl+{hjkl}
 nnoremap <C-j> <C-w>j
