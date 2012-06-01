@@ -44,7 +44,7 @@ URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
 URxvt.xftAntialias:     false
 !URxvt.font: 			-xos4-terminus-medium-r-normal--14-140-72-72-*-*-*-*
 !URxvt.boldFont: 		-xos4-terminus-bold-r-normal--14-140-72-72-*-*-*-*
-URxvt*shading:          15 
+URxvt*shading:          20 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
 URxvt*urgentOnBell:     true
