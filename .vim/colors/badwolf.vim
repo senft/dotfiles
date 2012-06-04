@@ -78,8 +78,8 @@ let s:bwc.dalespale = ['fade3e', 221]
 " A beautiful tan from Tomorrow Night.
 let s:bwc.dirtyblonde = ['f4cf86', 222]
 
-" Delicious, chewy red from Made of Code for the poppiest highlights.
-let s:bwc.taffy = ['ff2c4b', 196]
+" Delicious, chewy red from Made of Code for the poppiest highlights. (196)
+let s:bwc.taffy = ['ff2c4b', 197]
 
 " Another chewy accent, but use sparingly!
 let s:bwc.saltwatertaffy = ['8cffba', 121]
