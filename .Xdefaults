@@ -1,29 +1,46 @@
 *background: #000000
 *foreground: #FFFFFF
-! Black + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #DC143C
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #ADFF2F
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
-! DarkBlue + Blue
-*color4:  #4169E1
-*color12: #1E90FF
-! DarkMangenta + Mangenta
-*color5:  #9932CC
-*color13: #8B008B
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
+!! Black + DarkGrey
+!*color0:  #000000
+!*color8:  #555753
+!! DarkRed + Red
+!*color1:  #ff6565
+!*color9:  #DC143C
+!! DarkGreen + Green
+!*color2:  #93d44f
+!*color10: #ADFF2F
+!! DarkYellow + Yellow
+!*color3:  #eab93d
+!*color11: #ffc123
+!! DarkBlue + Blue
+!*color4:  #4169E1
+!*color12: #1E90FF
+!! DarkMangenta + Mangenta
+!*color5:  #9932CC
+!*color13: #8B008B
+!!DarkCyan + Cyan (both not tango)
+!*color6:  #89b6e2
+!*color14: #46a4ff
+!! LightGrey + White
+!*color7:  #cccccc
+!*color15: #ffffff
+
+*color0: #000000
+*color8: #AABC53
+*color1: #AEBC65
+*color9: #B2C73C
+*color2: #A7AE4F
+*color10: #A4952F
+*color3: #AC9E3D
+*color11: #AF7423
+*color4: #A9C7E1
+*color12: #A8CBFF
+*color5: #ABC8CC
+*color13: #ACCC8B
+*color6: #A9C2E2
+*color14: #A8C8FF
+*color7: #AABDCC
+*color15: #FFFFFF
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -35,9 +52,6 @@ Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 
 ! urxvt ----------------------------------------------------------------------
-URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
-URxvt*background:       black
-URxvt*foreground:       white
 URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
 URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
@@ -61,6 +75,13 @@ URxvt*colorUL:          2
 URxvt*cutchars:         `""()'*'<>[]{|}
 URxvt.keysym.M-u:       perl:url-select:select_next
 URxvt.underlineURLs:    true
+
+#tab colors
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 9
+URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.autohide: 1
 
 ! xscreensaver ---------------------------------------------------------------
 !general dialog box (affects main hostname, username, password text)
@@ -87,3 +108,13 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       4
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+
+
+
+
+
+
+
+
+
+
