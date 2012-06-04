@@ -76,7 +76,7 @@ URxvt*cutchars:         `""()'*'<>[]{|}
 URxvt.keysym.M-u:       perl:url-select:select_next
 URxvt.underlineURLs:    true
 
-#tab colors
+! tab colors
 URxvt.tabbed.tabbar-fg: 4
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 9
