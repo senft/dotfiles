@@ -1,3 +1,1 @@
-#!/bin/sh
-DMENU='dmenu -i -nb #151515 -nf #909090 -sb #303030 -sf #FFF'
-
+Code/Sonstiges/dotfiles/.dmenurc
