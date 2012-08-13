@@ -1,3 +1,6 @@
+SSH_AUTH_SOCK=`netstat -xl | grep -o "$HOME"'/.cache/keyring-.*/ssh$'`
+[ -z "$SSH_AUTH_SOCK" ] || export SSH_AUTH_SOCK
+
 export EDITOR=vim
 export VISUAL=vim
 export BROWSER=chromium
