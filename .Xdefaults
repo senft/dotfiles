@@ -1,4 +1,4 @@
-*background: #000000
+*background: #151515
 *foreground: #FFFFFF
 !! Black + DarkGrey
 !*color0:  #000000
@@ -108,13 +108,3 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       4
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-
-
-
-
-
-
-
-
-
-
