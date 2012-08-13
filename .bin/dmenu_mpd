@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#
+# Lists all files/dirs in mpd-collections main directory and plays the selected
+#
+
+if [ -f $HOME/.dmenurc ]; then
+    . $HOME/.dmenurc
+else
+    DMENU='dmenu -i'
+fi
+
+result=`mpc ls | grep -v mp3 | $DMENU -p library`
+
+[[ $result == "" ]] && exit 0
+if [ -d ~/Musik/"$result" ]; then
+    mpc clear
+    mpc add "$result"
+    mpc play
+fi
