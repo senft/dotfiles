@@ -1,9 +1,5 @@
 # Disable borders
-<<<<<<< HEAD
-new_window none
-=======
 new_window 1pixel
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 workspace_layout tabbed
 default_orientation horizontal
 
@@ -11,21 +7,13 @@ default_orientation horizontal
 focus_follows_mouse no
 
 # ISO 10646 = Unicode
-<<<<<<< HEAD
 font -*-envy code r-medium-r-*-*-12-*-*-*-*-*-*-*
-=======
-font -*-terminus-medium-r-normal-*-12-*-*-*-*-*-iso10646-1
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 
 # Use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod4
 
 # class                       border  backgr. text    indicator
-<<<<<<< HEAD
 client.focused                #151515 #606060 #FFFFFF #909090
-=======
-client.focused                #151515 #303030 #FFFFFF #909090
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 client.focused_inactive       #151515 #303030 #909090 #151515
 client.unfocused              #151515 #151515 #909090 #151515
 client.urgent                 #151515 #FFFFFF #151515 #151515
@@ -37,18 +25,11 @@ assign [class="Chrome"] www
 assign [class="Firefox"] www
 assign [class="Eclipse"] dev
 assign [class="Vlc"] misc
-<<<<<<< HEAD
-assign [class="Thunderbird"] mail
-=======
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 
 for_window [class="Xfce4-notifyd"] floating enable border none
 for_window [class="Pidgin"] floating enable
 for_window [class="Desura"] floating enable
 for_window [class="Speedcrunch"] floating enable
-<<<<<<< HEAD
-for_window [title="Colonists"] floating enable
-=======
 
 workspace "term" output DVI-I-2
 workspace "www" output DVI-I-2
@@ -56,8 +37,6 @@ workspace "im" output DVI-I-1
 workspace "irc" output DVI-I-1
 workspace "dev" output DVI-I-2
 workspace "misc" output DVI-I-2
-
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 
 #
 # Binds
@@ -77,11 +56,7 @@ bindcode 107 exec scrot ~/Bilder/Screenshots/%Y-%m-%d-%H%M%S-screenshot.png
 bindcode Mod4+118 exec scrot ~/Bilder/Screenshots/%Y-%m-%d-%H%M%S-screenshot.png
 
 bindcode Mod4+31 exec /usr/bin/pidgin
-<<<<<<< HEAD
-bindcode Mod4+27 exec /usr/bin/dmenu_run -i -fn "-*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*" -nb "#151515" -nf "#909090" -sb "#303030" -sf "#FFF"
-=======
 bindcode Mod4+27 exec /usr/bin/dmenu_run -i -fn "-*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-1" -nb "#151515" -nf "#909090" -sb "#303030" -sf "#FFF"
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 bindcode Mod4+33 exec ~/.bin/dmenu_playlist
 bindcode Mod4+23 exec ~/.bin/dmenu_mpd
 bindcode Mod4+Shift+9 exec ~/.bin/dmenu_shutdown
@@ -89,11 +64,7 @@ bindcode Mod4+Shift+9 exec ~/.bin/dmenu_shutdown
 bindcode 232 exec ~/.bin/sudo_brightdown
 bindcode 233 exec ~/.bin/sudo_brightup
 
-<<<<<<< HEAD
 bindcode Mod4+Shift+29 exec i3lock -u -c 000000 -i ~/.bg.png
-=======
-bindcode Mod4+Shift+29 exec /usr/bin/xscreensaver-command -lock 
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 
 # Toggle Headphone channel
 bindcode Mod4+38 exec /usr/bin/amixer -q set Headphone toggle
@@ -103,22 +74,6 @@ bindcode 121 exec amixer -q set Master toggle
 bindcode Mod4+Shift+82 exec mpc volume -5
 bindcode Mod4+Shift+86 exec mpc volume +5
 
-# Desktop
-<<<<<<< HEAD
-bindcode Mod4+82 exec amixer sset 'Master' 5%-
-bindcode Mod4+86 exec amixer sset 'Master' 5%+
-
-# Laptop
-bindcode 122 exec amixer sset 'Master' 5%-
-bindcode 123 exec amixer sset 'Master' 5%+
-=======
-#bindcode Mod4+82 exec amixer sset 'Master' 2%-
-#bindcode Mod4+86 exec amixer sset 'Master' 2%+
-#
-## Laptop
-#bindcode 122 exec amixer sset 'Master' 2%-
-#bindcode 123 exec amixer sset 'Master' 2%+
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 
 #
 # i3 Binds
@@ -173,15 +128,9 @@ bindcode Mod4+Shift+46 move right
 bindcode Mod4+10 workspace term
 bindcode Mod4+11 workspace www
 bindcode Mod4+12 workspace im
-<<<<<<< HEAD
-bindcode Mod4+13 workspace dev
-bindcode Mod4+14 workspace misc
-bindcode Mod4+15 workspace mail
-=======
 bindcode Mod4+13 workspace irc
 bindcode Mod4+14 workspace dev
 bindcode Mod4+15 workspace misc
->>>>>>> 3b2cbe5c057017c378e55f5e175f0ba25d8023e9
 bindcode Mod4+16 workspace 7
 bindcode Mod4+17 workspace 8
 bindcode Mod4+18 workspace 9
