@@ -1,46 +1,38 @@
 *background: #151515
 *foreground: #FFFFFF
-!! Black + DarkGrey
-!*color0:  #000000
-!*color8:  #555753
-!! DarkRed + Red
-!*color1:  #ff6565
-!*color9:  #DC143C
-!! DarkGreen + Green
-!*color2:  #93d44f
-!*color10: #ADFF2F
-!! DarkYellow + Yellow
-!*color3:  #eab93d
-!*color11: #ffc123
-!! DarkBlue + Blue
-!*color4:  #4169E1
-!*color12: #1E90FF
-!! DarkMangenta + Mangenta
-!*color5:  #9932CC
-!*color13: #8B008B
-!!DarkCyan + Cyan (both not tango)
-!*color6:  #89b6e2
-!*color14: #46a4ff
-!! LightGrey + White
-!*color7:  #cccccc
-!*color15: #ffffff
 
+! Black + DarkGrey
 *color0: #000000
 *color8: #AABC53
+
+! DarkRed + Red
 *color1: #AEBC65
 *color9: #B2C73C
+
+! DarkGreen + Green
 *color2: #A7AE4F
 *color10: #A4952F
+
+! DarkYellow + Yellow
 *color3: #AC9E3D
 *color11: #AF7423
-*color4: #A9C7E1
+
+! DarkBlue + Blue
+*color4: #2C65BA
 *color12: #A8CBFF
+
+! DarkMangenta + Mangenta
 *color5: #ABC8CC
 *color13: #ACCC8B
+
+!DarkCyan + Cyan (both not tango)
 *color6: #A9C2E2
 *color14: #A8C8FF
-*color7: #AABDCC
+
+! LightGrey + White
+*color7: #AAAAAA
 *color15: #FFFFFF
+
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -55,9 +47,12 @@ Xft.lcdfilter:  lcddefault
 URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
 URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
-URxvt.xftAntialias:     false
-!URxvt.font: 			-xos4-terminus-medium-r-normal--14-140-72-72-*-*-*-*
-!URxvt.boldFont: 		-xos4-terminus-bold-r-normal--14-140-72-72-*-*-*-*
+
+URxvt.xftAntialias:     true
+
+!URxvt.font:             xft:Terminus:medium:pixelsize=14
+!URxvt.boldFont:         xft:Terminus:bold:pixelsize=14
+
 URxvt*shading:          20 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
@@ -75,6 +70,7 @@ URxvt*colorUL:          2
 URxvt*cutchars:         `""()'*'<>[]{|}
 URxvt.keysym.M-u:       perl:url-select:select_next
 URxvt.underlineURLs:    true
+URxvt*internalBorder:   0
 
 ! tab colors
 URxvt.tabbed.tabbar-fg: 4

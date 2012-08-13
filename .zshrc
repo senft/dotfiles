@@ -10,20 +10,20 @@ export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-t
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 
+export LANG=en_US.utf8
+export LC_MESSAGES="en_US.utf8"
+export LC_NUMERIC="de_DE.utf8"
+export LC_TIME="de_DE.utf8"
+export LC_COLLATE="de_DE.utf8"
+export LC_MONETARY="de_DE.utf8"
+export LC_PAPER="de_DE.utf8"
+export LC_NAME="de_DE.utf8"
+export LC_ADDRESS="de_DE.utf8"
+export LC_TELEPHONE="de_DE.utf8"
+export LC_MEASUREMENT="de_DE.utf8"
+export LC_IDENTIFICATION="de_DE.utf8"
+export LC_CTYPE="de_DE.utf8"
 export LC_ALL=
-export LC_LANG=de_DE.UTF-8
-export LC_MESSAGES=en_US.UTF-8
-export LC_NUMERIC=de_DE.UTF-8
-export LC_TIME=de_DE.UTF-8
-export LC_COLLATE=de_DE.UTF-8
-export LC_MONETARY=de_DE.UTF-8
-export LC_PAPER=de_DE.UTF-8
-export LC_NAME=de_DE.UTF-8
-export LC_ADDRESS=de_DE.UTF-8
-export LC_TELEPHONE=de_DE.UTF-8
-export LC_MEASUREMENT=de_DE.UTF-8
-export LC_IDENTIFICATION=de_DE.UTF-8
-export LC_CTYPE=de_DE.UTF-8
 
 eval $(dircolors -b)
 
