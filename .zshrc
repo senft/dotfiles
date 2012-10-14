@@ -25,6 +25,13 @@ export LC_IDENTIFICATION="de_DE.utf8"
 export LC_CTYPE="de_DE.utf8"
 export LC_ALL=
 
+export PYTHONDOCS=/usr/share/doc/python/html/
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Code/Python
+export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
+
 eval $(dircolors -b)
 
 # Vi(m) mode
@@ -70,7 +77,7 @@ unsetopt ALL_EXPORT
 
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR] %(!.#.$) "
-#RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
+RPS1="$PR_LIGHT_WHITE%D{%d-%m %H:%M:%S}$PR_NO_COLOR"
 
 #------------------------------
 # Window title
