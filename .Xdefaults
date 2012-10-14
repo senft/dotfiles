@@ -47,12 +47,9 @@ Xft.lcdfilter:  lcddefault
 URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
 URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
-
 URxvt.xftAntialias:     true
-
 !URxvt.font:             xft:Terminus:medium:pixelsize=14
 !URxvt.boldFont:         xft:Terminus:bold:pixelsize=14
-
 URxvt*shading:          20 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
