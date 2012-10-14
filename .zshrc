@@ -1,6 +1,11 @@
 SSH_AUTH_SOCK=`netstat -xl | grep -o "$HOME"'/.cache/keyring-.*/ssh$'`
 [ -z "$SSH_AUTH_SOCK" ] || export SSH_AUTH_SOCK
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Code/Python
+export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper_lazy.sh
+
 export EDITOR=vim
 export VISUAL=vim
 export BROWSER=chromium
@@ -26,11 +31,6 @@ export LC_CTYPE="de_DE.utf8"
 export LC_ALL=
 
 export PYTHONDOCS=/usr/share/doc/python/html/
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Code/Python
-export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
-source /usr/bin/virtualenvwrapper.sh
 
 eval $(dircolors -b)
 
@@ -194,19 +194,13 @@ alias w='wicd-curses'
 alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
 alias vpn-disconnect="sudo vpnc-disconnect"
 alias cal="cal -3"
-alias calc="gcalccmd"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 
-alias iptv="vlc --repeat --http-caching 2000 --http-reconnect --vout-filter deinterlace --deinterlace-mode yadif http://iptv.fbihome.de/playlists/iptv_tv_unicast.m3u"
-alias jungletrain="mplayer -playlist http://jungletrain.net/128kbps.m3u"
-alias bassdrive="mplayer -playlist http://www.bassdrive.com/v2/streams/BassDrive.pls"
-alias di.fm-liquid="mplayer -playlist http://www.di.fm/mp3/liquiddnb.pls"
-
 # cd
 alias home="cd ~"
-alias done="cd ~/Downloads/"
+alias dl="cd ~/Downloads/"
 alias uni="cd ~/Uni/"
 alias back="cd -"
 alias ..="cd .."
@@ -216,8 +210,8 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
-alias -g G="| grep"
-alias -g L="| less"
+#alias -g G="| grep"
+alias -g G="| ack"
 
 # git
 alias gs="git status"
