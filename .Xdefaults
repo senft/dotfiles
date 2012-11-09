@@ -59,13 +59,15 @@ URxvt*loginShell:       true
 URxvt*inheritPixmap:    true
 URxvt*print-pipe:       cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-lib:         /usr/lib/urxvt/perl/
-URxvt.perl-ext-common:  default,url-select
+URxvt.perl-ext-common:  default,url-select,keyboard-select
 URxvt*perl-ext:         selection,clipboard
-URxvt*urlLauncher:      /usr/bin/chromium-browser
+URxvt*url-select.launcher:      /usr/bin/chromium-browser
 URxvt*matcher.button:   1
 URxvt*colorUL:          2
 URxvt*cutchars:         `""()'*'<>[]{|}
-URxvt.keysym.M-u:       perl:url-select:select_next
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+! URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.underlineURLs:    true
 URxvt*internalBorder:   0
 
