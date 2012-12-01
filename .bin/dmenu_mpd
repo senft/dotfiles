@@ -10,9 +10,10 @@ else
     DMENU='dmenu -i'
 fi
 
-result=`mpc ls | grep -v mp3 | $DMENU -p library`
+result=`mpc ls | grep -v mp3 | eval $DMENU -p library`
 
 [[ $result == "" ]] && exit 0
+
 if [ -d ~/Musik/"$result" ]; then
     mpc clear
     mpc add "$result"

@@ -1,6 +1,12 @@
 #!/bin/bash
 # Credit goes to steve___ for help with cleaning this up
-dmenu='dmenu -i'
+if [ -f $HOME/.dmenurc ]; then
+    . $HOME/.dmenurc
+else
+    DMENU='dmenu -i'
+fi
+
+
 all_devices=$(udisks --enumerate-device-files | grep /dev/sd)
 selection=$(udisks --enumerate-device-files | grep /dev/sd | (while read dev; do
     info=$(udisks --show-info $dev)
@@ -11,7 +17,7 @@ selection=$(udisks --enumerate-device-files | grep /dev/sd | (while read dev; do
     else
         echo "unmount:$dev"
     fi
-done) | sort | $dmenu "$@" -p umount)
+done) | sort | eval $DMENU "$@" -p umount)
 
 [[ $selection ]] || exit 1
 

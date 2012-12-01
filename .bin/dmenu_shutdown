@@ -6,7 +6,7 @@ else
     DMENU='dmenu -i'
 fi
 
-result=`printf "shutdown\nreboot\nsuspend" | $DMENU`
+result=`printf "shutdown\nreboot\nsuspend" | eval $DMENU`
 case $result in
     shutdown)
         sudo shutdown -h now
