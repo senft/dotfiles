@@ -1,5 +1,0 @@
-#!/bin/bash
-FILE="/tmp/lock.png"
-scrot $FILE
-convert -scale 340x100 $FILE -scale 1366x768 -modulate 100,50 $FILE
-i3lock -n -u -i /tmp/lock.png

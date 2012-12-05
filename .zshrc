@@ -197,6 +197,7 @@ alias cal="cal -3"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
+alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 
 # cd
 alias home="cd ~"
