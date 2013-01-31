@@ -198,6 +198,7 @@ alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
+alias n64="mupen64plus --windowed --resolution 1920x1080"
 
 # cd
 alias home="cd ~"
@@ -233,7 +234,7 @@ packer() {
    esac
 }
 
-mkdircd () { mkdir "$@" && eval cd "\"\$$#\""; }
+mkcd () { mkdir "$@" && eval cd "\"\$$#\""; }
 
 # Creates an archive from given directory
 mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
