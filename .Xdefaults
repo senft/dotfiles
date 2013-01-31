@@ -48,8 +48,7 @@ URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
 URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
 URxvt.xftAntialias:     true
-!URxvt.font:             xft:Terminus:medium:pixelsize=14
-!URxvt.boldFont:         xft:Terminus:bold:pixelsize=14
+urxvt*transparent:		true
 URxvt*shading:          20 
 URxvt*saveLines:        12000
 URxvt*visualBell:       true
@@ -70,13 +69,6 @@ URxvt.keysym.M-Escape:      perl:keyboard-select:activate
 ! URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.underlineURLs:    true
 URxvt*internalBorder:   0
-
-! tab colors
-URxvt.tabbed.tabbar-fg: 4
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg: 9
-URxvt.tabbed.tab-bg: 0
-URxvt.tabbed.autohide: 1
 
 ! xscreensaver ---------------------------------------------------------------
 !general dialog box (affects main hostname, username, password text)
@@ -103,3 +95,23 @@ xscreensaver.passwd.thermometer.background:  #000000
 xscreensaver.passwd.thermometer.width:       4
 !datestamp format--see the strftime(3) manual page for details
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+
+*foreground:   #FFFFFF
+*background:   #1d1f21
+*cursorColor:  #aeafad
+*color0:       #000000
+*color1:       #912226
+*color2:       #778900
+*color3:       #ae7b00
+*color4:       #1d2594
+*color5:       #682a9b
+*color6:       #2b6651
+*color7:       #929593
+*color8:       #666666
+*color9:       #cc6666
+*color10:      #b5bd68
+*color11:      #f0c674
+*color12:      #81a2be
+*color13:      #b294bb
+*color14:      #8abeb7
+*color15:      #ecebec
