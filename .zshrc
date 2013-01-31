@@ -46,6 +46,9 @@ setopt ALL_EXPORT
 autoload      edit-command-line
 zle -N        edit-command-line
 bindkey '\ee' edit-command-line
+bindkey '^e'  edit-command-line
+
+bindkey -s '^f' 'ranger\n'
 
 setopt   notify globdots correct cdablevars autolist
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
@@ -187,8 +190,6 @@ alias shutdown="sudo shutdown"
 alias off="shutdown -h now"
 alias reboot="sudo reboot"
 alias grep='grep --color=auto'
-alias df='df -h'
-alias du='du -c -h'
 alias mkdir='mkdir -p'
 alias w='wicd-curses'
 alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
@@ -198,6 +199,7 @@ alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
+alias r='ranger'
 
 # cd
 alias home="cd ~"
