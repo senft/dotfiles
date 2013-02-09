@@ -35,7 +35,7 @@
 
 
 ! Xft settings ---------------------------------------------------------------
-Xft.dpi:        96
+Xft.dpi:        false
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
@@ -45,9 +45,12 @@ Xft.lcdfilter:  lcddefault
 
 ! urxvt ----------------------------------------------------------------------
 URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
-URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
-URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
-URxvt.xftAntialias:     true
+!URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
+!URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
+URxvt.font:             xft:Envy Code R for Powerline:pixelsize=13:antialias=false
+URxvt.boldFont:         xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
+URxvt.letterSpace:		-2
+URxvt.xftAntialias:     false
 urxvt*transparent:		true
 URxvt*shading:          20 
 URxvt*saveLines:        12000
@@ -66,8 +69,9 @@ URxvt*colorUL:          2
 URxvt*cutchars:         `""()'*'<>[]{|}
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-! URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.underlineURLs:    true
+URxvt.url-select.underline: true
 URxvt*internalBorder:   0
 
 ! xscreensaver ---------------------------------------------------------------
