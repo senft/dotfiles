@@ -35,18 +35,20 @@
 
 
 ! Xft settings ---------------------------------------------------------------
-Xft.dpi:        false
+Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintfull
+!Xft.hinting:    full
+Xft.hinting:    slight
 Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 
+!
 ! urxvt ----------------------------------------------------------------------
 URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
 !URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 !URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
+!URxvt.letterSpace:		0
 URxvt.font:             xft:Envy Code R for Powerline:pixelsize=13:antialias=false
 URxvt.boldFont:         xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
 URxvt.letterSpace:		-2
