@@ -11,6 +11,9 @@ export VISUAL=vim
 export BROWSER=chromium
 export PAGER=less
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
+# omnetpp
+export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
+export PATH=$PATH:/opt/omnetpp/
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
@@ -264,7 +267,7 @@ function zle-line-init() {
 
 function _update_ps1()
 {
-  export PROMPT="$(python2 ~/.powerline-zsh.py $?)"
+  export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
 }
 precmd()
 {
