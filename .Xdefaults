@@ -1,38 +1,36 @@
-*background: #151515
-*foreground: #FFFFFF
-
 ! Black + DarkGrey
-*color0: #000000
-*color8: #AABC53
+*color0:       #000000
+*color8:       #666666
 
 ! DarkRed + Red
-*color1: #AEBC65
-*color9: #B2C73C
+*color1:       #912226
+*color9:       #cc6666
 
 ! DarkGreen + Green
-*color2: #A7AE4F
-*color10: #A4952F
+*color2:       #778900
+*color10:      #b5bd68
 
 ! DarkYellow + Yellow
-*color3: #AC9E3D
-*color11: #AF7423
+*color3:       #ae7b00
+*color11:      #f0c674
 
 ! DarkBlue + Blue
-*color4: #2C65BA
-*color12: #A8CBFF
+*color4:       #1d2594
+*color12:      #81a2be
 
 ! DarkMangenta + Mangenta
-*color5: #ABC8CC
-*color13: #ACCC8B
+*color5:       #682a9b
+*color13:      #b294bb
 
-!DarkCyan + Cyan (both not tango)
-*color6: #A9C2E2
-*color14: #A8C8FF
+!DarkCyan + Cyan
+*color6:       #2b6651
+*color14:      #8abeb7
 
 ! LightGrey + White
-*color7: #AAAAAA
-*color15: #FFFFFF
+*color7:       #929593
+*color15:      #ecebec
 
+*TkTheme: clearlooks
 
 ! Xft settings ---------------------------------------------------------------
 Xft.dpi:        96
@@ -43,81 +41,37 @@ Xft.hinting:    slight
 Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 
-!
 ! urxvt ----------------------------------------------------------------------
-URxvt*iconFile: 		/usr/share/icons/Faenza/apps/96/lxterminal.png
-!URxvt.font:             -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
-!URxvt.boldFont:         -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
-!URxvt.letterSpace:		0
-URxvt.font:             xft:Envy Code R for Powerline:pixelsize=13:antialias=false
-URxvt.boldFont:         xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
-URxvt.letterSpace:		-2
-URxvt.xftAntialias:     false
-urxvt*transparent:		true
-URxvt*shading:          20 
-URxvt*saveLines:        12000
-URxvt*visualBell:       true
-URxvt*urgentOnBell:     true
-URxvt*scrollBar:        false
-URxvt*loginShell:       true
-URxvt*inheritPixmap:    true
-URxvt*print-pipe:       cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
-URxvt*perl-lib:         /usr/lib/urxvt/perl/
-URxvt.perl-ext-common:  default,url-select,keyboard-select
-URxvt*perl-ext:         selection,clipboard
-URxvt*url-select.launcher:      /usr/bin/chromium-browser
-URxvt*matcher.button:   1
-URxvt*colorUL:          2
-URxvt*cutchars:         `""()'*'<>[]{|}
-URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.underlineURLs:    true
+URxvt*foreground:			#FFFFFF
+URxvt*background:   		#1d1f21
+URxvt*cursorColor:  		#aeafad
+URxvt*iconFile:				/usr/share/icons/Faenza/apps/96/lxterminal.png
+!URxvt.font:            	 -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
+!URxvt.boldFont:        	 -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
+!URxvt.letterSpace:			0
+URxvt.font:             	xft:Envy Code R for Powerline:pixelsize=13:antialias=false
+URxvt.boldFont:         	xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
+URxvt.letterSpace:			-2
+URxvt.xftAntialias:     	false
+urxvt*transparent:			true
+URxvt*shading:          	20 
+URxvt*saveLines:        	12000
+URxvt*visualBell:       	true
+URxvt*urgentOnBell:     	true
+URxvt*scrollBar:        	false
+URxvt*loginShell:       	true
+URxvt*inheritPixmap:    	true
+URxvt*print-pipe:       	cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*perl-lib:         	/usr/lib/urxvt/perl/
+URxvt.perl-ext-common:  	default,url-select,keyboard-select
+URxvt*perl-ext:         	selection,clipboard
+URxvt*url-select.launcher:	/usr/bin/chromium-browser
+URxvt*matcher.button:		1
+URxvt*colorUL:          	2
+URxvt*cutchars:         	`""()'*'<>[]{|}
+URxvt.keysym.M-u:       	perl:url-select:select_next
+URxvt.keysym.M-Escape:  	perl:keyboard-select:activate
+URxvt.keysym.M-s:       	perl:keyboard-select:search
+URxvt.underlineURLs:    	true
 URxvt.url-select.underline: true
-URxvt*internalBorder:   0
-
-! xscreensaver ---------------------------------------------------------------
-!general dialog box (affects main hostname, username, password text)
-xscreensaver.Dialog.headingFont:        -*-envy code r-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-envy code r-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-envy code r-medium-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-envy code r-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-envy code r-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.foreground:         #ffffff
-xscreensaver.Dialog.background:         #151515
-xscreensaver.Dialog.topShadowColor:     #000000
-xscreensaver.Dialog.bottomShadowColor:  #000000
-xscreensaver.Dialog.Button.foreground:  #FFFFFF
-xscreensaver.Dialog.Button.background:  #303030
-!username/password input box and date text colour
-xscreensaver.Dialog.text.foreground:    #000000
-xscreensaver.Dialog.text.background:    #ffffff
-xscreensaver.Dialog.internalBorderWidth:10
-xscreensaver.Dialog.borderWidth:        1
-xscreensaver.Dialog.shadowThickness:    1
-!timeout bar (background is actually determined by Dialog.text.background)
-xscreensaver.passwd.thermometer.foreground:  #303030
-xscreensaver.passwd.thermometer.background:  #000000
-xscreensaver.passwd.thermometer.width:       4
-!datestamp format--see the strftime(3) manual page for details
-xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-
-*foreground:   #FFFFFF
-*background:   #1d1f21
-*cursorColor:  #aeafad
-*color0:       #000000
-*color1:       #912226
-*color2:       #778900
-*color3:       #ae7b00
-*color4:       #1d2594
-*color5:       #682a9b
-*color6:       #2b6651
-*color7:       #929593
-*color8:       #666666
-*color9:       #cc6666
-*color10:      #b5bd68
-*color11:      #f0c674
-*color12:      #81a2be
-*color13:      #b294bb
-*color14:      #8abeb7
-*color15:      #ecebec
+URxvt*internalBorder:		0
