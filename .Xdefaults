@@ -65,7 +65,7 @@ URxvt*print-pipe:       	cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-lib:         	/usr/lib/urxvt/perl/
 URxvt.perl-ext-common:  	default,url-select,keyboard-select
 URxvt*perl-ext:         	selection,clipboard
-URxvt*url-select.launcher:	/usr/bin/chromium-browser
+URxvt*url-select.launcher:	/usr/bin/chromium
 URxvt*matcher.button:		1
 URxvt*colorUL:          	2
 URxvt*cutchars:         	`""()'*'<>[]{|}
