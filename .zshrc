@@ -179,7 +179,7 @@ alias ld='ll -rct'
 alias lz='ll -rS'                   # sort by size
 
 # pacman
-alias pacman='sudo pacman-color'
+alias pacman='sudo pacman'
 alias syu='packer -Syu'
 alias rs='pacman -Rs'
 alias pas='packer -S'
@@ -194,7 +194,7 @@ alias off="shutdown -h now"
 alias reboot="sudo reboot"
 alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
-alias w='wicd-curses'
+alias wcli='wicd-curses'
 alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
 alias vpn-disconnect="sudo vpnc-disconnect"
 alias cal="cal -3"
