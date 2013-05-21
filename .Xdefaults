@@ -54,7 +54,7 @@ URxvt.boldFont:         	xft:Envy Code R for Powerline:bold:pixelsize=13:antiali
 URxvt.letterSpace:			-2
 URxvt.xftAntialias:     	false
 urxvt*transparent:			true
-URxvt*shading:          	20 
+URxvt*shading:          	30 
 URxvt*saveLines:        	12000
 URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true

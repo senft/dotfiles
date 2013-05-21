@@ -185,6 +185,7 @@ alias rs='pacman -Rs'
 alias pas='packer -S'
 alias paqs='pacman -Qs'
 alias paql='pacman -Ql'
+alias paqi='pacman -Qi'
 alias pass='packer -Ss'
 alias pau='pacman -U'
 
