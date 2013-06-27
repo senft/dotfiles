@@ -10,7 +10,7 @@ export EDITOR=vim
 export VISUAL=vim
 export BROWSER=chromium
 export PAGER=less
-export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
+export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
 # omnetpp
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
 export PATH=$PATH:/opt/omnetpp/
@@ -52,6 +52,7 @@ bindkey '\ee' edit-command-line
 bindkey '^e'  edit-command-line
 
 bindkey -s '^f' 'ranger\n'
+bindkey -s '^t' 'urxvtc &\n'
 
 setopt   notify globdots correct cdablevars autolist
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
@@ -65,8 +66,8 @@ zmodload -a zsh/zprof zprof
 zmodload -a zsh/mapfile mapfile
 
 HISTFILE=$HOME/.zhistory
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=50000
+SAVEHIST=50000
 
 autoload colors zsh/terminfo
 if [[ "$terminfo[colors]" -ge 8 ]]; then
@@ -227,7 +228,8 @@ alias gb="git branch"
 alias gd="git diff"
 alias gc="git commit -am"
 alias gp="git push"
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias glf="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias gl="glf | head"
 
 packer() {
    case $1 in
