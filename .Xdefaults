@@ -52,6 +52,7 @@ URxvt*iconFile:				/usr/share/icons/Faenza/apps/96/lxterminal.png
 URxvt.font:             	xft:Envy Code R for Powerline:pixelsize=13:antialias=false
 URxvt.boldFont:         	xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
 URxvt.letterSpace:			-2
+
 URxvt.xftAntialias:     	false
 urxvt*transparent:			true
 URxvt*shading:          	30 
@@ -75,3 +76,4 @@ URxvt.keysym.M-s:       	perl:keyboard-select:search
 URxvt.underlineURLs:    	true
 URxvt.url-select.underline: true
 URxvt*internalBorder:		0
+URxvt*termName:				rxvt-256color
