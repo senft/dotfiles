@@ -16,6 +16,7 @@ export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
 export PATH=$PATH:/opt/omnetpp/
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export JAVA_FONTS=/usr/share/fonts/TTF
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 
 export LANG=en_US.utf8
