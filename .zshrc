@@ -52,7 +52,7 @@ zle -N        edit-command-line
 bindkey '\ee' edit-command-line
 bindkey '^e'  edit-command-line
 
-bindkey -s '^f' 'ranger\n'
+bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 
 setopt   notify globdots correct cdablevars autolist
@@ -277,4 +277,14 @@ function _update_ps1()
 precmd()
 {
   _update_ps1
+}
+
+function ranger-cd {
+    tempfile='/tmp/chosendir'
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
 }
