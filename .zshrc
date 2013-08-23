@@ -223,6 +223,7 @@ alias rm="rm -i"
 
 #alias -g G="| grep"
 alias -g G="| ack"
+alias -g C="| xclip"
 
 # git
 alias gs="git status"
