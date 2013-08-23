@@ -49,10 +49,11 @@ URxvt*iconFile:				/usr/share/icons/Faenza/apps/96/lxterminal.png
 !URxvt.font:            	 -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 !URxvt.boldFont:        	 -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
 !URxvt.letterSpace:			0
-URxvt.font:             	xft:Envy Code R for Powerline:pixelsize=13:antialias=false
-URxvt.boldFont:         	xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
-URxvt.letterSpace:			-2
-
+!URxvt.font:             	xft:Envy Code R for Powerline:pixelsize=13:antialias=false
+!URxvt.boldFont:         	xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
+!URxvt.letterSpace:			-2
+!URxvt.font:             	xft:Terminus for Powerline:pixelsize=17:antialias=false
+URxvt.font:					-*-terminesspowerline-medium-*-normal-*-16-*-*-*-*-*-*-*
 URxvt.xftAntialias:     	false
 urxvt*transparent:			true
 URxvt*shading:          	30 
