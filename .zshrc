@@ -173,7 +173,7 @@ zstyle '*' single-ignored show
 
 # ls
 #alias ls='ls -hF --color=always'
-alias ls='ls++ --potsf'
+alias ls='pwd && ls++ --potsf'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
@@ -255,30 +255,36 @@ mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 remindme() { (sleep $1 && zenity --info --text "$2") & }
 
-zle -N zle-keymap-select
-zle -N zle-line-init
+if [[ $TERM == "rxvt-256color" ]]; then
 
-function zle-keymap-select () {
-    if [ $KEYMAP = vicmd ]; then
-      echo -ne "\033]12;#ff6565\007"
-    else
-      echo -ne "\033]12;White\007"
-  fi
-  zle reset-prompt
-} 
-function zle-line-init() {
-  zle -K viins
-}
+	# Mode indicator
+	zle -N zle-keymap-select
+	zle -N zle-line-init
 
+	function zle-keymap-select () {
+		if [ $KEYMAP = vicmd ]; then
+		  echo -ne "\033]12;#ff6565\007"
+		else
+		  echo -ne "\033]12;White\007"
+	  fi
+	  zle reset-prompt
+	} 
+	function zle-line-init() {
+	  zle -K viins
+	}
 
-function _update_ps1()
-{
-  export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
-}
-precmd()
-{
-  _update_ps1
-}
+	# Powerline prompt
+	function _update_ps1()
+	{
+	  export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
+	}
+
+	precmd()
+	{
+	  _update_ps1
+	}
+
+fi
 
 function ranger-cd {
     tempfile='/tmp/chosendir'
