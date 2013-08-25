@@ -1,2 +1,3 @@
 #!/bin/sh
-DMENU='dmenu -i -fn "-*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-1" -nb "#151515" -nf "#909090" -sb "#303030" -sf "#FFF"'
+#DMENU='dmenu -i -fn "-*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-1" -nb "#151515" -nf "#909090" -sb "#303030" -sf "#FFF"'
+DMENU='dmenu -i -fn "-*-terminesspowerline-medium-*-normal-*-16-*-*-*-*-*-*-*" -nb "#151515" -nf "#909090" -sb "#303030" -sf "#FFF"'
