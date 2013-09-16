@@ -48,15 +48,18 @@ URxvt*cursorColor:  		#aeafad
 URxvt*iconFile:				/usr/share/icons/Faenza/apps/96/lxterminal.png
 !URxvt.font:            	 -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 !URxvt.boldFont:        	 -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
+!URxvt.font:				 -*-terminesspowerline-medium-*-normal-*-14-*-*-*-*-*-*-*
 !URxvt.letterSpace:			0
 !URxvt.font:             	xft:Envy Code R for Powerline:pixelsize=13:antialias=false
 !URxvt.boldFont:         	xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
 !URxvt.letterSpace:			-2
-!URxvt.font:             	xft:Terminus for Powerline:pixelsize=17:antialias=false
-URxvt.font:					-*-terminesspowerline-medium-*-normal-*-16-*-*-*-*-*-*-*
+!URxvt.font:             	xft:Inconsolata for Powerline:pixelsize=15:antialias=false
+!URxvt.font:             	xft:Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=full
+URxvt.font:             	xft:Ubuntu Mono derivative Powerline:pixelsize=15
+URxvt.letterSpace:			-1
 URxvt.xftAntialias:     	false
 urxvt*transparent:			true
-URxvt*shading:          	30 
+URxvt*shading:          	20 
 URxvt*saveLines:        	12000
 URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true
@@ -76,5 +79,6 @@ URxvt.keysym.M-Escape:  	perl:keyboard-select:activate
 URxvt.keysym.M-s:       	perl:keyboard-select:search
 URxvt.underlineURLs:    	true
 URxvt.url-select.underline: true
-URxvt*internalBorder:		0
 URxvt*termName:				rxvt-256color
+URxvt.internalBorder:       0
+URxvt.externalBorder:       0
