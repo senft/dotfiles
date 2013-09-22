@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -f $HOME/.dmenurc ]; then
+    . $HOME/.dmenurc
+else
+    DMENU='dmenu -i'
+fi
+
+avail_modes=`xrandr | grep '+$' | awk '{print $1}'`
+mode=`echo "$avail_modes" | eval $DMENU -p 'resolution'`
+xrandr --output LVDS --mode "$mode"
