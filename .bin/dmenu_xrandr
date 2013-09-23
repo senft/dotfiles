@@ -6,6 +6,8 @@ else
     DMENU='dmenu -i'
 fi
 
-avail_modes=`xrandr | grep '+$' | awk '{print $1}'`
+xrandr_out=`xrandr`
+avail_modes=`echo "$xrandr_out" | grep -P "   *[0-9]+x[0-9]+" | awk '{print $1}'`
 mode=`echo "$avail_modes" | eval $DMENU -p 'resolution'`
-xrandr --output LVDS --mode "$mode"
+output=`xrandr | grep " connected" | awk '{print $1}'`
+xrandr --output $output --mode "$mode"
