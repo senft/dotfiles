@@ -40,6 +40,7 @@ eval $(dircolors -b)
 
 # Vi(m) mode
 bindkey -v
+export KEYTIMEOUT=1
 
 bindkey "\e[3~" delete-char # Del
 bindkey "\e[7~" beginning-of-line # Home
@@ -49,8 +50,8 @@ setopt ALL_EXPORT
 
 autoload      edit-command-line
 zle -N        edit-command-line
-bindkey '\ee' edit-command-line
-bindkey '^e'  edit-command-line
+bindkey '^v'  edit-command-line
+bindkey -M vicmd v edit-command-line
 
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
@@ -231,7 +232,7 @@ alias gb="git branch"
 alias gd="git diff"
 alias gc="git commit -am"
 alias gp="git push"
-alias glf="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias glf="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gl="glf | head"
 
 packer() {
@@ -255,7 +256,7 @@ mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 remindme() { (sleep $1 && zenity --info --text "$2") & }
 
-if [[ $TERM == "rxvt-256color" ]]; then
+if [[ "$TERM" == *"-256color" ]]; then
 
 	# Mode indicator
 	zle -N zle-keymap-select
