@@ -11,13 +11,14 @@ export VISUAL=vim
 export BROWSER=chromium
 export PAGER=less
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
+
 # omnetpp
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
 export PATH=$PATH:/opt/omnetpp/
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd"
 
 export LANG=en_US.utf8
 export LC_MESSAGES="en_US.utf8"
@@ -93,9 +94,9 @@ unsetopt ALL_EXPORT
 #------------------------------
 case $TERM in
     *xterm*|rxvt|rxvt-unicode|rxvt-256color|rxvt-unicode-256color|(dt|k|E)term)
-		precmd () { print -Pn "\e]0;%n@%M [%~] \a" } 
-		preexec () { print -Pn "\e]0;%n@%M [%~] ($1)\a" }
-	;; 
+        precmd () { print -Pn "\e]0;%n@%M [%~] \a" }
+        preexec () { print -Pn "\e]0;%n@%M [%~] ($1)\a" }
+    ;;
 esac
 
 autoload -U compinit
@@ -123,7 +124,7 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 # allow one error for every three characters typed in approximate completer
 zstyle -e ':completion:*:approximate:*' max-errors \
     'reply=( $(( ($#PREFIX+$#SUFFIX)/2 )) numeric )'
-    
+
 # insert all expansions for expand completer
 zstyle ':completion:*:expand:*' tag-order all-expansions
 
@@ -258,32 +259,32 @@ remindme() { (sleep $1 && zenity --info --text "$2") & }
 
 if [[ "$TERM" == *"-256color" ]]; then
 
-	# Mode indicator
-	zle -N zle-keymap-select
-	zle -N zle-line-init
+    # Mode indicator
+    zle -N zle-keymap-select
+    zle -N zle-line-init
 
-	function zle-keymap-select () {
-		if [ $KEYMAP = vicmd ]; then
-		  echo -ne "\033]12;#ff6565\007"
-		else
-		  echo -ne "\033]12;White\007"
-	  fi
-	  zle reset-prompt
-	} 
-	function zle-line-init() {
-	  zle -K viins
-	}
+    function zle-keymap-select () {
+        if [ $KEYMAP = vicmd ]; then
+          echo -ne "\033]12;#ff6565\007"
+        else
+          echo -ne "\033]12;White\007"
+      fi
+      zle reset-prompt
+    }
+    function zle-line-init() {
+      zle -K viins
+    }
 
-	# Powerline prompt
-	function _update_ps1()
-	{
-	  export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
-	}
+    # Powerline prompt
+    function _update_ps1()
+    {
+      export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
+    }
 
-	precmd()
-	{
-	  _update_ps1
-	}
+    precmd()
+    {
+      _update_ps1
+    }
 
 fi
 
