@@ -18,7 +18,7 @@ export PATH=$PATH:/opt/omnetpp/
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 
 export LANG=en_US.utf8
 export LC_MESSAGES="en_US.utf8"
@@ -38,6 +38,9 @@ export LC_ALL=
 export PYTHONDOCS=/usr/share/doc/python/html/
 
 eval $(dircolors -b)
+
+# Disable Software flow control (Sleep on CTRL-S)
+stty -ixon
 
 # Vi(m) mode
 bindkey -v
@@ -210,6 +213,7 @@ alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias r='ranger'
 alias n64="mupen64plus --windowed --resolution 1920x1080"
+alias youtube-dl-mp3="youtube-dl -x --audio-format=mp3 --add-metadata"
 
 # cd
 alias home="cd ~"
@@ -249,11 +253,14 @@ packer() {
 
 mkcd () { mkdir "$@" && eval cd "\"\$$#\""; }
 
-# Creates an archive from given directory
+# Create an archive from given directory
 mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
 mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
+
+# Simple fuzzy search in current directory
+sfind() { find . -name "*$1*"; }
 
 remindme() { (sleep $1 && zenity --info --text "$2") & }
 
@@ -275,17 +282,17 @@ if [[ "$TERM" == *"-256color" ]]; then
       zle -K viins
     }
 
-    # Powerline prompt
-    function _update_ps1()
-    {
-      export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
-    }
+    ## Powerline prompt
+    #function _update_ps1()
+    #{
+    #  export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
+    #}
 
-    precmd()
-    {
-      _update_ps1
-    }
-
+    #precmd()
+    #{
+    #  _update_ps1
+    #}
+	PS1='[%F{cyan}%~%f%b] %# '
 fi
 
 function ranger-cd {

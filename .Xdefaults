@@ -1,34 +1,34 @@
-! Black + DarkGrey
-*color0:       #000000
-*color8:       #666666
-
-! DarkRed + Red
-*color1:       #912226
-*color9:       #cc6666
-
-! DarkGreen + Green
-*color2:       #778900
-*color10:      #b5bd68
-
-! DarkYellow + Yellow
-*color3:       #ae7b00
-*color11:      #f0c674
-
-! DarkBlue + Blue
-*color4:       #1d2594
-*color12:      #81a2be
-
-! DarkMangenta + Mangenta
-*color5:       #682a9b
-*color13:      #b294bb
-
-!DarkCyan + Cyan
-*color6:       #2b6651
-*color14:      #8abeb7
-
-! LightGrey + White
-*color7:       #929593
-*color15:      #ecebec
+!! Black + DarkGrey
+!*color0:       #000000
+!*color8:       #666666
+!
+!! DarkRed + Red
+!*color1:       #912226
+!*color9:       #cc6666
+!
+!! DarkGreen + Green
+!*color2:       #778900
+!*color10:      #b5bd68
+!
+!! DarkYellow + Yellow
+!*color3:       #ae7b00
+!*color11:      #f0c674
+!
+!! DarkBlue + Blue
+!*color4:       #1d2594
+!*color12:      #81a2be
+!
+!! DarkMangenta + Mangenta
+!*color5:       #682a9b
+!*color13:      #b294bb
+!
+!!DarkCyan + Cyan
+!*color6:       #2b6651
+!*color14:      #8abeb7
+!
+!! LightGrey + White
+!*color7:       #929593
+!*color15:      #ecebec
 
 *TkTheme: clearlooks
 
@@ -42,24 +42,38 @@ Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 
 ! urxvt ----------------------------------------------------------------------
-URxvt*foreground:			#FFFFFF
-URxvt*background:   		#1d1f21
-URxvt*cursorColor:  		#aeafad
-URxvt*iconFile:				/usr/share/icons/Faenza/apps/96/lxterminal.png
+!URxvt*foreground:			#FFFFFF
+!URxvt*background:   		#1d1f21
+!URxvt*cursorColor:  		#aeafad
+
 !URxvt.font:            	 -*-envy code r-medium-r-*-*-13-*-*-*-*-*-iso10646-*
 !URxvt.boldFont:        	 -*-envy code r-bold-r-*-*-13-*-*-*-*-*-iso10646-*
-!URxvt.font:				 -*-terminesspowerline-medium-*-normal-*-14-*-*-*-*-*-*-*
-!URxvt.letterSpace:			0
-!URxvt.font:             	xft:Envy Code R for Powerline:pixelsize=13:antialias=false
-!URxvt.boldFont:         	xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
+!URxvt.font:				 -*-terminesspowerline-medium-r-*-*-14-*-*-*-*-*-iso10646-*
+!URxvt.letterSpace:			 0
+!URxvt.font:             	 xft:Envy Code R for Powerline:pixelsize=13:antialias=false
+!URxvt.boldFont:         	 xft:Envy Code R for Powerline:bold:pixelsize=13:antialias=false
+!URxvt.letterSpace:			 -2
+!URxvt.font:             	 xft:Inconsolata for Powerline:pixelsize=15:antialias=false
+!URxvt.font:             	 xft:Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=full
+
+!URxvt.font:             	xft:Ubuntu Mono derivative Powerline:pixelsize=14
+!URxvt.letterSpace:			-1
+
+!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=11:antialias=true
 !URxvt.letterSpace:			-2
-!URxvt.font:             	xft:Inconsolata for Powerline:pixelsize=15:antialias=false
-!URxvt.font:             	xft:Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=full
-URxvt.font:             	xft:Ubuntu Mono derivative Powerline:pixelsize=15
-URxvt.letterSpace:			-1
+
+URxvt*font: -*-envy code r-medium-r-*-*-12-*-*-*-*-*-iso10646-1
+URxvt*boldFont: -*-envy code r-medium-r-*-*-12-*-*-*-*-*-iso10646-1
+
+!URxvt.font: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
+!URxvt.boldFont: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
+
+!URxvt.font: -*-lemon-medium-r-*-*-11-*-*-*-*-*-*-*
+!URxvt.boldFont: -*-lemon-medium-r-*-*-11-*-*-*-*-*-*-*
+
 URxvt.xftAntialias:     	false
-urxvt*transparent:			true
-URxvt*shading:          	20 
+Urxvt*transparent:			true
+URxvt*shading:          	20
 URxvt*saveLines:        	12000
 URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true
@@ -74,11 +88,49 @@ URxvt*url-select.launcher:	/usr/bin/chromium
 URxvt*matcher.button:		1
 URxvt*colorUL:          	2
 URxvt*cutchars:         	`""()'*'<>[]{|}
-URxvt.keysym.M-u:       	perl:url-select:select_next
-URxvt.keysym.M-Escape:  	perl:keyboard-select:activate
-URxvt.keysym.M-s:       	perl:keyboard-select:search
-URxvt.underlineURLs:    	true
-URxvt.url-select.underline: true
+URxvt*keysym.M-u:       	perl:url-select:select_next
+URxvt*keysym.M-Escape:  	perl:keyboard-select:activate
+URxvt*keysym.M-s:       	perl:keyboard-select:search
+URxvt*underlineURLs:    	true
+URxvt*url-select.underline: true
 URxvt*termName:				rxvt-256color
-URxvt.internalBorder:       0
-URxvt.externalBorder:       0
+URxvt*internalBorder:       4
+URxvt*externalBorder:       0
+
+*cursorColor:                         #917154
+!*colorIT:                             #E3AB8D
+!*colorBD:                             #F0E5DF
+!*colorUL:                             #cd546c
+!*VT100.colorBDMode:                   true
+!*VT100.colorBD:                       red
+!*VT100.colorULMode:                   true
+!*VT100.colorUL:                       magenta
+!*VT100.veryBoldColors:                6
+
+URxvt*foreground:                     #eddcd3
+URxvt*background:                     #181512
+
+! Black                               Black !
+*color0:                              #252525
+*color8:                              #454545
+! Red                                 Red   !
+*color1:                              #CD546C
+*color9:                              #EF545F
+! Green                               Green !
+*color2:                              #A5AF86
+*color10:                             #BDC79E
+! Yellow                              Yellow!
+*color3:                              #CD7860
+*color11:                             #E88773
+! Blue                                Blue  !
+*color4:                              #7A9388
+*color12:                             #94B1A3
+! Magenta                             Magenta
+*color5:                              #917154
+*color13:                             #989584
+! Cyan                                Cyan  !
+*color6:                              #767D75
+*color14:                             #9DA69E
+! White                               White !
+*color7:                              #C2C2A8
+*color15:                             #DBDAC1

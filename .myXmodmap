@@ -1,0 +1,12 @@
+! bind { on AltGR+o
+keycode 32 = o O o O braceright Oslash oslash
+
+! bind } on AltGR+p
+keycode 33 = p P p P braceleft THORN thorn
+
+! bind Caps-Lock to Esc
+keycode 66 = Escape NoSymbol Escape NoSymbol Escape
+
+add Control = Control_L
+
+! keycode 9 = Caps_Lock
