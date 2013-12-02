@@ -88,10 +88,6 @@ fi
 
 unsetopt ALL_EXPORT
 
-#PR_NO_COLOR="%{$terminfo[sgr0]%}"
-#PS1="[$PR_BLUE%n$PR_WHITE@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR] %(!.#.$) "
-#RPS1="$PR_LIGHT_WHITE%D{%d-%m %H:%M:%S}$PR_NO_COLOR"
-
 #------------------------------
 # Window title
 #------------------------------
@@ -178,7 +174,7 @@ zstyle '*' single-ignored show
 
 # ls
 #alias ls='ls -hF --color=always'
-alias ls='pwd && ls++ --potsf'
+alias ls='ls++ --potsf'
 alias lr='ls -R'                    # recursive ls
 alias ll='ls -l'
 alias la='ll -A'
@@ -197,6 +193,8 @@ alias paqi='pacman -Qi'
 alias pass='packer -Ss'
 alias pau='pacman -U'
 
+compdef packer='pacman'
+
 # programs
 alias shutdown="sudo shutdown"
 alias off="shutdown -h now"
@@ -213,7 +211,7 @@ alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias r='ranger'
 alias n64="mupen64plus --windowed --resolution 1920x1080"
-alias youtube-dl-mp3="youtube-dl -x --audio-format=mp3 --add-metadata"
+alias youtube-dl-mp3="youtube-dl -x --audio-format mp3"
 
 # cd
 alias home="cd ~"
@@ -221,6 +219,11 @@ alias dl="cd ~/Downloads/"
 alias uni="cd ~/Uni/"
 alias back="cd -"
 alias ..="cd .."
+
+# vim shortcuts
+alias vv="vim ~/.vim/vimrc"
+alias vz="vim ~/.zshrc"
+alias vx="vim ~/.Xdefaults"
 
 # safety features
 alias cp="cp -i"
@@ -292,7 +295,8 @@ if [[ "$TERM" == *"-256color" ]]; then
     #{
     #  _update_ps1
     #}
-	PS1='[%F{cyan}%~%f%b] %# '
+    PS1='%F{magenta}%#  %f'
+    RPROMPT='%F{cyan}%~%f%b'
 fi
 
 function ranger-cd {
@@ -304,3 +308,5 @@ function ranger-cd {
     fi
     rm -f -- "$tempfile"
 }
+
+todo.sh ls
