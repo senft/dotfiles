@@ -1,34 +1,32 @@
-!! Black + DarkGrey
-!*color0:       #000000
-!*color8:       #666666
-!
-!! DarkRed + Red
-!*color1:       #912226
-!*color9:       #cc6666
-!
-!! DarkGreen + Green
-!*color2:       #778900
-!*color10:      #b5bd68
-!
-!! DarkYellow + Yellow
-!*color3:       #ae7b00
-!*color11:      #f0c674
-!
-!! DarkBlue + Blue
-!*color4:       #1d2594
-!*color12:      #81a2be
-!
-!! DarkMangenta + Mangenta
-!*color5:       #682a9b
-!*color13:      #b294bb
-!
-!!DarkCyan + Cyan
-!*color6:       #2b6651
-!*color14:      #8abeb7
-!
-!! LightGrey + White
-!*color7:       #929593
-!*color15:      #ecebec
+! Black
+*color0:                              #252525
+*color8:                              #454545
+! Red
+*color1:							  #BF3F34
+*color9:                              #EF545F
+! Green
+*color2:                              #705D22
+*color10:                             #B8AA4B
+! Yellow
+*color3:                              #CD7860
+*color11:                             #E88773
+! Blue
+*color4:                              #627A92
+*color12:			                  #88a1ba
+! Magenta
+*color5:                              #917154
+*color13:                             #989584
+! Cyan
+*color6:                              #767D75
+*color14:                             #9DA69E
+! White
+*color7:                              #C2C2A8
+*color15:                             #DBDAC1
+
+*cursorColor:                         #917154
+
+URxvt*foreground:                     #eddcd3
+URxvt*background:                     #121212
 
 *TkTheme: clearlooks
 
@@ -63,14 +61,14 @@ URxvt.font: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
 !URxvt.boldFont: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
 
 URxvt.xftAntialias:     	false
-Urxvt*transparent:			true
-URxvt*shading:          	20
+!Urxvt*transparent:			true
+!URxvt*shading:          	20
+!URxvt*inheritPixmap:    	true
 URxvt*saveLines:        	12000
 URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true
 URxvt*scrollBar:        	false
 URxvt*loginShell:       	true
-URxvt*inheritPixmap:    	true
 URxvt*print-pipe:       	cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-lib:         	/usr/lib/urxvt/perl/
 URxvt.perl-ext-common:  	default,url-select,keyboard-select
@@ -85,43 +83,5 @@ URxvt*keysym.M-s:       	perl:keyboard-select:search
 URxvt*underlineURLs:    	true
 URxvt*url-select.underline: true
 URxvt*termName:				rxvt-256color
-URxvt*internalBorder:       4
+URxvt*internalBorder:       5
 URxvt*externalBorder:       0
-
-*cursorColor:                         #917154
-!*colorIT:                             #E3AB8D
-!*colorBD:                             #F0E5DF
-!*colorUL:                             #cd546c
-!*VT100.colorBDMode:                   true
-!*VT100.colorBD:                       red
-!*VT100.colorULMode:                   true
-!*VT100.colorUL:                       magenta
-!*VT100.veryBoldColors:                6
-
-URxvt*foreground:                     #eddcd3
-URxvt*background:                     #181512
-
-! Black                               Black !
-*color0:                              #252525
-*color8:                              #454545
-! Red                                 Red   !
-*color1:                              #CD546C
-*color9:                              #EF545F
-! Green                               Green !
-*color2:                              #A5AF86
-*color10:                             #BDC79E
-! Yellow                              Yellow!
-*color3:                              #CD7860
-*color11:                             #E88773
-! Blue                                Blue  !
-*color4:                              #7A9388
-*color12:                             #94B1A3
-! Magenta                             Magenta
-*color5:                              #917154
-*color13:                             #989584
-! Cyan                                Cyan  !
-*color6:                              #767D75
-*color14:                             #9DA69E
-! White                               White !
-*color7:                              #C2C2A8
-*color15:                             #DBDAC1
