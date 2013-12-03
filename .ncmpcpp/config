@@ -1,0 +1,46 @@
+mpd_music_dir = "~/Musik"
+
+user_interface ="alternative"
+
+alternative_header_first_line_format ="{$5%a$9} $1|$9 {$2%t$9}"
+alternative_header_second_line_format ="{$6%b$9} $1"
+
+alternative_ui_separator_color ="gray"
+
+#song_list_format = "{$2%a$9} $1│$9 {$5%t$9} $R {$6%b$9} $1│$9 {$2%l$9}"
+song_columns_list_format = "(20)[blue]{a} (44)[red]{t} (30)[magenta]{b} (1)[gray]{l}"
+#song_columns_list_format = "(7f)[0]{l} (25)[green]{a} (40)[0]{t|f} (30)[green]{b}"
+playlist_display_mode = "columns"
+
+song_status_format = "$8%a$9 $8%t$9"
+now_playing_prefix = "$r$b"
+now_playing_suffix = "$/r$/b"
+
+selected_item_prefix = "$b$6"
+selected_item_suffix = "$/b$9"
+
+titles_visibility = "no"
+
+header_window_color = "gray"
+
+header_visibility = "no"
+autocenter_mode = "yes"
+statusbar_visibility = "no"
+
+main_window_highlight_color = "gray"
+
+discard_colors_if_item_is_selected = "no"
+
+progressbar_look = "██░"
+
+progressbar_color = "white"
+
+progressbar_elapsed_color = "magenta"
+
+statusbar_color = "white"
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "FIFO output"
+visualizer_type = "wave"
+
+display_bitrate="true"
