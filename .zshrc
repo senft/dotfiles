@@ -308,5 +308,3 @@ function ranger-cd {
     fi
     rm -f -- "$tempfile"
 }
-
-todo.sh ls
