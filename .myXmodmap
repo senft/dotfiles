@@ -5,8 +5,6 @@ keycode 32 = o O o O braceright Oslash oslash
 keycode 33 = p P p P braceleft THORN thorn
 
 ! bind Caps-Lock to Esc
+clear Lock
 keycode 66 = Escape NoSymbol Escape NoSymbol Escape
-
 add Control = Control_L
-
-! keycode 9 = Caps_Lock
