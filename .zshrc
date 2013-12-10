@@ -224,6 +224,8 @@ alias ..="cd .."
 alias vv="vim ~/.vim/vimrc"
 alias vz="vim ~/.zshrc"
 alias vx="vim ~/.Xdefaults"
+alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
+
 
 # safety features
 alias cp="cp -i"
