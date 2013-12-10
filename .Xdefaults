@@ -61,12 +61,9 @@ URxvt.font: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
 !URxvt.boldFont: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
 
 URxvt.xftAntialias:     	false
-
-Urxvt*transparent:			true
+!Urxvt*transparent:			true
 !URxvt*shading:          	20
-URxvt*inheritPixmap:    	true
-URxvt*tintColor:            #121212
-
+!URxvt*inheritPixmap:    	true
 URxvt*saveLines:        	12000
 URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true
