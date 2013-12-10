@@ -297,9 +297,13 @@ if [[ "$TERM" == *"-256color" ]]; then
     #{
     #  _update_ps1
     #}
-    PS1='%F{magenta}%#  %f'
-    RPROMPT='%F{cyan}%~%f%b'
 fi
+
+#PS1='%F{magenta}%#  %f'
+#RPROMPT='%F{cyan}%~%f%b'
+
+PS1='%F{cyan}%~%f%b %F{magenta}%#%f '
+
 
 function ranger-cd {
     tempfile='/tmp/chosendir'
