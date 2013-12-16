@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ -f $HOME/.dmenurc ]; then
+    . $HOME/.dmenurc
+else
+    DMENU='dmenu -i'
+fi
+result=`echo | eval $DMENU -p 'Solve' | bc`
+notify-send "$result"
+echo "$result" | xclip -selection "clipboard" -i
