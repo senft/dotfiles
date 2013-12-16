@@ -56,9 +56,8 @@ Xft.lcdfilter:  lcddefault
 !URxvt*boldFont: -*-envy code r-medium-r-*-*-12-*-*-*-*-*-iso10646-1
 !URxvt.letterSpace:			 0
 
-!URxvt.font: -*-termsyn.icons-medium-r-*-*-14-*-*-*-*-*-*-*
-URxvt.font: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
-!URxvt.boldFont: -*-termsyn-medium-r-*-*-14-*-*-*-*-*-*-*
+URxvt.font: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
+URxvt.boldFont: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
 
 URxvt.xftAntialias:     	false
 !Urxvt*transparent:			true
