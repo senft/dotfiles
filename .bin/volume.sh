@@ -1,2 +1,2 @@
 #!/bin/bash
-amixer get Master | egrep -o "[0-9]+%" | head -1
+amixer get Master | grep "\[on\]" | egrep -o "[0-9]+%" | head -1
