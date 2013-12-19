@@ -30,4 +30,4 @@ xset m 1 0 &
 xsetroot -cursor_name left_ptr &
 unclutter -idle 3 &
 
-/home/jln/.config/bspwm/panel &
+(sleep 1 && /home/jln/.config/bspwm/panel) &

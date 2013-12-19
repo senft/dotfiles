@@ -58,7 +58,7 @@ super + shift + Return
     urxvtc
 
 super + r
-    dmenu_run
+    dmenu_run -i -fn "-*-termsyn-medium-*-*-*-12-*-*-*-*-*-iso8859-*" -nb "#121212" -nf "#909090" -sb "#917154" -sf "#fff"
 
 super + {m,p,c}
     ~/.bin/dmenu_{mpd,playlist,solve}
