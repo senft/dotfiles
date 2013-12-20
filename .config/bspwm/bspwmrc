@@ -21,6 +21,8 @@ bspc rule -a Chromium desktop=^2 monocle=true
 bspc rule -a mplayer floating=on
 bspc rule -a ncmpcpp floating=on
 
+bspc rule -a BSPWM_FRAME frame=on 
+
 xcompmgr -c -C -f -F -D 1 &
 chromium &
 

@@ -29,7 +29,7 @@ super + ctrl + {h,j,k,l}
 super + ctrl + shift + {h,j,k,l}
     bspc window -e {right,up,down,left} pull
 
-super + alt + {h,j,k,l}
+alt + {h,j,k,l}
     bspc window -p {left,down,up,right}
 
 super + {_,shift + }{1-9,0}
@@ -67,10 +67,10 @@ super + shift + z
     i3lock -u -i /home/jln/.bg.png -t
 
 super + o
-    urxvtc -g 100x50+900+150 -name ncmpcpp -e ncmpcpp
+    urxvtc -g 150x60+820+150 -name ncmpcpp -e ncmpcpp
 
 super + {KP_Add,KP_Subtract}
-    amixer set Master {4000+, 4000-}
+    amixer set Master {4000+,4000-}
 
 super + KP_Enter
     amixer -q set Master toggle
@@ -79,7 +79,7 @@ super + {x,Left,Right}
     mpc {toggle,prev,next}
 
 super + shift + {KP_Add,KP_Subtract}
-    mpc volume {+5, -5}
+    mpc volume {+5,-5}
 
 # make sxhkd reload its configuration files:
 super + q
