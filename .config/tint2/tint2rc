@@ -1,0 +1,33 @@
+# Panel
+panel_monitor = LVDS
+panel_position = bottom right horizontal
+panel_size = 25% 20
+panel_margin = 0 0
+panel_padding = 0 0 0
+panel_dock = 0
+wm_menu = 0
+panel_layer = bottom
+panel_background_id = 0
+
+# Panel Autohide
+autohide = 1
+autohide_show_timeout = 0.0
+autohide_hide_timeout = 0.5
+autohide_height = 2
+strut_policy = follow_size
+
+# Taskbar
+taskbar_mode = single_desktop
+taskbar_padding = 0 0 0
+
+# Tasks
+task_icon = 0
+task_text = 0
+task_maximum_size = 1 1
+task_padding = 0 0 
+
+# System Tray
+systray = 1
+systray_padding = 2
+systray_sort = ascending
+systray_icon_size = 16
