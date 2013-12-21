@@ -19,7 +19,6 @@ bspc config top_padding $PANEL_HEIGHT
 #bspc config bottom_padding $PANEL_HEIGHT
 
 bspc control --subscribe > "$PANEL_FIFO" &
-xtitle -sf 'T%s' > "$PANEL_FIFO" &
 conky -c ~/.conkyrc-bspwm > "$PANEL_FIFO" &
 
 source /home/jln/.config/bspwm/panel_colors

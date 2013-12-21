@@ -33,15 +33,15 @@ while read -r line ; do
             sys_infos="${PADDING}${line#?}${PADDING}${PADDING}"
             ;;
 
-        T*)
-            # xtitle output
-            if [ ${#line} -gt 100 ]
-            then
-                title="${PADDING}${line:1:100}...${PADDING}"
-            else
-                title="${PADDING}${line#?}${PADDING}"
-            fi
-            ;;
+        #T*)
+        #    # xtitle output
+        #    if [ ${#line} -gt 100 ]
+        #    then
+        #        title="${PADDING}${line:1:100}...${PADDING}"
+        #    else
+        #        title="${PADDING}${line#?}${PADDING}"
+        #    fi
+        #    ;;
 
         W*)
             # bspwm internal state
@@ -95,27 +95,14 @@ while read -r line ; do
             ;;
     esac
 
-    set -- $(printf '%s\0%s\0%s' "$wm_infos" "$title" "$sys_infos" | sed 's/\^[a-z]\+([^)]*)//g' | xargs -0 txtw -f "$font_family" -s "$font_size")
+    set -- $(printf '%s\0%s' "$wm_infos" "$sys_infos" | sed 's/\^[a-z]\+([^)]*)//g' | xargs -0 txtw -f "$font_family" -s "$font_size")
 
     left_width=$1
-    center_width=$2
-    right_width=$3
+    right_width=$2
 
     left_indent=0
     right_indent=$((screen_width - right_width - 65))
-    available_center=$((screen_width - (left_width + right_width)))
 
-    if [ $available_center -lt $center_width ] ; then
-        center_indent=$((left_indent + left_width))
-    else
-        if [ $adaptive_centering -eq 1 ] ; then
-            center_indent=$((left_width + (available_center - center_width) / 2))
-        else
-            center_indent=$(((screen_width - center_width) / 2 ))
-        fi
-    fi
-    center_indent=$(((screen_width - 300) / 2 ))
-
-    printf "%s\n" "^pa($center_indent)$wm_infos^pa($left_indent)$title^pa($right_indent)$sys_infos"
+    printf "%s\n" "^pa($left_indent)$wm_infos^pa($right_indent)$sys_infos"
 
 done
