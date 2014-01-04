@@ -82,5 +82,5 @@ URxvt*keysym.M-s:       	perl:keyboard-select:search
 URxvt*underlineURLs:    	true
 URxvt*url-select.underline: true
 URxvt*termName:				rxvt-256color
-URxvt*internalBorder:       5
+URxvt*internalBorder:       2
 URxvt*externalBorder:       0
