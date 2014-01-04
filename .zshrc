@@ -240,7 +240,7 @@ alias -g C="| xclip"
 alias gs="git status"
 alias gb="git branch"
 alias gd="git diff"
-alias gc="git commit -am"
+alias gc="git commit -m"
 alias gp="git push"
 alias glf="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gl="glf | head"
@@ -277,7 +277,7 @@ if [[ "$TERM" == *"-256color" ]]; then
 
     function zle-keymap-select () {
         if [ $KEYMAP = vicmd ]; then
-          echo -ne "\033]12;#ff6565\007"
+          echo -ne "\033]12;Black\007"
         else
           echo -ne "\033]12;White\007"
       fi
