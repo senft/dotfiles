@@ -33,16 +33,6 @@ while read -r line ; do
             sys_infos="${PADDING}${line#?}${PADDING}${PADDING}"
             ;;
 
-        #T*)
-        #    # xtitle output
-        #    if [ ${#line} -gt 100 ]
-        #    then
-        #        title="${PADDING}${line:1:100}...${PADDING}"
-        #    else
-        #        title="${PADDING}${line#?}${PADDING}"
-        #    fi
-        #    ;;
-
         W*)
             # bspwm internal state
             wm_infos="$PADDING"
