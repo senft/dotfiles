@@ -26,5 +26,6 @@ source /home/jln/.config/bspwm/panel_colors
 FONT_FAMILY='termsyn'
 FONT_SIZE=11
 cat "$PANEL_FIFO" | /home/jln/.config/bspwm/panel_dzen2 -f "$FONT_FAMILY" -s "$FONT_SIZE" | dzen2 -h $PANEL_HEIGHT -dock -ta l -title-name panel -fn "${FONT_FAMILY}:pixelsize=${FONT_SIZE}" -fg "$COLOR_FG" -bg "$COLOR_BG" -y $PANEL_Y &
+cat "$PANEL_FIFO" | /home/jln/.config/bspwm/panel_dzen2 -f "$FONT_FAMILY" -s "$FONT_SIZE" | dzen2 -h $PANEL_HEIGHT -dock -ta l -title-name panel -fn "${FONT_FAMILY}:pixelsize=${FONT_SIZE}" -fg "$COLOR_FG" -bg "$COLOR_BG" -y $PANEL_Y -e 'entertitle=exec:/home/jln/.bin/dzen-spawner.sh;leavetitle=exec:/home/jln/.bin/dzen-kill-spawner.sh' &
 
 wait
