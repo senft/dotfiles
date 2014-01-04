@@ -72,7 +72,13 @@ super + o
 super + {KP_Add,KP_Subtract}
     amixer set Master {4000+,4000-}
 
+XF86Audio{Raise,Lower}Volume
+    amixer set Master {4000+,4000-}
+
 super + KP_Enter
+    amixer -q set Master toggle
+
+XF86AudioMute
     amixer -q set Master toggle
 
 super + {x,Left,Right}
