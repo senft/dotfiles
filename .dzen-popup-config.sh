@@ -1,0 +1,15 @@
+#!/bin/sh
+
+BACKGROUND="#121212"
+FOREGROUND='#989584'
+HIGHLIGHT="#eddcd3"
+HIGHLIGHT2="#746c48"
+
+BAR_BG="#454545"
+
+YPOS="38"
+
+FONT="terminus"
+FONT_SIZE=12
+
+SPAWNER_PID_FILE="/tmp/dzen_popup.pid"
