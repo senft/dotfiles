@@ -23,9 +23,9 @@ bspc rule -a mplayer floating=on
 bspc rule -a ncmpcpp floating=on
 bspc rule -a Steam follow=on fullscreen=on
 
-bspc rule -a BSPWM_FRAME frame=on 
+bspc rule -a BSPWM_FRAME frame=on
 
-xcompmgr -c -C -f -F -D 1 &
+xcompmgr -c -C &
 chromium &
 
 urxvtc &
@@ -34,6 +34,8 @@ xset m 1 0 &
 xsetroot -cursor_name left_ptr &
 unclutter -idle 3 &
 tint2 &
+
+xscreensaver -no-splash &
 
 (sleep 1 && /home/jln/.config/bspwm/panel) &
 

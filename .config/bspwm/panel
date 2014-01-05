@@ -9,11 +9,13 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
-PANEL_HEIGHT=20
+PANEL_HEIGHT=16
+
+# top panel
 PANEL_Y=0
 bspc config top_padding $PANEL_HEIGHT
 
-# uncomment for bottom panel
+# bottom panel
 #SCREEN_HEIGHT=$(sres -H)
 #PANEL_Y=$SCREEN_HEIGHT-$PANEL_HEIGHT
 #bspc config bottom_padding $PANEL_HEIGHT
