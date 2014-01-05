@@ -2,41 +2,63 @@
 # bspwm hotkeys
 #
 
+# quit bspwm
 super + shift + q
     pkill -x panel;bspc quit
 
+# close window
 super + Escape
     bspc window -c
 
-super + {shift + space,f}
+# toggle window state (floating,fullscreen)
+super + {space,f}
     bspc window -t {floating,fullscreen}
 
-super + {grave,Tab}
-    bspc {window,desktop} -f last
+# toggle layout (tiled, monocle)
+super + t
+    bspc desktop -l next
 
+## rotate windows 
+#super + Tab
+#    bspc desktop -C forward
+#    #bspc desktop -R 90
+
+super + {_,shift} + BackSpace
+    bspc desktop -{B,E}
+
+# focus/move window
 super + {_,shift + }{h,j,k,l}
     bspc window -{f,s} {left,down,up,right}
 
-super + {_,shift + }c
+# focus next/prev window
+super + {_,shift + }n
     bspc window -f {next,prev}
 
-super + {comma,period}
-    bspc desktop -C {backward,forward}
+#super + {comma,period}
+#    bspc desktop -C {backward,forward}
 
-super + ctrl + {h,j,k,l}
-    bspc window -e {left,down,up,right} push
+# Resize window
+super + ctrl + l
+    bspc window -e right +40 || bspc window -e left +40
 
-super + ctrl + shift + {h,j,k,l}
-    bspc window -e {right,up,down,left} pull
+super + ctrl + h
+    bspc window -e right -40 || bspc window -e left -40
 
+super + ctrl + j
+    bspc window -e down +40 || bspc window -e up +40
+
+super + ctrl + k
+    bspc window -e down -40 || bspc window -e up -40
+
+# Preselect splitting area
 alt + {h,j,k,l}
     bspc window -p {left,down,up,right}
 
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,window -d} ^{1-9,10}
 
-~button1
-    bspc pointer -g focus
+#~button1
+#    bspc pointer -g focus
 
 super + button{1-3}
     bspc pointer -g {move,resize_side,resize_corner}
@@ -46,9 +68,6 @@ super + !button{1-3}
 
 super + @button{1-3}
     bspc pointer -u
-
-super + t
-    bspc desktop -l next
 
 #
 # wm independent hotkeys
