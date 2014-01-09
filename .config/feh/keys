@@ -1,0 +1,19 @@
+next_img j Right space
+prev_img k Left BackSpace
+
+# image movement
+scroll_up    K C-Up
+scroll_down  J C-Down
+scroll_left  H C-Left
+scroll_right L C-Right
+
+# remove now conflicts with toggle_filenames, so change that
+toggle_filenames f
+
+# zooming
+zoom_default d
+zoom_fit a
+
+# I only hit these accidentaly
+save_image
+save_filelist
