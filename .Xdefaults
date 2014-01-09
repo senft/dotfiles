@@ -1,6 +1,6 @@
 ! Black
-*color0:                              #252525
-*color8:                              #454545
+*color0:                              #454545
+*color8:                              #656565
 ! Red
 *color1:							  #BF3F34
 *color9:                              #EF545F
@@ -8,8 +8,8 @@
 *color2:                              #705D22
 *color10:                             #B8AA4B
 ! Yellow
-*color3:                              #CD7860
-*color11:                             #E88773
+*color3:                              #c7a417
+*color11:                             #dcc670
 ! Blue
 *color4:                              #627A92
 *color12:			                  #88a1ba
@@ -23,7 +23,7 @@
 *color7:                              #C2C2A8
 *color15:                             #DBDAC1
 
-*cursorColor:                         #917154
+*cursorColor:                         #eddcd3
 
 URxvt*foreground:                     #eddcd3
 URxvt*background:                     #121212
@@ -63,9 +63,11 @@ URxvt.font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso1064
 URxvt.boldFont: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
 
 URxvt.xftAntialias:     	false
-!Urxvt*transparent:			true
-!URxvt*shading:          	20
-!URxvt*inheritPixmap:    	true
+Urxvt*transparent:			true
+URxvt*shading:          	12
+URxvt*inheritPixmap:    	true
+URxvt*depth:                32
+!URxvt*tintcolor: #121212
 URxvt*saveLines:        	12000
 URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true
@@ -75,7 +77,7 @@ URxvt*print-pipe:       	cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
 URxvt*perl-lib:         	/usr/lib/urxvt/perl/
 URxvt.perl-ext-common:  	default,url-select,keyboard-select
 URxvt*perl-ext:         	selection,clipboard
-URxvt*url-select.launcher:	/usr/bin/chromium
+URxvt*url-select.launcher:	firefox
 URxvt*matcher.button:		1
 URxvt*colorUL:          	2
 URxvt*cutchars:         	`""()'*'<>[]{|}
@@ -85,5 +87,5 @@ URxvt*keysym.M-s:       	perl:keyboard-select:search
 URxvt*underlineURLs:    	true
 URxvt*url-select.underline: true
 URxvt*termName:				rxvt-256color
-URxvt*internalBorder:       2
+URxvt*internalBorder:       4
 URxvt*externalBorder:       0
