@@ -211,7 +211,7 @@ alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias r='ranger'
 alias n64="mupen64plus --windowed --resolution 1920x1080"
-alias youtube-dl-mp3="youtube-dl -x --audio-format mp3"
+alias youtube-dl-mp3="youtube-dl -x --audio-format mp3 --add-metadata"
 
 # cd
 alias home="cd ~"
@@ -277,7 +277,7 @@ if [[ "$TERM" == *"-256color" ]]; then
 
     function zle-keymap-select () {
         if [ $KEYMAP = vicmd ]; then
-          echo -ne "\033]12;Black\007"
+          echo -ne "\033]12;Darkgray\007"
         else
           echo -ne "\033]12;White\007"
       fi
@@ -299,10 +299,16 @@ if [[ "$TERM" == *"-256color" ]]; then
     #}
 fi
 
-#PS1='%F{magenta}%#  %f'
-#RPROMPT='%F{cyan}%~%f%b'
+#PS1='%F{cyan}%~%f%b %F{magenta}%#%f '
 
-PS1='%F{cyan}%~%f%b %F{magenta}%#%f '
+#PS1='%F{magenta}%#  %f'
+RPROMPT='%F{cyan}%~%f%b'
+
+if [ $(id -u) -eq 0 ]; then
+    PS1='%F{red}# %f'
+else
+    PS1='%F{magenta}» %f'
+fi
 
 
 function ranger-cd {
