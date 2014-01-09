@@ -2,31 +2,39 @@
 
 bspc monitor -d term www dev misc irc 6 7 8 9
 
-bspc config border_width        2
-bspc config window_gap          20
-bspc config split_ratio         0.52
-bspc config borderless_monocle  true
-bspc config gapless_monocle     true
-bspc config auto_cancel         true
+# set monocle layout for browser workspace
+bspc desktop www -l monocle
+
+bspc config border_width           1
+bspc config window_gap             30
+bspc config split_ratio            0.50
+bspc config focus_follows_pointer  false
+bspc config borderless_monocle     true
+bspc config gapless_monocle        true
+bspc config auto_cancel            true
+bspc config auto_alternate         true
+bspc config ignore_ewmh_focus      true
 
 bspc config focused_border_color         "#917154"
 bspc config normal_border_color          "#121212"
-#bspc config active_border_color          "#312E2A"
-#bspc config focused_locked_border_color  "#00C7D8"
-#bspc config normal_locked_border_color   "#708D8F"
-#bspc config active_locked_border_color   "#808C8D"
-#bspc config urgent_border_color          "#CF4F88"
-bspc config presel_border_color           "#705D22"
+bspc config urgent_border_color          "#EF545F"
+bspc config presel_border_color          "#705D22"
 
-bspc rule -a Chromium desktop=^2 monocle=true
-bspc rule -a mplayer floating=on
-bspc rule -a ncmpcpp floating=on
-bspc rule -a Steam follow=on fullscreen=on
+bspc rule -a Chromium desktop=www
+bspc rule -a Firefox desktop=www
+bspc rule -a Gimp desktop=misc
+bspc rule -a feh floating=true focus=false
+bspc rule -a mplayer floating=true
+bspc rule -a ncmpcpp floating=true
+bspc rule -a Steam desktop=misc follow=true fullscreen=true
 
 bspc rule -a BSPWM_FRAME frame=on
 
-xcompmgr -c -C &
-chromium &
+numlockx &
+#xcompmgr -c -C &
+xcompmgr -c -C -f -F -D 2 &
+#chromium &
+firefox &
 
 urxvtc &
 xset m 1 0 &
@@ -36,7 +44,6 @@ unclutter -idle 3 &
 tint2 &
 
 xscreensaver -no-splash &
+dropbox start &
 
 (sleep 1 && /home/jln/.config/bspwm/panel) &
-
-wait

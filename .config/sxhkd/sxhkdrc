@@ -18,37 +18,46 @@ super + {space,f}
 super + t
     bspc desktop -l next
 
-## rotate windows 
-#super + Tab
+## rotate windows
+# switch to last desktop
+super + Tab
+    bspc desktop -R 90
+#    bspc desktop -f last
 #    bspc desktop -C forward
-#    #bspc desktop -R 90
 
 super + {_,shift} + BackSpace
     bspc desktop -{B,E}
 
-# focus/move window
-super + {_,shift + }{h,j,k,l}
-    bspc window -{f,s} {left,down,up,right}
+# focus window
+super + {h,j,k,l}
+    bspc window -f {left,down,up,right}
+
+# move window
+super + shift + h
+    bspc window -s left || bspc window -s right || xdo move -x -20
+super + shift + l
+    bspc window -s right || bspc window -s left || xdo move -x +20
+super + shift + j
+    bspc window -s down || bspc window -s up || xdo move -y +20
+super + shift + k
+    bspc window -s up || bspc window -s down || xdo move -y -20
 
 # focus next/prev window
 super + {_,shift + }n
     bspc window -f {next,prev}
 
-#super + {comma,period}
-#    bspc desktop -C {backward,forward}
-
 # Resize window
 super + ctrl + l
-    bspc window -e right +40 || bspc window -e left +40
+    bspc window -e right +40 || bspc window -e left +40 || xdo resize -w +40
 
 super + ctrl + h
-    bspc window -e right -40 || bspc window -e left -40
+    bspc window -e right -40 || bspc window -e left -40 || xdo resize -w -40
 
 super + ctrl + j
-    bspc window -e down +40 || bspc window -e up +40
+    bspc window -e down +40 || bspc window -e up +40 || xdo resize -h +40
 
 super + ctrl + k
-    bspc window -e down -40 || bspc window -e up -40
+    bspc window -e down -40 || bspc window -e up -40 || xdo resize -h -40
 
 # Preselect splitting area
 alt + {h,j,k,l}
