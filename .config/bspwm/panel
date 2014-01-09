@@ -9,7 +9,7 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
-PANEL_HEIGHT=16
+PANEL_HEIGHT=12
 
 # top panel
 PANEL_Y=0
@@ -25,8 +25,8 @@ conky -c ~/.conkyrc-bspwm > "$PANEL_FIFO" &
 
 source /home/jln/.config/bspwm/panel_colors
 
-FONT_FAMILY='termsyn'
-FONT_SIZE=11
+FONT_FAMILY='tamzen'
+FONT_SIZE=10
 cat "$PANEL_FIFO" | /home/jln/.config/bspwm/panel_dzen2 -f "$FONT_FAMILY" -s "$FONT_SIZE" | dzen2 -h $PANEL_HEIGHT -dock -ta l -title-name panel -fn "${FONT_FAMILY}:pixelsize=${FONT_SIZE}" -fg "$COLOR_FG" -bg "$COLOR_BG" -y $PANEL_Y -e 'entertitle=exec:/home/jln/.bin/dzen-spawner.sh;leavetitle=exec:/home/jln/.bin/dzen-kill-spawner.sh' &
 
 wait

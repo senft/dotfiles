@@ -1,2 +1,2 @@
 #!/bin/sh
-DMENU='dmenu -i -fn "-*-termsyn-medium-*-*-*-12-*-*-*-*-*-iso8859-*" -nb "#121212" -nf "#909090" -sb "#917154" -sf "#fff"'
+DMENU='dmenu -i -fn "-*-tamzen-medium-*-*-*-9-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#252525" -sf "#eddcd3"'

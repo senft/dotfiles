@@ -56,8 +56,11 @@ Xft.lcdfilter:  lcddefault
 !URxvt*boldFont: -*-envy code r-medium-r-*-*-12-*-*-*-*-*-iso10646-1
 !URxvt.letterSpace:			 0
 
-URxvt.font: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
-URxvt.boldFont: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
+!URxvt.font: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
+!URxvt.boldFont: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
+
+URxvt.font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
+URxvt.boldFont: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
 
 URxvt.xftAntialias:     	false
 !Urxvt*transparent:			true
