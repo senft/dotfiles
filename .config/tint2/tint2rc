@@ -1,18 +1,18 @@
 rounded = 0
 border_width = 0
-background_color = #000000 0
+background_color = #121212 80
 border_color = #000000 0
 
 # Panel
 panel_monitor = LVDS
 panel_position = bottom right horizontal
-panel_size = 25% 20
+panel_size = 100% 16
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
 wm_menu = 0
 panel_layer = bottom
-panel_background_id = 0
+panel_background_id = 1
 
 # Panel Autohide
 autohide = 1
@@ -22,8 +22,8 @@ autohide_height = 0
 strut_policy = follow_size
 
 # Taskbar
-taskbar_mode = single_desktop
-taskbar_padding = 0 0 0
+#taskbar_mode = single_desktop
+#taskbar_padding = 0 0 0
 
 # Tasks
 task_icon = 0
@@ -33,7 +33,6 @@ task_padding = 0 0
 
 # System Tray
 systray = 1
-systray_background_id = 0
-systray_padding = 2
+systray_padding = 0
 systray_sort = ascending
 systray_icon_size = 16
