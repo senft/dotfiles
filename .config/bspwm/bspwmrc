@@ -15,10 +15,10 @@ bspc config auto_cancel            true
 bspc config auto_alternate         true
 bspc config ignore_ewmh_focus      true
 
-bspc config focused_border_color         "#917154"
-bspc config normal_border_color          "#121212"
-bspc config urgent_border_color          "#EF545F"
-bspc config presel_border_color          "#705D22"
+bspc config focused_border_color   "#917154"
+bspc config normal_border_color    "#121212"
+bspc config urgent_border_color    "#EF545F"
+bspc config presel_border_color    "#705D22"
 
 bspc rule -a Chromium desktop=www
 bspc rule -a Firefox desktop=www
@@ -28,11 +28,8 @@ bspc rule -a mplayer floating=true
 bspc rule -a ncmpcpp floating=true
 bspc rule -a Steam desktop=misc follow=true fullscreen=true
 
-bspc rule -a BSPWM_FRAME frame=on
-
 numlockx &
-#xcompmgr -c -C &
-xcompmgr -c -C -f -F -D 2 &
+xcompmgr -c -C &
 #chromium &
 firefox &
 
