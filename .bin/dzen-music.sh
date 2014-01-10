@@ -48,7 +48,7 @@ if [ ! -z "$playing" ]; then
      echo "$album ($date)";
      #echo "^ca(1, mpc prev)  ^fg()^i(/home/jln/.icons/xbm8x8/prev.xbm) ^ca()  ^ca(1, mpc pause) ^i(/home/jln/.icons/xbm8x8/pause.xbm) ^ca()  ^ca(1, mpc play) ^i(/home/jln/.icons/xbm8x8/play.xbm) ^ca()   ^ca(1, mpc next) ^i(/home/jln/.icons/xbm8x8/next.xbm) ^ca()";
      echo " ";
-     echo "$duration min, $bitrate kbps"
+     echo "$duration min @ $bitrate kbps"
      echo " ";
      echo $percbar;
      echo "$progress";) | dzen2 -p -fg $FOREGROUND -bg $BACKGROUND -fn "${FONT}:pixelsize=${FONT_SIZE}" -x $XPOS -y $YPOS -w $WIDTH -l $LINES -sa c -e 'onstart=uncollapse;button1=exit;button3=exit' -title-name 'dzen-popup-music'
