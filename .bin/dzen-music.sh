@@ -13,13 +13,19 @@ playing=$(mpc current)
 if [ ! -z "$playing" ]; then
     artist=$(mpc current -f %artist%)
     album=$(mpc current -f %album%)
+
     date=$(mpc current -f %date%)
     track=$(mpc current -f %title%)
     duration=$(mpc current -f %time%)
     filename="/home/jln/Musik/$(mpc current -f %file%)"
     bitrate=`mp3info -r m -p "%r" "$filename"`
     paused=$(mpc status | grep "paused")
-    art="$COVER_BASE$(ls $COVER_BASE | grep -v SMALL | grep "$(mpc current -f %album%)")"
+
+    if [ -z "$album" ]; then
+        art="$COVER_BASE""default.jpg"
+    else
+        art="$COVER_BASE$(ls $COVER_BASE | grep -v SMALL | grep "$album")"
+    fi
 
     stats_width=`txtw -f "$FONT" -s "$FONT_SIZE" "$artist - $album"`
     stats_indent=$(((WIDTH-stats_width)/2))
@@ -28,10 +34,8 @@ if [ ! -z "$playing" ]; then
 
     percbar=`echo -e "$perc" | gdbar -bg $BAR_BG -fg $HIGHLIGHT2 -h 1 -w $((WIDTH-40))`
 
-    if [ "$art" != "$COVER_BASE" ]; then
-        feh -Z -x -B black -g 115x115+$((XPOS-112))+$YPOS "$art" &
-        feh_pid=$!
-    fi
+    feh -Z -x -B black -g 115x115+$((XPOS-112))+$YPOS "$art" &
+    feh_pid=$!
 
     (echo " ";
     if [ -z "$paused" ]; then
