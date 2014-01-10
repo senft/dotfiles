@@ -4,6 +4,11 @@ if [ -f $HOME/.dmenurc ]; then
 else
     DMENU='dmenu -i'
 fi
-result=`echo | eval $DMENU -p 'Solve' | bc`
-notify-send "$result"
+term=`echo | eval $DMENU -p 'Solve'`
+result=`echo $term | bc -l`
+
+#term=`echo | eval $DMENU -p 'Solve'`
+#result=`python -c "print($term)"`
+
+notify-send -u normal -a "Solve" "$term" "$result"
 echo "$result" | xclip -selection "clipboard" -i
