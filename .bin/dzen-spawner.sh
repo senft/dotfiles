@@ -13,19 +13,20 @@ SCREEN_WIDTH=$(sres -W)
 CAL_START=$((SCREEN_WIDTH-110))
 CAL_END=$SCREEN_WIDTH
 
-MUSIC_START=$((SCREEN_WIDTH-(SCREEN_WIDTH/3)))
+music_text=$(mpc current)
+music_width=$(txtw -f $PANEL_FONT -s $PANEL_FONT_SIZE "$music_text")
+
+MUSIC_START=$((CAL_START-90-music_width))
 MUSIC_END=$CAL_START
 
 while true; do
-    XPOS=$(xdotool getmouselocation 2> /dev/null | tail -1 | awk -F " " '{print $1}' | cut -d ":" -f 2)
-    YPOS=$(xdotool getmouselocation 2> /dev/null | tail -1 | awk -F " " '{print $2}' | cut -d ":" -f 2)
-
-    #echo $YPOS
-    #echo $BAR_HEIGHT
+    mousepos=$(xdotool getmouselocation 2> /dev/null | tail -1 2> /dev/null)
+    YPOS=$(echo $mousepos | awk '{print $2}' | cut -d ":" -f 2 2> /dev/null)
     if [ $YPOS -gt $BAR_HEIGHT ]; then
-        #echo "meh"
         continue
     fi
+
+    XPOS=$(echo $mousepos | awk '{print $1}' | cut -d ":" -f 2)
 
     if [ $XPOS -gt $CAL_START -a $XPOS -lt $CAL_END ]; then
         pid=$(pgrep -f "dzen-popup-cal")
@@ -42,5 +43,5 @@ while true; do
     else
         /home/jln/.bin/dzen-kill-popup.sh
     fi
-    sleep 0.5
+    sleep 1
 done
