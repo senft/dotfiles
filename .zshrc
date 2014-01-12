@@ -211,7 +211,7 @@ alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias r='ranger'
 alias n64="mupen64plus --windowed --resolution 1920x1080"
-alias youtube-dl-mp3="youtube-dl -x --audio-format mp3 --add-metadata"
+alias youtube-dl-mp3="youtube-dl --add-metadata -x --audio-format mp3"
 
 # cd
 alias home="cd ~"
@@ -221,7 +221,7 @@ alias back="cd -"
 alias ..="cd .."
 
 # vim shortcuts
-alias vv="vim ~/.vim/vimrc"
+alias vv="vim ~/.vim/vimrc ~/.vimperatorrc"
 alias vz="vim ~/.zshrc"
 alias vx="vim ~/.Xdefaults"
 alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
