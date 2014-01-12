@@ -92,7 +92,7 @@ while read -r line ; do
     right_width=$2
 
     left_indent=0
-    right_indent=$((screen_width - right_width - 45))
+    right_indent=$((screen_width - right_width - 35))
 
     printf "%s\n" "^pa($left_indent)$wm_infos^pa($right_indent)$sys_infos"
 
