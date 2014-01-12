@@ -43,7 +43,7 @@ super + shift + k
     bspc window -s up || bspc window -s down || xdo move -y -20
 
 # focus next/prev window
-super + {_,shift + }n
+super + {n,p}
     bspc window -f {next,prev}
 
 # Resize window
@@ -88,7 +88,7 @@ super + shift + Return
 super + r
     dmenu_run -i -fn "-*-tamzen-medium-*-*-*-9-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#252525" -sf "#eddcd3"
 
-super + {m,p,c}
+super + {m,shift+m,c}
     ~/.bin/dmenu_{mpd,playlist,solve}
 
 super + shift + z
