@@ -1,0 +1,94 @@
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+/* Firefox button */
+#appmenu-toolbar-button {
+    list-style-image: url("chrome://branding/content/icon16.png");
+    -moz-appearance: none !important;
+    background-color: #121212 !important;
+    color: #eddcd3 !important;
+
+    max-height: 18px !important;
+    max-width: 18px !important;
+}
+
+/*#appmenu-toolbar-button > .toolbarbutton-text,
+#appmenu-toolbar-button > .toolbarbutton-menu-dropmarker {*/
+.toolbarbutton-text,
+.toolbarbutton-menu-dropmarker {
+    display: none !important;
+}
+
+#abp-toolbarbutton {
+    -moz-appearance: none !important;
+    background-color: #121212 !important;
+    color: #eddcd3 !important;
+
+    max-height: 18px !important;
+    max-width: 18px !important;
+}
+
+#tabbrowser-tabs {
+    background-color: #121212 !important;
+    font: 12px "tamzen" !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.tabbrowser-tab {
+    -moz-appearance: none !important;
+    background-image: none !important;
+    border: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+
+    min-height: 18px !important;
+    max-height: 18px !important;
+}
+
+.tabbrowser-tab:not([pinned]) {
+    max-width: 250px !important;
+    min-width: 20px !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+    background-color: #454545 !important;
+    color: #ffffff !important;
+	padding-top: 0px !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) {
+    background-color: #121212 !important;
+    color: #989584 !important;
+	padding-top: 0px !important;
+}
+
+/* tab favicon size */
+.tabbrowser-tabs .tab-icon-image {
+    max-height: 14px !important;
+    max-width: 14px !important;
+}
+
+#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab > .tab-stack > .tab-content[pinned]{
+    min-height: 50px;
+}
+
+.tabs-newtab-button {
+    -moz-appearance: none !important;
+    border: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+toolbarseparator
+{
+    -moz-appearance:none !important;
+    padding: 8px !important;
+	background-color: #121212 !important;
+}

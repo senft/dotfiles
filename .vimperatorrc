@@ -1,0 +1,89 @@
+set gui=none,tabs
+
+set tabnumbers
+set smartcase
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+set noscrollbars
+set focuscontent
+
+" follow non-unique hint after 500ms
+set hinttimeout=500
+
+" all type pages are opened in new tab
+" " addons + downloads + help + javascript + prefs
+set newtab=all
+
+" don't show download-manager
+set! browser.download.manager.showWhenStarting=false
+
+" open tab in the background
+set! browser.tabs.loadDivertedInBackground=false
+
+set editor="urxvt -e vim"
+" don't display tab numbers in statusline
+set status=input,location,bookmark,history,position
+
+" Make Firefox run faster by using JIT
+set! javascript.options.jit.chrome=true
+
+let mapleader = ","
+
+colorscheme molokai
+
+set! browser.tabs.closeButtons=2
+
+" Qmarks
+silent qmark f http://facebook.com
+silent qmark r http://reddit.com
+silent qmark n http://feedly.com
+silent qmark g http://github.com/senft
+silent qmark i http://instagram.com/#
+
+noremap <leader>f gnf
+noremap <leader>r gnr
+noremap <leader>n gnn
+noremap <leader>g gng
+noremap <leader>i gni
+
+noremap <leader>d :tabopen chrome://browser/content/downloads/contentAreaDownloadsView.xul<CR>
+noremap <leader>a :addons<CR>
+
+nnoremap b :bmarks!
+nnoremap B :buffer!
+
+noremap <C-S-b> :sidebar bookmarks<CR>
+noremap <C-S-h> :sidebar history<CR>
+
+nnoremap D yP
+
+nnoremap j 5j
+nnoremap k 5k
+
+noremap H h
+noremap L l
+noremap h :back<CR>
+noremap l :forward<CR>
+
+noremap J :bp<CR>
+noremap K :bn<CR>
+
+" CTRL-A = select all in insert mode
+inoremap <C-a> <Ins><C-a><Ins>
+
+" sourcing .vimperatorrc
+noremap <Leader>s :source ~/.vimperatorrc<CR>
+
+:style -name=yourUglyStatusline * #liberator-statusline { font-family: "tamzen" !important; }  }
+
+highlight! CmdLine>* font-family: "tamzen"; font-size: 14px; color: #eddcd3; transition: all 0.25s;
+highlight! CompItem font-family: "tamzen"; font-size: 14px;
+highlight! CompTitle font-family: "tamzen"; font-size: 16px; font-weight: bold;
+highlight! StatusLine font-family: "tamzen"; font-size: 14px; max-height: 9px;
+highlight! Hint font-family: "tamzen"; font-weight: bold; font-size: 18px; text-transform: uppercase; color: black; background-color: yellow; border-color: ButtonShadow; border-width: 1px; border-style: solid; border-color: black; padding: 2px 3px 0px 3px;
+highlight! HintElem background-color: ;
+
+" vim: set ft=vim:
