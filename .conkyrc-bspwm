@@ -1,0 +1,21 @@
+#use_spacer left
+pad_percents 3
+background no
+out_to_console yes
+out_to_x no
+total_run_times 0
+update_interval 2
+uppercase no
+if_up_strictness address
+override_utf8_locale yes
+
+# #{"full_text": " ${cpu cpu1}% ${cpu cpu2}% ", "icon": "/home/jln/.icons/xbm8x8/cpu.xbm", "color": "\#FFFFFF", "separator": false},
+# #{"full_text": " $mem / $memmax ", "icon":"/home/jln/.icons/xbm8x8/mem.xbm", "color":"\#FFFFFF", "separator": false},
+# /: ${fs_used_perc /}%   ~/: ${fs_used_perc /home}% #","icon": "/home/jln/.icons/xbm8x8/diskette.xbm", "color": "\#FFFFFF", "separator": false},
+# #{"full_text" : " ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDF temperature}°C ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDF weather} ", "color": "\#FFFFFF", "icon": "/home/jln/.icons/cloud.xbm", "separator": false},
+# ${if_up eth0}
+# ${upspeedf eth0}   ${downspeedf eth0} # ","icon": "/home/jln/.icons/xbm8x8/net_wired.xbm", "color": "\#FFFFFF", "separator": false},
+# ${endif}
+
+TEXT
+C${if_mpd_playing}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)${if_match "$mpd_status" == "Paused"}^i(/home/jln/.icons/xbm8x8/pause.xbm)${else}^i(/home/jln/.icons/xbm8x8/play.xbm)$endif $mpd_smart^ca()^ca()^ca() ${endif} ^ca(1, amixer set Master toggle)^ca(4, amixer -q set Master 4000+)^ca(5, amixer -q set Master 4000-) ${execi 1 /home/jln/.bin/volume-dzen.sh}^ca()^ca()^ca()   ^i(/home/jln/.icons/xbm8x8/clock.xbm) ${time %a %d.%m}  ${time %R}
