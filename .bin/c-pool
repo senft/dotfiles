@@ -1,3 +1,0 @@
-#!/bin/bash
-xrandr --output CRT1 --mode 1920x1080 --output LVDS --off
-feh --bg-fill ~/.bg.jpg
