@@ -16,16 +16,21 @@ else
     DMENU='dmenu -i'
 fi
 
+# whitelist filetypes
+filetypes="(.+|sh|py|java|mp3|ogg|jpeg|jpg|png|gif)"
+
 if [ -z "$1" ]; then
     dir="."
 else
     dir="$1/"
 fi
 
-result=$(find $dir -regextype "posix-extended" ! -iregex '.*\.(git|svn|hg).*' | eval $DMENU -p open)
+files=$(find $dir -regextype "posix-extended" ! -iregex '.*\.(git|svn|hg).*' -iregex ".*\.$filetypes")
+echo "Found "$(echo "$files" | wc -l)" files "
+result=$(echo "$files" | eval $DMENU -p open)
 if [ ! -z "$result" ]; then
     mime=$(mimetype -b "$result")
     app=$(xdg-mime query default "$mime")
-    #echo "Open $result ($mime) with $app"
+    echo "Open $result ($mime) with $app"
     xdg-open "$result"
 fi
