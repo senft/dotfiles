@@ -2,7 +2,7 @@
 COLOR_ON="#eddcd3"
 COLOR_OFF="#989584"
 BAR_MAX_WIDTH=40
-BAR_HEIGHT=5
+BAR_HEIGHT=7
 vol=`amixer get Master | egrep -o "[0-9]+%" | head -1 | sed 's/%//'`
 mute=`amixer get Master | grep "\[on\]"`
 
