@@ -1,2 +1,2 @@
 #!/bin/sh
-DMENU='dmenu -i -fn "-*-tamzen-medium-*-*-*-9-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#252525" -sf "#eddcd3"'
+DMENU='dmenu -i -fn "-*-tamzen-medium-*-*-*-9-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#252525" -sf "#eddcd3" -dim 0.5'

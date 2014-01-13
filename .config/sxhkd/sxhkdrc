@@ -86,7 +86,7 @@ super + shift + Return
     urxvtc
 
 super + r
-    dmenu_run -i -fn "-*-tamzen-medium-*-*-*-9-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#252525" -sf "#eddcd3"
+    dmenu_run -i -fn "-*-tamzen-medium-*-*-*-9-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#252525" -sf "#eddcd3" -dim 0.5
 
 super + {m,shift+m,c}
     ~/.bin/dmenu_{mpd,playlist,solve}
