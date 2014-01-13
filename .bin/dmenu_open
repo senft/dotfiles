@@ -3,6 +3,11 @@
 #
 # Lists "all" regular files in current pwd and pipes to input. Opens the
 # selected file with xdg-open.
+# 
+# Depends on File-MimeInfo (http://search.cpan.org/dist/File-MimeInfo/)
+# for better mime identification
+# On Arch:
+#   packer -S perl-file-mimeinfo
 #
 
 if [ -f $HOME/.dmenurc ]; then
@@ -11,5 +16,10 @@ else
     DMENU='dmenu -i'
 fi
 
-result=`find . -type f ! -iwholename "*.git*" | eval $DMENU -p open`
-xdg-open $result
+dir="$1/"
+
+result=$(find $dir -regextype "posix-extended" ! -iregex '.*\.(git|svn|hg).*' | eval $DMENU -p open)
+mime=$(mimetype -b "$result")
+app=$(xdg-mime query default "$mime")
+#echo "Open $result ($mime) with $app"
+xdg-open "$result"
