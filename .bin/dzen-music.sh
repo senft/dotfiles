@@ -34,7 +34,7 @@ if [ ! -z "$playing" ]; then
 
     percbar=`echo -e "$perc" | gdbar -bg $BAR_BG -fg $HIGHLIGHT2 -h 1 -w $((WIDTH-40))`
 
-    feh -Z -x -B black -g 115x115+$((XPOS-112))+$YPOS "$art" &
+    feh -Z -x -B black -g 115x115+$((XPOS-117))+$YPOS "$art" &
     feh_pid=$!
 
     (echo " ";
