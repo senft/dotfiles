@@ -57,6 +57,7 @@ zle -N        edit-command-line
 bindkey '^v'  edit-command-line
 bindkey -M vicmd v edit-command-line
 
+bindkey -s '^o' 'dmenu_open\n'
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 
@@ -223,7 +224,7 @@ alias ..="cd .."
 # vim shortcuts
 alias vv="vim ~/.vim/vimrc ~/.vimperatorrc"
 alias vz="vim ~/.zshrc"
-alias vx="vim ~/.Xdefaults"
+alias vx="vim ~/.Xdefaults ~/.xinitrc"
 alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
 
 

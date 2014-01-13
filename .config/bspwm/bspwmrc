@@ -29,7 +29,8 @@ bspc rule -a ncmpcpp floating=true
 bspc rule -a Steam desktop=misc follow=true fullscreen=true
 
 numlockx &
-xcompmgr -c -C &
+#xcompmgr -c -C &
+compton -c -C -G -f -D 4 -b &
 #chromium &
 firefox &
 

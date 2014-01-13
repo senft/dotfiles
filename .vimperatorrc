@@ -30,6 +30,9 @@ set status=input,location,bookmark,history,position
 " Make Firefox run faster by using JIT
 set! javascript.options.jit.chrome=true
 
+" always show http
+set! browser.urlbar.trimURLs=false
+
 let mapleader = ","
 
 colorscheme molokai
@@ -58,8 +61,6 @@ nnoremap B :buffer!
 noremap <C-S-b> :sidebar bookmarks<CR>
 noremap <C-S-h> :sidebar history<CR>
 
-nnoremap D yP
-
 nnoremap j 5j
 nnoremap k 5k
 
@@ -70,6 +71,8 @@ noremap l :forward<CR>
 
 noremap J :bp<CR>
 noremap K :bn<CR>
+
+" imap jj <Esc>
 
 " CTRL-A = select all in insert mode
 inoremap <C-a> <Ins><C-a><Ins>
