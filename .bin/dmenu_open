@@ -7,7 +7,7 @@
 # Depends on File-MimeInfo (http://search.cpan.org/dist/File-MimeInfo/)
 # for better mime identification
 # On Arch:
-#   packer -S perl-file-mimeinfo
+#   pacman -S perl-file-mimeinfo
 #
 
 if [ -f $HOME/.dmenurc ]; then
