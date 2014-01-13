@@ -21,7 +21,6 @@ if [ -z "$1" ]; then
 else
     dir="$1/"
 fi
-echo $dir
 
 result=$(find $dir -regextype "posix-extended" ! -iregex '.*\.(git|svn|hg).*' | eval $DMENU -p open)
 if [ ! -z "$result" ]; then
