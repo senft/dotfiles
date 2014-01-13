@@ -24,9 +24,6 @@ mode=`echo $result | cut -c 1`
 # Cut leading "I: " or "A: "
 result=`echo $result | cut -c 4-`
 
-echo $mode
-echo $result
-
 if [ $mode == "I" ]; then
 	# Add artist
     mpc -q clear
