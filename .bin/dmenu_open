@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#
+# Lists "all" regular files in current pwd and pipes to input. Opens the
+# selected file with xdg-open.
+#
+
+if [ -f $HOME/.dmenurc ]; then
+    . $HOME/.dmenurc
+else
+    DMENU='dmenu -i'
+fi
+
+result=`find . -type f ! -iwholename "*.git*" | eval $DMENU -p open`
+xdg-open $result
