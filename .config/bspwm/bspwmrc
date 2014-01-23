@@ -35,7 +35,7 @@ compton -c -C -G -f -D 4 -b &
 firefox &
 
 urxvtc &
-xset m 1 0 &
+xset m 2 0 &
 
 xsetroot -cursor_name left_ptr &
 unclutter -idle 3 &
