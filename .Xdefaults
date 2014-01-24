@@ -63,11 +63,10 @@ URxvt.font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso1064
 URxvt.boldFont: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
 
 URxvt.xftAntialias:     	false
-Urxvt*transparent:			true
-URxvt*shading:          	12
-URxvt*inheritPixmap:    	true
-URxvt*depth:                32
-!URxvt*tintcolor: #121212
+!Urxvt*transparent:			true
+!URxvt*shading:          	12
+!URxvt*inheritPixmap:    	true
+!URxvt*depth:                32
 URxvt*saveLines:        	12000
 URxvt*visualBell:       	true
 URxvt*urgentOnBell:     	true
