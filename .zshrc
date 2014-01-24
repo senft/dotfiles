@@ -57,10 +57,11 @@ zle -N        edit-command-line
 bindkey '^v'  edit-command-line
 bindkey -M vicmd v edit-command-line
 
-bindkey -s '^o' 'dmenu_open\n'
+bindkey -s '^@' 'dmenu_open\n' # dmenu_open on ctrl+space
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 
+setopt   prompt_subst
 setopt   notify globdots correct cdablevars autolist
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
 setopt   menucomplete extendedglob rcquotes mailwarning
@@ -71,6 +72,8 @@ zmodload -a zsh/stat stat
 zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -a zsh/mapfile mapfile
+
+autoload -Uz vcs_info
 
 HISTFILE=$HOME/.zhistory
 HISTSIZE=50000
@@ -173,6 +176,12 @@ zstyle ':completion:*:ssh:*' tag-order users 'hosts:-host hosts:-domain:domain h
 zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
+zstyle ':vcs_info:git*' formats "%b %a %c%u%f "
+zstyle ':vcs_info:*' stagedstr '%F{4}S%f'
+zstyle ':vcs_info:*' unstagedstr '%F{1}U%f'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' enable git hg
+
 # ls
 #alias ls='ls -hF --color=always'
 alias ls='ls++ --potsf'
@@ -212,7 +221,8 @@ alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias r='ranger'
 alias n64="mupen64plus --windowed --resolution 1920x1080"
-alias youtube-dl-mp3="youtube-dl --add-metadata -x --audio-format mp3"
+alias youtube-dl-mp3="youtube-dl -x --audio-format mp3"
+alias o='xdg-open'
 
 # cd
 alias home="cd ~"
@@ -287,30 +297,19 @@ if [[ "$TERM" == *"-256color" ]]; then
     function zle-line-init() {
       zle -K viins
     }
-
-    ## Powerline prompt
-    #function _update_ps1()
-    #{
-    #  export PROMPT="$(python2 /home/jln/.powerline-zsh.py $?)"
-    #}
-
-    #precmd()
-    #{
-    #  _update_ps1
-    #}
 fi
 
-#PS1='%F{cyan}%~%f%b %F{magenta}%#%f '
+precmd() {
+    vcs_info
+}
 
-#PS1='%F{magenta}%#  %f'
+
 RPROMPT='%F{cyan}%~%f%b'
-
 if [ $(id -u) -eq 0 ]; then
-    PS1='%F{red}# %f'
+    PS1='${vcs_info_msg_0_}%F{red}# %f'
 else
-    PS1='%F{magenta}» %f'
+    PS1='${vcs_info_msg_0_}%F{magenta}» %f'
 fi
-
 
 function ranger-cd {
     tempfile='/tmp/chosendir'

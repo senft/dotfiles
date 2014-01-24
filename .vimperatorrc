@@ -25,7 +25,7 @@ set! browser.tabs.loadDivertedInBackground=false
 
 set editor="urxvt -e vim"
 " don't display tab numbers in statusline
-set status=input,location,bookmark,history,position
+set status=input,location,bookmark,history,position,ssl
 
 " Make Firefox run faster by using JIT
 set! javascript.options.jit.chrome=true
@@ -61,8 +61,8 @@ nnoremap B :buffer!
 noremap <C-S-b> :sidebar bookmarks<CR>
 noremap <C-S-h> :sidebar history<CR>
 
-nnoremap j 5j
-nnoremap k 5k
+nnoremap j 6j
+nnoremap k 6k
 
 noremap H h
 noremap L l
