@@ -26,11 +26,11 @@ else
 fi
 
 files=$(find $dir -regextype "posix-extended" ! -iregex '.*\.(git|svn|hg).*' -iregex ".*\.$filetypes")
-echo "Found "$(echo "$files" | wc -l)" files "
-result=$(echo "$files" | eval $DMENU -p open)
+echo "Found "$(echo "$files" | wc -l)" files."
+result=$(echo "$files" | eval $DMENU -l 30 -p open)
 if [ ! -z "$result" ]; then
     mime=$(mimetype -b "$result")
     app=$(xdg-mime query default "$mime")
-    echo "Open $result ($mime) with $app"
+    echo "Open $result ($mime) with $app."
     xdg-open "$result"
 fi
