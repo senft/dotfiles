@@ -1,12 +1,13 @@
 #! /bin/sh
 
-bspc monitor -d term www dev misc irc 6 7 8 9
+#bspc monitor -d term www dev misc irc 6 7 8 9
+bspc monitor -d T W D M I 6 7 8 9
 
 # set monocle layout for browser workspace
-bspc desktop www -l monocle
+bspc desktop ^2 -l monocle
 
-bspc config border_width           1
-bspc config window_gap             30
+bspc config border_width           2
+bspc config window_gap             20
 bspc config split_ratio            0.50
 bspc config focus_follows_pointer  false
 bspc config borderless_monocle     true
@@ -20,13 +21,14 @@ bspc config normal_border_color    "#121212"
 bspc config urgent_border_color    "#EF545F"
 bspc config presel_border_color    "#705D22"
 
-bspc rule -a Chromium desktop=www
-bspc rule -a Firefox desktop=www
-bspc rule -a Gimp desktop=misc
+bspc rule -a Chromium desktop=^2
+bspc rule -a Firefox desktop=^2
+bspc rule -a Eclipse desktop=^3
+bspc rule -a Gimp desktop=^4
 bspc rule -a feh floating=true focus=false
 bspc rule -a mplayer floating=true
 bspc rule -a ncmpcpp floating=true
-bspc rule -a Steam desktop=misc follow=true fullscreen=true
+bspc rule -a Steam desktop=^4 follow=true fullscreen=true
 
 numlockx &
 #xcompmgr -c -C &
