@@ -15,8 +15,8 @@ super + Escape
     bspc window -c
 
 # toggle window state (floating,fullscreen)
-super + {space,f}
-    bspc window -t {floating,fullscreen}
+super + {space,f,p}
+    bspc window -t {floating,fullscreen,private}
 
 # toggle layout (tiled, monocle)
 super + t
@@ -36,9 +36,9 @@ super + {_,shift} + BackSpace
 #super + {h,j,k,l}
 #    bspc window -f {left,down,up,right}
 super + h
-    bspc window -f left || bspc window -f right || bspc window -f prev
+    bspc window -f left || bspc window -f next || bspc window -f right
 super + l
-    bspc window -f right || bspc window -f left || bspc window -f next
+    bspc window -f right || bspc window -f prev || bspc window -f left
 super + j
     bspc window -f down || bspc window -f up || bspc window -f next
 super + k
