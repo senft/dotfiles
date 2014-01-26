@@ -17,7 +17,7 @@ else
 fi
 
 # whitelist filetypes
-filetypes="(.+|sh|py|java|mp3|ogg|jpeg|jpg|png|gif)"
+filetypes="(sh|py|java|mp3|ogg|jpeg|jpg|png|gif|tex|pdf)"
 
 if [ -z "$1" ]; then
     dir="."
@@ -25,7 +25,7 @@ else
     dir="$1/"
 fi
 
-files=$(find $dir -regextype "posix-extended" ! -iregex '.*\.(git|svn|hg).*' -iregex ".*\.$filetypes")
+files=$(find $dir -type f -regextype "posix-extended" -iregex "\.[/a-z0-9]*(\.$filetypes)?" -not -iregex '.*\.(git|svn|hg).*')
 echo "Found "$(echo "$files" | wc -l)" files."
 result=$(echo "$files" | eval $DMENU -l 30 -p open)
 if [ ! -z "$result" ]; then
