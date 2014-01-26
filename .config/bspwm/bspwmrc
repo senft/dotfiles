@@ -31,9 +31,7 @@ bspc rule -a ncmpcpp floating=true
 bspc rule -a Steam desktop=^4 follow=true fullscreen=true
 
 numlockx &
-#xcompmgr -c -C &
-compton -c -C -G -f -D 4 -b &
-#chromium &
+compton -c -C -G -f -D 3 -b &
 firefox &
 
 urxvtc &
@@ -46,4 +44,7 @@ tint2 &
 xscreensaver -no-splash &
 dropbox start &
 
-(sleep 1 && /home/jln/.config/bspwm/panel) &
+xcmenu --daemon &
+
+#(sleep 1 && /home/jln/.config/bspwm/panel) &
+/home/jln/.config/bspwm/panel &
