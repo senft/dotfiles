@@ -10,7 +10,7 @@ else
     DMENU='dmenu -i'
 fi
 
-song=`mpc playlist --format "[%artist% - %title% (%album%)] | %file%" | eval $DMENU -l 10 -p playlist`
+song=`mpc playlist --format "[%artist% - %title% (%album%)] | %file%" | eval $DMENU -l 30 -p playlist`
 
 # Add trailing numbers and grep it to give mpc an id to play
 number=`mpc playlist --format "[%artist% - %title% (%album%)] | %file%" | awk '{print NR, $0}' | grep "$song" | awk '{print $1}'`
