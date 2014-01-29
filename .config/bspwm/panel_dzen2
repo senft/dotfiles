@@ -33,6 +33,11 @@ while read -r line ; do
             sys_infos="${PADDING}${line#?}${PADDING}${PADDING}"
             ;;
 
+        T*)
+            # conky output
+            time="${line#?}"
+            ;;
+
         W*)
             # bspwm internal state
             wm_infos="$PADDING"
@@ -76,7 +81,8 @@ while read -r line ; do
                                 ;;
                         esac
                         if  $print ; then
-                            wm_infos="${wm_infos}^fg(${FG})^bg(${BG})^ca(1, bspc desktop -f ${name})^ca(2, bspc window -d ${name})${PADDING}${name}${PADDING}^ca()^ca()^fg()^bg()"
+                            #wm_infos="${wm_infos}^fg(${FG})^bg(${BG})^ca(1, bspc desktop -f ${name})^ca(2, bspc window -d ${name})${PADDING}${name}${PADDING}^ca()^ca()^fg()^bg()"
+                            wm_infos="${wm_infos}^fg(${FG})^bg(${BG})^ca(1, bspc desktop -f ${name})^ca(2, bspc window -d ${name})${name}${PADDING}^ca()^ca()^fg()^bg()"
                         fi
                         ;;
                 esac
@@ -86,14 +92,15 @@ while read -r line ; do
             ;;
     esac
 
-    set -- $(printf '%s\0%s' "$wm_infos" "$sys_infos" | sed 's/\^[a-z]\+([^)]*)//g' | xargs -0 txtw -f "$font_family" -s "$font_size")
-
+    set -- $(printf '%s\0%s\0%s' "$wm_infos" "$time" "$sys_infos" | sed 's/\^[a-z]\+([^)]*)//g' | xargs -0 txtw -f "$font_family" -s "$font_size")
     left_width=$1
-    right_width=$2
+    center_width=$2
+    right_width=$3
 
     left_indent=0
-    right_indent=$((screen_width - right_width - 35))
+    center_indent=$(((screen_width - center_width) / 2))
+    right_indent=$((screen_width - right_width))
 
-    printf "%s\n" "^pa($left_indent)$wm_infos^pa($right_indent)$sys_infos"
+    printf "%s\n" "^pa($left_indent)$wm_infos^pa($center_indent)$time^pa($right_indent)$sys_infos"
 
 done

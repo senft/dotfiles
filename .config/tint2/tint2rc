@@ -11,7 +11,7 @@ panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0
 wm_menu = 0
-panel_layer = bottom
+panel_layer = top
 panel_background_id = 1
 
 # Panel Autohide

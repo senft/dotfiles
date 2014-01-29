@@ -191,6 +191,9 @@ alias la='ll -A'
 alias ld='ll -rct'
 alias lz='ll -rS'                   # sort by size
 
+alias du="du -ch"
+alias df="df -h"
+
 # pacman
 alias pacman='sudo pacman'
 alias syu='packer -Syu'
@@ -223,6 +226,7 @@ alias r='ranger'
 alias n64="mupen64plus --windowed --resolution 1920x1080"
 alias youtube-dl-mp3="youtube-dl -x --audio-format mp3"
 alias o='xdg-open'
+alias xv='sxiv'
 
 # cd
 alias home="cd ~"

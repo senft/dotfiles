@@ -71,12 +71,8 @@
 
 /* tab favicon size */
 .tabbrowser-tabs .tab-icon-image {
-    max-height: 14px !important;
-    max-width: 14px !important;
-}
-
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab > .tab-stack > .tab-content[pinned]{
-    min-height: 50px;
+    max-height: 12px !important;
+    max-width: 12px !important;
 }
 
 .tabs-newtab-button {

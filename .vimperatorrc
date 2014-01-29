@@ -1,6 +1,6 @@
 set gui=none,tabs
 
-set tabnumbers
+" set tabnumbers
 set smartcase
 set incsearch
 set hlsearch
@@ -39,6 +39,8 @@ colorscheme molokai
 
 set! browser.tabs.closeButtons=2
 
+ignorekeys add -except J,K,:,h,l,gg,G,g,d,r,gn,t www\\.reddit\\.com
+
 " Qmarks
 silent qmark f http://facebook.com
 silent qmark r http://reddit.com
@@ -72,6 +74,9 @@ noremap l :forward<CR>
 noremap J :bp<CR>
 noremap K :bn<CR>
 
+noremap ^ :brewind<CR>
+noremap $ :blast<CR>
+
 " imap jj <Esc>
 
 " CTRL-A = select all in insert mode
@@ -82,11 +87,12 @@ noremap <Leader>s :source ~/.vimperatorrc<CR>
 
 :style -name=yourUglyStatusline * #liberator-statusline { font-family: "tamzen" !important; }  }
 
-highlight! CmdLine>* font-family: "tamzen"; font-size: 14px; color: #eddcd3; transition: all 0.25s;
-highlight! CompItem font-family: "tamzen"; font-size: 14px;
-highlight! CompTitle font-family: "tamzen"; font-size: 16px; font-weight: bold;
-highlight! StatusLine font-family: "tamzen"; font-size: 14px; max-height: 9px;
-highlight! Hint font-family: "tamzen"; font-weight: bold; font-size: 18px; text-transform: uppercase; color: black; background-color: yellow; border-color: ButtonShadow; border-width: 1px; border-style: solid; border-color: black; padding: 2px 3px 0px 3px;
-highlight! HintElem background-color: ;
+highlight CmdLine>* font-family: "tamzen"; font-size: 14px; color: #eddcd3; transition: all 0.25s;
+highlight CompItem font-family: "tamzen"; font-size: 14px;
+highlight CompTitle font-family: "tamzen"; font-size: 16px; font-weight: bold;
+highlight StatusLine font-family: "tamzen"; font-size: 14px; max-height: 9px;
+highlight InfoMsg font-family: "tamzen"; font-size: 14px; max-height: 9px; color: #87FF00;
+highlight Hint font-family: "termsyn"; font-size: 14px; text-transform: uppercase; color: black; background-color: yellow; border-color: ButtonShadow; border-width: 1px; border-style: solid; border-color: black; padding: 1px 3px 0px 3px; opacity: 0.9;
+highlight HintElem background-color: ;
 
 " vim: set ft=vim:
