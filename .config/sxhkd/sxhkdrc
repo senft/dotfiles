@@ -88,6 +88,10 @@ super + !button{1-3}
 super + @button{1-3}
     bspc pointer -u
 
+# Change window gap
+alt + {KP_Add,KP_Subtract}
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
+
 #
 # wm independent hotkeys
 #
@@ -108,10 +112,10 @@ super + o
     urxvtc -g 150x60+820+150 -name ncmpcpp -e ncmpcpp
 
 super + {KP_Add,KP_Subtract}
-    amixer set Master {4000+,4000-}
+    amixer set Master 4000{+,-}
 
 XF86Audio{Raise,Lower}Volume
-    amixer set Master {4000+,4000-}
+    amixer set Master 4000{+,-}
 
 super + KP_Enter
     amixer -q set Master toggle
@@ -123,7 +127,7 @@ super + {x,Left,Right}
     mpc {toggle,prev,next}
 
 super + shift + {KP_Add,KP_Subtract}
-    mpc volume {+5,-5}
+    mpc volume {+,-}5
 
 Print
     xfce4-screenshooter
