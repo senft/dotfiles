@@ -1,7 +1,7 @@
 #! /bin/sh
 
-#bspc monitor -d term www dev misc irc 6 7 8 9
-bspc monitor -d T W D M I 6 7 8 9
+bspc monitor -d term www dev misc irc 6 7 8
+#bspc monitor -d T W D M I 6 7 8
 
 # set monocle layout for browser workspace
 bspc desktop ^2 -l monocle
