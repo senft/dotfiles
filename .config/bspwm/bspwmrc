@@ -36,21 +36,18 @@ bspc rule -a mplayer floating=true
 bspc rule -a ncmpcpp floating=true
 bspc rule -a Steam desktop=^4 follow=true fullscreen=true
 
-numlockx &
-compton -c -C -G -f -D 3 -t 0 &
-firefox &
-
+compton -c -C -G -t 0 &
 urxvtc &
+firefox &
+tint2 &
+xsetroot -cursor_name left_ptr &
 xset m 1 0 &
 
-xsetroot -cursor_name left_ptr &
 unclutter -idle 3 &
-tint2 &
-
-xscreensaver -no-splash &
-dropbox start &
 
 xcmenu --daemon &
 
-#(sleep 1 && /home/jln/.config/bspwm/panel) &
+xscreensaver -no-splash &
+dropbox start &
+numlockx &
 /home/jln/.config/bspwm/panel &
