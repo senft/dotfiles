@@ -74,6 +74,9 @@ noremap l :forward<CR>
 noremap J :bp<CR>
 noremap K :bn<CR>
 
+noremap ^ :brewind<CR>
+noremap $ :blast<CR>
+
 " imap jj <Esc>
 
 " CTRL-A = select all in insert mode

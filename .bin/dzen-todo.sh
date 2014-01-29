@@ -8,7 +8,5 @@ XPOS=$((SCREEN_WIDTH-WIDTH-PADDING_RIGHT-150))
 
 text=$(todo.sh -p list | head -n -3)
 LINES=$(echo "$text" | wc -l)
-#echo "$text"
-#echo $LINES
 
 echo "$text" | dzen2 -p -fg $FOREGROUND -bg $BACKGROUND -fn "${FONT}:pixelsize=${FONT_SIZE}" -x $XPOS -y $YPOS -w $WIDTH -l $LINES -ta l -sa l -e 'onstart=uncollapse;button1=exit;button3=exit' -title-name 'dzen-popup-todo'
