@@ -31,7 +31,7 @@ bspc rule -a ncmpcpp floating=true
 bspc rule -a Steam desktop=^4 follow=true fullscreen=true
 
 numlockx &
-compton -c -C -G -f -D 3 -b &
+compton -c -C -G -f -D 3 -t 0 &
 firefox &
 
 urxvtc &
