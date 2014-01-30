@@ -30,7 +30,7 @@ override_utf8_locale yes
 
 TEXT
 C\
-${if_mpd_playing}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)^fg(\#454545)mpd^fg()  $mpd_smart^ca()^ca()^ca()   ${endif}\
+${if_match "$mpd_status" == "Playing"}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)^fg(\#454545)mpd^fg()  $mpd_smart^ca()^ca()^ca()   ${endif}\
 ^fg(\#454545)mem^fg()  $mem\
 ${if_up wlan0}^fg(\#454545)wlan0^fg()  {upspeedf wlan0}  ${downspeedf wlan0}${else}    \
 ${if_up eth0}^fg(\#454545)eth0^fg()  ${upspeedf eth0}  ${downspeedf eth0}${endif}${endif}   \
