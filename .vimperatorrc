@@ -66,13 +66,13 @@ noremap <C-S-h> :sidebar history<CR>
 nnoremap j 6j
 nnoremap k 6k
 
-noremap H h
-noremap L l
+" noremap H h
+" noremap L l
 noremap h :back<CR>
 noremap l :forward<CR>
 
-noremap J :bp<CR>
-noremap K :bn<CR>
+noremap H :bp<CR>
+noremap L :bn<CR>
 
 noremap ^ :brewind<CR>
 noremap $ :blast<CR>
