@@ -220,13 +220,15 @@ alias vpn-disconnect="sudo vpnc-disconnect"
 alias cal="cal -3"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
-alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias r='ranger'
 alias n64="mupen64plus --windowed --resolution 1920x1080"
 alias youtube-dl-mp3="youtube-dl -x --audio-format mp3"
 alias o='xdg-open'
 alias xv='sxiv'
+
+alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
+alias tcl="/home/jln/Code/Python/todotxt-machine/todotxt-machine.py -f ~/Dropbox/.todo/todo.txt"
 
 # cd
 alias home="cd ~"

@@ -36,7 +36,7 @@ bspc rule -a mplayer floating=true
 bspc rule -a ncmpcpp floating=true
 bspc rule -a Steam desktop=^4 follow=true fullscreen=true
 
-compton -c -C -G -t 0 &
+compton -c -C -G -t 0 -l 0 --paint-on-overlay &
 urxvtc &
 firefox &
 tint2 &

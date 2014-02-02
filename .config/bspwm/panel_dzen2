@@ -30,7 +30,7 @@ while read -r line ; do
     case $line in
         C*)
             # conky output
-            sys_infos="${PADDING}${line#?}${PADDING}${PADDING}"
+            sys_infos="${line#?}"
             ;;
 
         T*)
@@ -40,7 +40,7 @@ while read -r line ; do
 
         W*)
             # bspwm internal state
-            wm_infos="$PADDING"
+            wm_infos=""
             IFS=$FIELDIFS
             set -- ${line#?}
             while [ $# -gt 0 ] ; do
@@ -82,7 +82,7 @@ while read -r line ; do
                         esac
                         if  $print ; then
                             #wm_infos="${wm_infos}^fg(${FG})^bg(${BG})^ca(1, bspc desktop -f ${name})^ca(2, bspc window -d ${name})${PADDING}${name}${PADDING}^ca()^ca()^fg()^bg()"
-                            wm_infos="${wm_infos}^fg(${FG})^bg(${BG})^ca(1, bspc desktop -f ${name})^ca(2, bspc window -d ${name})${name}${PADDING}^ca()^ca()^fg()^bg()"
+                            wm_infos="${wm_infos}^fg(${FG})^bg(${BG})^ca(1, bspc desktop -f ${name})^ca(2, bspc window -d ${name})${PADDING}${name}${PADDING}^ca()^ca()^fg()^bg()"
                         fi
                         ;;
                 esac
@@ -99,7 +99,7 @@ while read -r line ; do
 
     left_indent=0
     center_indent=$(((screen_width - center_width) / 2))
-    right_indent=$((screen_width - right_width))
+    right_indent=$((screen_width - right_width+10))
 
     printf "%s\n" "^pa($left_indent)$wm_infos^pa($center_indent)$time^pa($right_indent)$sys_infos"
 
