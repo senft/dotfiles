@@ -44,16 +44,8 @@ Xft.lcdfilter:  lcddefault
 !URxvt*background:   		#1d1f21
 !URxvt*cursorColor:  		#aeafad
 
-!URxvt.font:             	 xft:Inconsolata for Powerline:pixelsize=15:antialias=false
-!URxvt.font:             	 xft:Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=full
-!URxvt.font:             	xft:Ubuntu Mono derivative Powerline:pixelsize=14
-!URxvt.letterSpace:			-1
-
-!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=11:antialias=true
-!URxvt.letterSpace:			-2
-
-!URxvt*font: -*-envy code r-medium-r-*-*-12-*-*-*-*-*-iso10646-1
-!URxvt*boldFont: -*-envy code r-medium-r-*-*-12-*-*-*-*-*-iso10646-1
+!URxvt*font: -*-envy code r-medium-r-*-*-10-*-*-*-*-*-iso10646-1
+!URxvt*boldFont: -*-envy code r-medium-r-*-*-10-*-*-*-*-*-iso10646-1
 !URxvt.letterSpace:			 0
 
 !URxvt.font: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
