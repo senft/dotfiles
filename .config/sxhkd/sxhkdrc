@@ -15,8 +15,8 @@ super + Escape
     bspc window -c
 
 # toggle window state (floating,fullscreen)
-super + {space,f,p}
-    bspc window -t {floating,fullscreen,private}
+super + {space,f,shift+p,p}
+    bspc window -t {floating,fullscreen,private,pseudo_tiled}
 
 # toggle layout (tiled, monocle)
 super + t
@@ -44,6 +44,10 @@ super + j
 super + k
     bspc window -f up || bspc window -f down || bspc window -f prev
 
+# focus next/prev window
+super + {n,shift+n}
+    bspc window -f {next,prev}.floating || bspc window -f {next,prev}
+
 # move window
 super + shift + h
     bspc window -s left || bspc window -s right || xdo move -x -20
@@ -53,10 +57,6 @@ super + shift + j
     bspc window -s down || bspc window -s up || xdo move -y +20
 super + shift + k
     bspc window -s up || bspc window -s down || xdo move -y -20
-
-# focus next/prev window
-super + {n,p}
-    bspc window -f {next,prev}
 
 # Resize window
 super + ctrl + l
@@ -90,7 +90,21 @@ super + @button{1-3}
 
 # Change window gap
 alt + {KP_Add,KP_Subtract}
-    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 10 ))
+
+alt + Left
+    bspc config -d focused left_padding $((`bspc config -d focused left_padding` + 10 ))
+alt + Right
+    bspc config -d focused right_padding $((`bspc config -d focused right_padding` + 10 ))
+alt + Up
+    bspc config -d focused top_padding $((`bspc config -d focused top_padding` + 10 )) && bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` + 10 ))
+alt + Down
+    bspc config -d focused top_padding $((`bspc config -d focused top_padding` - 10 )) && bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` - 10 ))
+
+alt + shift + Left
+    bspc config -d focused left_padding $((`bspc config -d focused left_padding` - 10 ))
+alt + shift + Right
+    bspc config -d focused right_padding $((`bspc config -d focused right_padding` - 10 ))
 
 #
 # wm independent hotkeys
@@ -112,10 +126,10 @@ super + o
     urxvtc -g 150x60+820+150 -name ncmpcpp -e ncmpcpp
 
 super + {KP_Add,KP_Subtract}
-    amixer set Master 4000{+,-}
+    amixer set Master 5%{+,-}
 
 XF86Audio{Raise,Lower}Volume
-    amixer set Master 4000{+,-}
+    amixer set Master 5%{+,-}
 
 super + KP_Enter
     amixer -q set Master toggle
