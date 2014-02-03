@@ -10,14 +10,16 @@ done
 
 SCREEN_WIDTH=$(sres -W)
 
-CAL_START=$((SCREEN_WIDTH-110))
-CAL_END=$SCREEN_WIDTH
+CAL_START=0
+CAL_END=$((SCREEN_WIDTH/2))
 
-music_text=$(mpc current)
-music_width=$(txtw -f $PANEL_FONT -s $PANEL_FONT_SIZE "$music_text")
+#music_text=$(mpc current)
+#music_width=$(txtw -f $PANEL_FONT -s $PANEL_FONT_SIZE "$music_text")
 
 MUSIC_START=$((CAL_START-140-music_width))
-MUSIC_END=$CAL_START
+
+MUSIC_START=$((SCREEN_WIDTH/2))
+MUSIC_END=$SCREEN_WIDTH
 
 while true; do
     sleep 0.5
@@ -32,10 +34,12 @@ while true; do
 
     if [ $XPOS -gt $CAL_START -a $XPOS -lt $CAL_END ]; then
         pid=$(pgrep -f "dzen-popup-cal")
+        #pid=$(pgrep -f "dzen-popup-time")
         if [ -z "$pid" ]; then
             /home/jln/.bin/dzen-kill-popup.sh
             /home/jln/.bin/dzen-cal.sh 2> /dev/null &
-            /home/jln/.bin/dzen-todo.sh 2> /dev/null &
+            #/home/jln/.bin/dzen-todo.sh 2> /dev/null &
+            #/home/jln/.bin/dzen-time.sh 2> /dev/null &
         fi
     elif [ $XPOS -gt $MUSIC_START -a $XPOS -lt $MUSIC_END ]; then
         pid=$(pgrep -f "dzen-popup-music")
