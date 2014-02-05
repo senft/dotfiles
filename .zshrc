@@ -305,6 +305,10 @@ if [[ "$TERM" == *"-256color" ]]; then
     }
 fi
 
+if [[ ! -z "$SSH_CLIENT" ]]; then
+    ssh_info="[%n@%m] "
+fi
+
 precmd() {
     vcs_info
 }
@@ -312,9 +316,9 @@ precmd() {
 
 RPROMPT='%F{cyan}%~%f%b'
 if [ $(id -u) -eq 0 ]; then
-    PS1='${vcs_info_msg_0_}%F{red}# %f'
+    PS1='${vcs_info_msg_0_}%F{red}$ssh_info%F{red}# %f'
 else
-    PS1='${vcs_info_msg_0_}%F{magenta}» %f'
+    PS1='${vcs_info_msg_0_}%F{magenta}$ssh_info%F{magenta}» %f'
 fi
 
 function ranger-cd {
