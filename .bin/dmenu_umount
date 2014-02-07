@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -f $HOME/.dmenurc ]; then
+    . $HOME/.dmenurc
+else
+    DMENU='dmenu -i'
+fi
+
+result=$(mount | eval $DMENU -p umount -l 30 | awk '{print $3}')
+if [ -n "$result" ]; then
+    sudo umount "$result" 
+fi

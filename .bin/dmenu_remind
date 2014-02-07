@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -f $HOME/.dmenurc ]; then
+    . $HOME/.dmenurc
+else
+    DMENU='dmenu -i'
+fi
+
+result=$(echo | eval $DMENU -p RemindMe)
+delay=$(echo "$result" | awk '{printf $1'})
+text=$(echo "$result" | cut -d ' ' -f 2-)
+sleep $delay && notify-send -t 0 -a "Reminder" "$delay" "$text"
