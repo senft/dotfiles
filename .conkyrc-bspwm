@@ -32,6 +32,6 @@ C\
 ${if_match "$mpd_status" == "Playing"}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)^fg(\#424d17)mpd^fg()  $mpd_smart^ca()^ca()^ca()   ${endif}\
 ^fg(\#424d17)cpu^fg()  ${cpu cpu0}   \
 ^fg(\#424d17)mem^fg()  $mem\
-${if_up wlan0}^fg(\#424d17)wlan0^fg()  {upspeedf wlan0}  ${downspeedf wlan0}${else}    \
+${if_up wlan0}^fg(\#424d17)wlan0^fg()  ${upspeedf wlan0}  ${downspeedf wlan0}${else}    \
 ${if_up eth0}^fg(\#424d17)eth0  u^fg() ${upspeedf eth0}  ^fg(\#424d17)d^fg() ${downspeedf eth0}${endif}${endif}    \
 ^ca(1, amixer set Master toggle)^ca(4, amixer -q set Master 4000+)^ca(5, amixer -q set Master 4000-)^fg(\#424d17)vol^fg()  ${execi 1 /home/jln/.bin/volume.sh}^ca()^ca()^ca()   \
