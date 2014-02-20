@@ -16,25 +16,20 @@ super + Escape
 
 # toggle window state (floating,fullscreen)
 super + {space,f,shift+p,p}
-    bspc window -t {floating,fullscreen,private,pseudo_tiled}
+    bspc window -t {floating,fullscreen,pseudo_tiled,private}
 
 # toggle layout (tiled, monocle)
 super + t
     bspc desktop -l next
 
-## rotate windows
-# switch to last desktop
+## rotate desktop
 super + Tab
     bspc desktop -R 90
-#    bspc desktop -f last
-#    bspc desktop -C forward
 
 super + {_,shift} + BackSpace
     bspc desktop -{B,E}
 
 # focus window
-#super + {h,j,k,l}
-#    bspc window -f {left,down,up,right}
 super + h
     bspc window -f left || bspc window -f next || bspc window -f right
 super + l
@@ -114,10 +109,10 @@ super + shift + Return
     urxvtc
 
 super + r
-    dmenu_run -i -fn "-*-tamzen-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#424d17" -sf "#eddcd3"
+    dmenu_run -w 1000 -x 460 -i -fn "-*-tamzen-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#424d17" -sf "#eddcd3"
 
-super + {m,shift+m,c}
-    ~/.bin/dmenu_{mpd,playlist,solve}
+super + {m,shift+m,c,u}
+    ~/.bin/dmenu_{mpd,playlist,solve,umount}
 
 super + shift + z
     i3lock -u -i /home/jln/.bg.png -t
@@ -126,10 +121,10 @@ super + o
     urxvtc -g 150x60+820+150 -name ncmpcpp -e ncmpcpp
 
 super + {KP_Add,KP_Subtract}
-    amixer set Master 5%{+,-}
+    amixer set Master 2%{+,-}
 
 XF86Audio{Raise,Lower}Volume
-    amixer set Master 5%{+,-}
+    amixer set Master 2%{+,-}
 
 super + KP_Enter
     amixer -q set Master toggle
