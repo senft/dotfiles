@@ -58,7 +58,7 @@ noremap <leader>d :tabopen chrome://browser/content/downloads/contentAreaDownloa
 noremap <leader>a :addons<CR>
 
 nnoremap b :bmarks!
-nnoremap B :buffer!
+nnoremap <c-t> :buffer!
 
 noremap <leader>bb :bmark<CR>
 noremap <leader>bm :bmark -folder TOOLBAR/Mukke<CR>

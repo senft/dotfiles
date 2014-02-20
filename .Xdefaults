@@ -25,25 +25,16 @@
 
 *cursorColor:                         #eddcd3
 
+URxvt.colorIT:                        #627A92
+URxvt.colorBD:                        #989584
+URxvt.colorUL:                        #424d17
+
 URxvt*foreground:                     #eddcd3
 URxvt*background:                     #121212
 
 *TkTheme: clearlooks
 
-! Xft settings ---------------------------------------------------------------
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-!Xft.hinting:    full
-Xft.hinting:    slight
-Xft.autohint:   0
-Xft.lcdfilter:  lcddefault
-
 ! urxvt ----------------------------------------------------------------------
-!URxvt*foreground:			#FFFFFF
-!URxvt*background:   		#1d1f21
-!URxvt*cursorColor:  		#aeafad
-
 !URxvt*font: -*-envy code r-medium-r-*-*-10-*-*-*-*-*-iso10646-1
 !URxvt*boldFont: -*-envy code r-medium-r-*-*-10-*-*-*-*-*-iso10646-1
 !URxvt.letterSpace:			 0
@@ -80,3 +71,13 @@ URxvt*url-select.underline: true
 URxvt*termName:				rxvt-256color
 URxvt*internalBorder:       4
 URxvt*externalBorder:       0
+URxvt*buffered:             false
+
+! Xft settings ---------------------------------------------------------------
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+!Xft.hinting:    full
+Xft.hinting:    slight
+Xft.autohint:   0
+Xft.lcdfilter:  lcddefault

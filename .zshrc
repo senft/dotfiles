@@ -11,6 +11,7 @@ export VISUAL=vim
 export BROWSER=chromium
 export PAGER=less
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
+export PATH="/usr/lib/cw:$PATH"
 
 # omnetpp
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
@@ -248,6 +249,11 @@ alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{p
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+ 
+# trash
+alias tp="trash-put"
+alias tl="trash-list"
+alias trash-restore="restore-trash"
 
 #alias -g G="| grep"
 alias -g G="| ack"
