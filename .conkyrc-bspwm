@@ -9,15 +9,6 @@ uppercase no
 if_up_strictness address
 override_utf8_locale yes
 
-# /: ${fs_used_perc /}%   ~/: ${fs_used_perc /home}% #","icon": "/home/jln/.icons/xbm8x8/diskette.xbm", "color": "\#FFFFFF", "separator": false},
-
-#^i(/home/jln/.icons/cloud.xbm) ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDF temperature}°C ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDF weather} \
-#
-#^i(/home/jln/.icons/xbm8x8/cpu.xbm) ${cpu cpu1}% ${cpu cpu2}%   \
-#${time %d.%m}  ${time %R}^i(/home/jln/.icons/cloud.xbm) ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EDDF temperature}°C   \
-#${time %d.%m}  ${time %R}
-
-#TEXT
 #C\
 #^i(/home/jln/.icons/xbm8x8/mem.xbm) $mem \
 #${if_up wlan0}^i(/home/jln/.icons/xbm8x8/wifi_02.xbm) ${upspeedf wlan0}  ${downspeedf wlan0}${else}  \
@@ -25,13 +16,12 @@ override_utf8_locale yes
 #${if_mpd_playing}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)${if_match "$mpd_status" == "Paused"}^i(/home/jln/.icons/xbm8x8/pause.xbm)${else}^i(/home/jln/.icons/xbm8x8/play.xbm)$endif $mpd_smart^ca()^ca()^ca()  ${endif}\
 #^ca(1, amixer set Master toggle)^ca(4, amixer -q set Master 2%+)^ca(5, amixer -q set Master 2%-) ${execi 1 /home/jln/.bin/volume-dzen.sh}^ca()^ca()^ca()   \
 #^i(/home/jln/.icons/xbm8x8/clock.xbm) ${time %a %d.%m}  ${time %R}
-
-
+#${if_up wlan0}^fg(\#424d17)wlan0 u^fg()  ${upspeedf wlan0}  ${downspeedf wlan0}${else}    \
 TEXT
 C\
 ${if_match "$mpd_status" == "Playing"}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)^fg(\#424d17)mpd^fg()  $mpd_smart^ca()^ca()^ca()   ${endif}\
 ^fg(\#424d17)cpu^fg()  ${cpu cpu0}   \
-^fg(\#424d17)mem^fg()  $mem\
-${if_up wlan0}^fg(\#424d17)wlan0^fg()  ${upspeedf wlan0}  ${downspeedf wlan0}${else}    \
-${if_up eth0}^fg(\#424d17)eth0  u^fg() ${upspeedf eth0}  ^fg(\#424d17)d^fg() ${downspeedf eth0}${endif}${endif}    \
+^fg(\#424d17)mem^fg()  $mem   \
+${if_up wlan0}^fg(\#424d17)wlan0  u^fg() ${upspeedf wlan0}  ^fg(\#424d17)d^fg() ${downspeedf wlan0}   ${endif}\
+${if_up eth0}^fg(\#424d17)eth0  u^fg() ${upspeedf eth0}  ^fg(\#424d17)d^fg() ${downspeedf eth0}    ${endif}\
 ^ca(1, amixer set Master toggle)^ca(4, amixer -q set Master 2%+)^ca(5, amixer -q set Master 2%-)^fg(\#424d17)vol^fg()  ${execi 1 /home/jln/.bin/volume.sh}^ca()^ca()^ca()   \
