@@ -1,5 +1,6 @@
 [global]
-    font = terminus 14
+    #font = lime.se 8
+    font = tamzen 9
 
     # allow a small subset of html markup:
     # <b>bold</b>
@@ -19,7 +20,8 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-    format = "<span letter_spacing='2000'>%a » %s</span>\n<span color='#DBDAC1'>%b</span>"
+    #format = "<span letter_spacing='2000'>%a » %s</span>\n<span color='#DBDAC1'>%b</span>"
+    format = "<span letter_spacing='2000'>%s</span>\n<span color='#DBDAC1'>%b</span>"
 
     # Sort messages by urgency
     sort = yes
@@ -63,7 +65,7 @@
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
-    transparency = 15
+    transparency = 7
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -125,7 +127,8 @@
 
 [frame]
     width = 1
-    color = "#917154"
+    #color = "#917154"
+    color = "#424d17"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -155,7 +158,7 @@
 
 [urgency_normal]
     background = "#121212"
-    foreground = "#917154"
+    foreground = "#424d17"
     timeout = 10
 
 [urgency_critical]
