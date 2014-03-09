@@ -1,2 +1,3 @@
 #!/bin/sh
 DMENU='dmenu -i -fn "-*-tamzen-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#424d17" -sf "#eddcd3"'
+XCMENUCTRL_DMENU='dmenu -i -fn -*-tamzen-medium-*-*-*-11-*-*-*-*-*-*-* -nb #121212 -nf #989584 -sb #424d17 -sf #eddcd3 -l 15'
