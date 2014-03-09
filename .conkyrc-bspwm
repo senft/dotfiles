@@ -1,4 +1,3 @@
-#use_spacer left
 pad_percents 3
 background no
 out_to_console yes
@@ -9,14 +8,6 @@ uppercase no
 if_up_strictness address
 override_utf8_locale yes
 
-#C\
-#^i(/home/jln/.icons/xbm8x8/mem.xbm) $mem \
-#${if_up wlan0}^i(/home/jln/.icons/xbm8x8/wifi_02.xbm) ${upspeedf wlan0}  ${downspeedf wlan0}${else}  \
-#${if_up eth0}^i(/home/jln/.icons/xbm8x8/net_wired.xbm) ${upspeedf eth0}  ${downspeedf eth0}${endif}${endif}  \
-#${if_mpd_playing}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)${if_match "$mpd_status" == "Paused"}^i(/home/jln/.icons/xbm8x8/pause.xbm)${else}^i(/home/jln/.icons/xbm8x8/play.xbm)$endif $mpd_smart^ca()^ca()^ca()  ${endif}\
-#^ca(1, amixer set Master toggle)^ca(4, amixer -q set Master 2%+)^ca(5, amixer -q set Master 2%-) ${execi 1 /home/jln/.bin/volume-dzen.sh}^ca()^ca()^ca()   \
-#^i(/home/jln/.icons/xbm8x8/clock.xbm) ${time %a %d.%m}  ${time %R}
-#${if_up wlan0}^fg(\#424d17)wlan0 u^fg()  ${upspeedf wlan0}  ${downspeedf wlan0}${else}    \
 TEXT
 C\
 ${if_match "$mpd_status" == "Playing"}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)^fg(\#424d17)mpd^fg()  $mpd_smart^ca()^ca()^ca()   ${endif}\
