@@ -111,8 +111,11 @@ super + shift + Return
 super + r
     dmenu_run -i -fn "-*-tamzen-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#424d17" -sf "#eddcd3"
 
-super + {m,shift+m,c,u}
-    ~/.bin/dmenu_{mpd,playlist,solve,umount}
+super + {m,shift+m,s,u,shift+r}
+    ~/.bin/dmenu_{mpd,playlist,solve,umount,remind}
+
+super + c
+    xcmenuctrl
 
 super + shift + z
     i3lock -u -i /home/jln/.bg.png -t
