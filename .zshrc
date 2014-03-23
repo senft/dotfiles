@@ -62,6 +62,18 @@ bindkey -s '^@' 'dmenu_open\n' # dmenu_open on ctrl+space
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    fg
+    zle redisplay
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 setopt   prompt_subst
 setopt   notify globdots correct cdablevars autolist
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
