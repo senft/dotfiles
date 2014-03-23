@@ -349,3 +349,10 @@ function ranger-cd {
     fi
     rm -f -- "$tempfile"
 }
+
+function git-commit-file(){
+    commitmsg=$1
+    shift
+    git add $@
+    git commit -m "$commitmsg"
+}
