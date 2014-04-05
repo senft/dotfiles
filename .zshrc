@@ -1,6 +1,9 @@
 SSH_AUTH_SOCK=`netstat -xl | grep -o '/run/user/1000/keyring-.*/ssh$'`
 [ -z "$SSH_AUTH_SOCK" ] || export SSH_AUTH_SOCK
 
+# frequently used directorys
+OSSIM=/home/jln/Code/C++/omnetpp/ossim
+
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code/Python
 export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
@@ -338,7 +341,7 @@ RPROMPT='%F{cyan}%~%f%b'
 if [ $(id -u) -eq 0 ]; then
     PS1='${vcs_info_msg_0_}%F{red}$ssh_info%F{red}# %f'
 else
-    PS1='${vcs_info_msg_0_}%F{magenta}$ssh_info%F{magenta}» %f'
+    PS1='${vcs_info_msg_0_}%F{magenta}$ssh_info%F{green}» %f'
 fi
 
 function ranger-cd {
