@@ -38,7 +38,8 @@ export LC_ALL=
 
 export PYTHONDOCS=/usr/share/doc/python/html/
 
-eval $(dircolors -b)
+#eval $(dircolors -b)
+eval $(dircolors -b $HOME/.dircolors)
 
 # Disable Software flow control (Sleep on CTRL-S)
 stty -ixon
@@ -197,9 +198,9 @@ zstyle ':vcs_info:*' enable git hg
 
 # ls
 #alias ls='ls -hF --color=always'
-alias ls='ls++ --potsf'
+alias ls='ls --color=always'
 alias lr='ls -R'                    # recursive ls
-alias ll='ls -l'
+alias ll='ls++ -l'
 alias la='ll -A'
 alias ld='ll -rct'
 alias lz='ll -rS'                   # sort by size
