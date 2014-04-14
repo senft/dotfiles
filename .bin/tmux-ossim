@@ -10,18 +10,21 @@ if [ "$?" -eq 1 ] ; then
     tmux new-session -d -s $SESSION
     tmux rename-window "dev"
     tmux send-keys "cd $DIR/src" "C-m" "C-l"
-    tmux send-keys "vim" "C-m"
+    tmux send-keys "vim tree/multitree" "C-m"
 
     tmux split-window -h -p 40
     tmux send-keys "cd $DIR" "C-m" "C-l"
-    tmux send-keys "./build.sh && cd simulations && ../src/so -r 0 -n .:../src:../../inet/examples:../../inet/src -l ../../inet/src/inet Multitree.ini -c Multitree_Network; cd .."
+    tmux send-keys "./build-jul.sh && cd simulations && ../src/so -r 0 -n .:../src:../../inet/examples:../../inet/src -l ../../inet/src/inet Multitree.ini -c Multitree_Network; cd .."
 
     tmux select-pane -t 0
 
     tmux new-window -n "results"
     tmux send-keys "cd $DIR/simulations/results" "C-m" "C-l"
 
-    tmux new-window -n "misc"
+    tmux new-window -n "visual"
+    tmux send-keys "cd $DIR/simulations/" "C-m" "C-l"
+
+    tmux new-window -n "git"
     tmux send-keys "cd $DIR" "C-m" "C-l"
 
     tmux select-window -t 1
