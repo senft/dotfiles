@@ -232,14 +232,13 @@ alias reboot="sudo reboot"
 alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
 alias wcli='wicd-curses'
-alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
-alias vpn-disconnect="sudo vpnc-disconnect"
+#alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
+#alias vpn-disconnect="sudo vpnc-disconnect"
+alias vpn-uni="sudo openconnect https://vpn.hrz.tu-darmstadt.de/"
 alias cal="cal -3"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
-alias r='ranger'
-alias n64="mupen64plus --windowed --resolution 1920x1080"
 alias youtube-dl-mp3="youtube-dl -x --audio-format mp3"
 alias o='xdg-open'
 alias iv='sxiv'
@@ -341,7 +340,7 @@ RPROMPT='%F{cyan}%~%f%b'
 if [ $(id -u) -eq 0 ]; then
     PS1='${vcs_info_msg_0_}%F{red}$ssh_info%F{red}# %f'
 else
-    PS1='${vcs_info_msg_0_}%F{magenta}$ssh_info%F{green}» %f'
+    PS1='${vcs_info_msg_0_}%F{magenta}$ssh_info%F{white}» %f'
 fi
 
 function ranger-cd {
@@ -360,3 +359,12 @@ function git-commit-file(){
     git add $@
     git commit -m "$commitmsg"
 }
+
+if (( $+commands[trash-empty] )); then
+  trash-empty() {
+    if read -q "?$0: Are you sure you want to empty the trash? [y/n] "; then
+      echo ""
+      nocorrect command trash-empty "$@"
+    fi
+  }
+fi
