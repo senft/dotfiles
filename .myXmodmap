@@ -1,8 +1,8 @@
 ! { on AltGR+o
-keycode 32 = o O o O braceright Oslash oslash
+! keycode 32 = o O o O braceright Oslash oslash
 
 ! } on AltGR+p
-keycode 33 = p P p P braceleft THORN thorn
+! keycode 33 = p P p P braceleft THORN thorn
 
 ! Caps-Lock to Esc
 clear Lock
@@ -10,7 +10,7 @@ keycode 66 = Escape NoSymbol Escape NoSymbol Escape
 add Control = Control_L
 
 ! colon on Ö
-keycode  47 = odiaeresis colon odiaeresis Odiaeresis doubleacute doubleacute doubleacute doubleacute odiaeresis Odiaeresis doubleacute doubleacute
+! keycode  47 = odiaeresis colon odiaeresis Odiaeresis doubleacute doubleacute doubleacute doubleacute odiaeresis Odiaeresis doubleacute doubleacute
 
 ! no colon on :
-keycode  60 = period NoSymbol period colon U2026 division U2026 division period colon U2026 division period colon U2026 division
+! keycode  60 = period NoSymbol period colon U2026 division U2026 division period colon U2026 division period colon U2026 division
