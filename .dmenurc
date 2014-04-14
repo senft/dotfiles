@@ -1,3 +1,7 @@
 #!/bin/sh
-DMENU='dmenu -i -fn "-*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#424d17" -sf "#eddcd3"'
-XCMENUCTRL_DMENU='dmenu -i -fn -*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-* -nb #121212 -nf #989584 -sb #424d17 -sf #eddcd3 -l 15'
+DMENU='dmenu -i -fn "-*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#121212" -sf "#eddcd3"'
+#DMENU='dmenu -i -fn "-*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#fdf6e3" -nf "#989584" -sb "#b58900" -sf "#eddcd3" -w 1912 -x 5 -y 5'
+DMENU_VERT="$DMENU -l 20"
+
+XCMENUCTRL_DMENU='dmenu -i -fn "-*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#121212" -sf "#eddcd3"'
+#XCMENUCTRL_DMENU='dmenu -i -fn "-*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#fdf6e3" -nf "#989584" -sb "#b58900" -sf "#eddcd3" -w 1912 -x 5 -y 5'

@@ -7,10 +7,10 @@
 if [ -f $HOME/.dmenurc ]; then
     . $HOME/.dmenurc
 else
-    DMENU='dmenu -i'
+    DMENU_VERT='dmenu -i'
 fi
 
-song=`mpc playlist --format "[%artist% - %title% (%album%)] | %file%" | eval $DMENU -l 20 -p playlist`
+song=`mpc playlist --format "[%artist% - %title% (%album%)] | %file%" | eval $DMENU_VERT -p playlist`
 
 # Add trailing numbers and grep it to give mpc an id to play
 number=`mpc playlist --format "[%artist% - %title% (%album%)] | %file%" | awk '{print NR, $0}' | grep "$song" | awk '{print $1}'`

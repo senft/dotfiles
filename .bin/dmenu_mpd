@@ -14,7 +14,7 @@ artists=$(mpc list Artist | awk '{ print "I: " $0 }')
 albums=$(mpc list Album | awk '{ print "A: " $0 }')
 search=$artists"\n"$albums
 
-result=`echo "$search" | eval $DMENU -p library -l 20`
+result=`echo "$search" | eval $DMENU -p library`
 
 # User canceled input -> exit
 [[ $result == "" ]] && exit 0

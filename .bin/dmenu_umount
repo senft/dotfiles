@@ -3,10 +3,10 @@
 if [ -f $HOME/.dmenurc ]; then
     . $HOME/.dmenurc
 else
-    DMENU='dmenu -i'
+    DMENU_VERT='dmenu -i'
 fi
 
-result=$(mount | eval $DMENU -p umount -l 20 | awk '{print $3}')
+result=$(mount | eval $DMENU_VERT -p umount -l 20 | awk '{print $3}')
 if [ -n "$result" ]; then
-    sudo umount "$result" 
+    udiskie-umount "$result" 
 fi

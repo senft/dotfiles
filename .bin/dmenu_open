@@ -13,7 +13,7 @@
 if [ -f $HOME/.dmenurc ]; then
     . $HOME/.dmenurc
 else
-    DMENU='dmenu -i'
+    DMENU_VERT='dmenu -i'
 fi
 
 # whitelist filetypes
@@ -27,7 +27,7 @@ fi
 
 files=$(find $dir -type f -regextype "posix-extended" -iregex "\.[/a-z0-9]*(\.$filetypes)?" -not -iregex '.*\.(git|svn|hg).*')
 echo "Found "$(echo "$files" | wc -l)" files."
-result=$(echo "$files" | eval $DMENU -l 30 -p open)
+result=$(echo "$files" | eval $DMENU_VERT -p open)
 if [ ! -z "$result" ]; then
     mime=$(mimetype -b "$result")
     app=$(xdg-mime query default "$mime")
