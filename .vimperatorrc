@@ -33,13 +33,14 @@ set! javascript.options.jit.chrome=true
 " always show http
 set! browser.urlbar.trimURLs=false
 
+" DuckDuckGo as default search engine
+set defsearch=dd
+
 let mapleader = ","
 
 colorscheme molokai
 
 set! browser.tabs.closeButtons=2
-
-ignorekeys add -except J,K,:,h,l,gg,G,g,d,r,gn,t www\\.reddit\\.com
 
 " Qmarks
 silent qmark f http://facebook.com
@@ -47,11 +48,13 @@ silent qmark r http://reddit.com
 silent qmark n http://feedly.com
 silent qmark g http://github.com/senft
 silent qmark i http://imgur.com/
+silent qmark b http://bitbucket.org
 
 noremap <leader>f gnf
 noremap <leader>r gnr
 noremap <leader>n gnn
 noremap <leader>g gng
+noremap <leader>bb gnb
 noremap <leader>i gni
 
 noremap <leader>d :tabopen chrome://browser/content/downloads/contentAreaDownloadsView.xul<CR>
@@ -60,7 +63,6 @@ noremap <leader>a :addons<CR>
 nnoremap b :bmarks!
 nnoremap <c-t> :buffer!
 
-noremap <leader>bb :bmark<CR>
 noremap <leader>bm :bmark -folder TOOLBAR/Mukke<CR>
 noremap <leader>bc :bmark -folder TOOLBAR/Code<CR>
 
