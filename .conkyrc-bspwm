@@ -10,9 +10,9 @@ override_utf8_locale yes
 
 TEXT
 C\
-${if_match "$mpd_status" == "Playing"}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)^fg(\#424d17)mpd^fg()  $mpd_smart^ca()^ca()^ca()   ${endif}\
-^fg(\#424d17)cpu^fg()  ${cpu cpu0}   \
-^fg(\#424d17)mem^fg()  $mem   \
-${if_up wlan0}^fg(\#424d17)wlan0  u^fg() ${upspeedf wlan0}  ^fg(\#424d17)d^fg() ${downspeedf wlan0}   ${endif}\
-${if_up eth0}^fg(\#424d17)eth0  u^fg() ${upspeedf eth0}  ^fg(\#424d17)d^fg() ${downspeedf eth0}    ${endif}\
-^ca(1, amixer set Master toggle)^ca(4, amixer -q set Master 2%+)^ca(5, amixer -q set Master 2%-)^fg(\#424d17)vol^fg()  ${execi 1 /home/jln/.bin/volume.sh}^ca()^ca()^ca()   \
+${if_match "$mpd_status" == "Playing"}^ca(1, mpc toggle)^ca(4, mpc next)^ca(5, mpc prev)^fg(\#989584)mpd^fg()  $mpd_smart^ca()^ca()^ca()   ${endif}\
+^fg(\#989584)cpu^fg()  ${cpu cpu0}   \
+^fg(\#989584)mem^fg()  $mem   \
+${if_up wlan0}^fg(\#989584)wlan0  u^fg() ${upspeedf wlan0}  ^fg(\#989584)d^fg() ${downspeedf wlan0}   ${endif}\
+${if_up eth0}^fg(\#989584)eth0  u^fg() ${upspeedf eth0}  ^fg(\#989584)d^fg() ${downspeedf eth0}    ${endif}\
+^ca(1, amixer set Master toggle)^ca(4, amixer -q set Master 2%+)^ca(5, amixer -q set Master 2%-)^fg(\#989584)vol^fg()  ${execi 1 /home/jln/.bin/volume.sh}^ca()^ca()^ca()   \
