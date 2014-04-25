@@ -37,13 +37,13 @@ URxvt*background:                     #121212
 ! urxvt ----------------------------------------------------------------------
 !URxvt*font: -*-envy code r-medium-r-*-*-10-*-*-*-*-*-iso10646-1
 !URxvt*boldFont: -*-envy code r-medium-r-*-*-10-*-*-*-*-*-iso10646-1
-!URxvt.letterSpace:			 0
+!URxvt.letterSpace:			 2
 
-!URxvt.font: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
-!URxvt.boldFont: -*-termsyn-medium-r-*-*-13-*-*-*-*-*-*-*
+!URxvt.font: -misc-tamzenforpowerline-medium-r-normal--10-87-100-100-c-60-iso10646-1
+!URxvt.boldFont: -misc-tamzenforpowerline-medium-r-normal--10-87-100-100-c-60-iso10646-1
 
-URxvt.font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
-URxvt.boldFont: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
+URxvt.font: -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
+URxvt.boldFont: -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
 
 URxvt.xftAntialias:     	false
 !Urxvt*transparent:			true

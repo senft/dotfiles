@@ -16,10 +16,10 @@ YPOS=36
 YPOS=$((BAR_HEIGHT+top_padding+gap+border))
 PADDING_RIGHT=$((gap+border))
 
-PANEL_FONT="tamzen"
-PANEL_FONT_SIZE=10
+#PANEL_FONT="tamzen"
+#PANEL_FONT_SIZE=10
 
-FONT="tamzen"
+FONT="termsyn"
 FONT_SIZE=11
 
 KILL_DELAY=0.5

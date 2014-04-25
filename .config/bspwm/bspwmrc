@@ -33,7 +33,7 @@ bspc rule -a Firefox desktop=^2
 bspc rule -a Eclipse desktop=^3
 bspc rule -a Gimp desktop=^4
 bspc rule -a feh floating=true focus=false borderless=true
-bspc rule -a sxiv floating=true
+#bspc rule -a sxiv floating=true
 bspc rule -a mplayer floating=true
 bspc rule -a ncmpcpp floating=true
 bspc rule -a speedcrunch floating=true
