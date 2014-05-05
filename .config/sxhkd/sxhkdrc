@@ -109,7 +109,7 @@ super + shift + Return
     urxvtc
 
 super + r
-    dmenu_run -i -fn "-*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#121212" -sf "#eddcd3"
+    dmenu_run -i -fn "-*-lime.se-medium-*-*-*-11-*-*-*-*-*-*-*" -nb "#121212" -nf "#989584" -sb "#121212" -sf "#eddcd3" -y 1
 
 super + {m,shift+m,s,u,shift+r}
     ~/.bin/dmenu_{mpd,playlist,solve,umount,remind}
@@ -143,6 +143,9 @@ super + shift + {KP_Add,KP_Subtract}
 
 Print
     xfce4-screenshooter
+
+super + e
+    eclipse
 
 # make sxhkd reload its configuration files:
 super + q

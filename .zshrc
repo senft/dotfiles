@@ -13,7 +13,6 @@ export VISUAL=vim
 export BROWSER=chromium
 export PAGER=less
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
-export PATH="/usr/lib/cw:$PATH"
 
 # omnetpp
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
@@ -40,7 +39,6 @@ export LC_ALL=
 
 export PYTHONDOCS=/usr/share/doc/python/html/
 
-#eval $(dircolors -b)
 eval $(dircolors -b $HOME/.dircolors)
 
 # Disable Software flow control (Sleep on CTRL-S)
@@ -243,7 +241,9 @@ alias o='xdg-open'
 alias iv='sxiv'
 
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
-alias tcl="/home/jln/Code/Python/todotxt-machine/todotxt-machine.py -f ~/Dropbox/.todo/todo.txt"
+alias ta="t add"
+alias td="t do"
+alias tv="t e" # edit todo.txt in $EDITOR
 
 # cd
 alias home="cd ~"
