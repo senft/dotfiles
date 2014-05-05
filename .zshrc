@@ -1,8 +1,7 @@
-SSH_AUTH_SOCK=`netstat -xl | grep -o '/run/user/1000/keyring-.*/ssh$'`
-[ -z "$SSH_AUTH_SOCK" ] || export SSH_AUTH_SOCK
-
-# frequently used directorys
-OSSIM=/home/jln/Code/C++/omnetpp/ossim
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start --components=ssh)
+    export SSH_AUTH_SOCK
+fi
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code/Python
