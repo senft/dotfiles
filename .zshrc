@@ -59,7 +59,7 @@ zle -N        edit-command-line
 bindkey '^v'  edit-command-line
 bindkey -M vicmd v edit-command-line
 
-bindkey -s '^@' 'dmenu_open\n' # dmenu_open on ctrl+space
+bindkey -s '^P' 'dmenu_open\n' # dmenu_open on ctrl+space
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 
