@@ -33,9 +33,6 @@ set! javascript.options.jit.chrome=true
 " always show http
 set! browser.urlbar.trimURLs=false
 
-" DuckDuckGo as default search engine
-set defsearch=dd
-
 let mapleader = ","
 
 colorscheme molokai

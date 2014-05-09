@@ -121,8 +121,8 @@ compinit
 
 bindkey "^r" history-incremental-search-backward
 
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
+# bindkey "^[[A" history-search-backward
+# bindkey "^[[B" history-search-forward
 
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
@@ -229,8 +229,6 @@ alias reboot="sudo reboot"
 alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
 alias wcli='wicd-curses'
-#alias vpn-uni="sudo vpnc /etc/vpnc/uni.conf"
-#alias vpn-disconnect="sudo vpnc-disconnect"
 alias vpn-uni="sudo openconnect https://vpn.hrz.tu-darmstadt.de/"
 alias cal="cal -3"
 alias ipy='ipython -i'
@@ -303,12 +301,9 @@ mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 # Simple fuzzy search in current directory
-sfind() { find . -name "*$1*"; }
-
-remindme() { (sleep $1 && zenity --info --text "$2") & }
+ffind() { find . -name "*$1*"; }
 
 if [[ "$TERM" == *"-256color" ]]; then
-
     # Mode indicator
     zle -N zle-keymap-select
     zle -N zle-line-init
@@ -349,14 +344,7 @@ function ranger-cd {
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
         cd -- "$(cat "$tempfile")"
     fi
-    rm -f -- "$tempfile"
-}
-
-function git-commit-file(){
-    commitmsg=$1
-    shift
-    git add $@
-    git commit -m "$commitmsg"
+    /bin/rm -f -- "$tempfile"
 }
 
 if (( $+commands[trash-empty] )); then
