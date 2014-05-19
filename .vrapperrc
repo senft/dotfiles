@@ -1,0 +1,23 @@
+set ignorecase
+set smartcase
+set autoindent
+set smartindent
+set number
+
+nnoremap H :bp<CR>
+nnoremap L :bn<CR>
+
+nnoremap ,w :w<CR>
+
+eclipseaction eclipsenextmember org.eclipse.jdt.ui.edit.text.java.goto.next.member
+nnoremap ]] :eclipsenextmember<cr>
+eclipseaction eclipseprevmember org.eclipse.jdt.ui.edit.text.java.goto.previous.member
+nnoremap [[ :eclipseprevmember<cr>
+
+eclipseaction findref org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace
+nnoremap ,a :findref<CR>
+
+" rename current symbol
+eclipseaction eclipserename org.eclipse.jdt.ui.edit.text.java.rename.element
+au "Dart Editor" eclipseaction eclipserename com.google.dart.tools.ui.edit.text.dart.rename.element
+nnoremap ,r :eclipserename<cr>
