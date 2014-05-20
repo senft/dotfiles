@@ -84,7 +84,7 @@ super + @button{1-3}
     bspc pointer -u
 
 # Change window gap
-alt + {KP_Add,KP_Subtract,minus}
+alt + {KP_Add,KP_Subtract,slash}
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-,-} 10 ))
 
 alt + Left

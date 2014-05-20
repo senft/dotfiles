@@ -1,19 +1,19 @@
 #! /bin/sh
 
-bspc monitor -d term www dev misc im 6 7 8
+bspc monitor -d term www dev misc msg 6 7 8
 
 # set monocle layout for browser workspace
 bspc desktop ^2 -l monocle
 
-bspc config border_width           3
-bspc config window_gap             20
-bspc config split_ratio            0.50
-bspc config focus_follows_pointer  false
-bspc config borderless_monocle     true
-bspc config gapless_monocle        true
-bspc config auto_cancel            true
-bspc config auto_alternate         false
-bspc config ignore_ewmh_focus      true
+bspc config border_width                  3
+bspc config window_gap                    20
+bspc config split_ratio                   0.50
+bspc config focus_follows_pointer         false
+bspc config borderless_monocle            true
+bspc config gapless_monocle               true
+bspc config auto_cancel                   true
+bspc config auto_alternate                false
+bspc config ignore_ewmh_focus             true
 
 bspc config focused_border_color          "#424d17"
 bspc config normal_border_color           "#121212"
@@ -27,17 +27,17 @@ bspc config normal_private_border_color   "#627a92"
 bspc config focused_border_color          "#fdf6e3"
 bspc config normal_border_color           "#121212"
 
-bspc rule -a Chromium desktop=^2
-bspc rule -a Firefox desktop=^2
-bspc rule -a Eclipse desktop=^3
-bspc rule -a Gimp desktop=^4
-bspc rule -a Steam desktop=^4 follow=true fullscreen=true
-bspc rule -a Skype desktop=^5
-bspc rule -a ncmpcpp floating=true
-bspc rule -a vmpk floating=true
+bspc rule -a                              Chromium desktop=^2
+bspc rule -a                              Firefox desktop=^2
+bspc rule -a                              Eclipse desktop=^3
+bspc rule -a                              Gimp desktop=^4
+bspc rule -a                              Steam desktop=^4 follow=true fullscreen=true
+bspc rule -a                              Skype desktop=^5
+#bspc rule -a                              ncmpcpp floating=true
+bspc rule -a                              vmpk floating=true
+bspc rule -a                              Omnetpp desktop=^4
+bspc rule -a                              Toplevel desktop=^4 floating=true
 
-bspc rule -a Omnetpp desktop=^4
-bspc rule -a Toplevel desktop=^4 floating=true
 
 compton &
 urxvtc &

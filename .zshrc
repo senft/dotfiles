@@ -18,6 +18,12 @@ export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-t
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
 export PATH=$PATH:/opt/omnetpp/
 
+# commonly used directorys
+export py=~/Code/Python
+export lso=~/Code/Java/Uni/lso
+export pfs=~/Code/Java/Uni/simonstrator-overlays/
+export pfss=~/Code/Java/Uni/simonstrator-simrunner/
+
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
@@ -261,7 +267,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 #alias rm="rm -i"
 alias rm='echo "This is not the command you are looking for."; false'
- 
+
 # trash
 alias tp="trash-put"
 alias te="trash-empty"
