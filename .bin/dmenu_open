@@ -4,11 +4,6 @@
 # Lists "all" regular files in current pwd and pipes to input. Opens the
 # selected file with xdg-open.
 #
-# Depends on File-MimeInfo (http://search.cpan.org/dist/File-MimeInfo/)
-# for better mime identification
-# On Arch:
-#   pacman -S perl-file-mimeinfo
-#
 
 if [ -f $HOME/.dmenurc ]; then
     . $HOME/.dmenurc
@@ -17,7 +12,7 @@ else
 fi
 
 # whitelist filetypes
-filetypes="(sh|py|java|mp3|ogg|jpeg|jpg|png|gif|tex|pdf)"
+filetypes="(sh|py|java|mp3|ogg|jpeg|jpg|png|gif|tex|pdf|ods)"
 
 if [ -z "$1" ]; then
     dir="."
@@ -28,11 +23,9 @@ fi
 files=$(find $dir -type f -regextype "posix-extended" -iregex "\.[/a-z0-9]*(\.$filetypes)?" -not -iregex '.*\.(git|svn|hg).*')
 #echo "Found "$(echo "$files" | wc -l)" files."
 result=$(echo "$files" | eval $DMENU_VERT -p open)
-echo "Found "$(echo "$files" | wc -l)" files."
-result=$(echo "$files" | eval $DMENU_VERT -p open)
 if [ ! -z "$result" ]; then
-    mime=$(mimetype -b "$result")
-    app=$(xdg-mime query default "$mime")
+    #mime=$(mimetype -b "$result")
+    #app=$(xdg-mime query default "$mime")
     #echo "Open $result ($mime) with $app."
-    (xdg-open "$result" >> /dev/null) &
+    xdg-open "$result" 2> /dev/null
 fi
