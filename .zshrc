@@ -364,5 +364,3 @@ if (( $+commands[trash-empty] )); then
     fi
   }
 fi
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
