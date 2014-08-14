@@ -4,6 +4,9 @@ set autoindent
 set smartindent
 set number
 
+nnoremap <space> za
+vnoremap <space> zf
+
 nnoremap H :bp<CR>
 nnoremap L :bn<CR>
 
