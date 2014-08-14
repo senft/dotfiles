@@ -18,6 +18,8 @@ export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-t
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
 export PATH=$PATH:/opt/omnetpp/
 
+export LADSPA_PATH="/usr/lib/ladspa/"
+
 # commonly used directorys
 export py=~/Code/Python
 export lso=~/Code/Java/Uni/lso
@@ -83,6 +85,7 @@ bindkey '^Z' fancy-ctrl-z
 
 setopt   prompt_subst
 setopt   notify globdots correct cdablevars autolist
+setopt   extended_glob
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
 setopt   menucomplete extendedglob rcquotes mailwarning
 unsetopt bgnice autoparamslash
@@ -206,7 +209,7 @@ zstyle ':vcs_info:*' enable git hg
 #alias ls='ls -hF --color=always'
 alias ls='ls --color=always'
 alias lr='ls -R'                    # recursive ls
-alias ll='ls++ -l'
+alias ll='ls++ -l --potsf'
 alias la='ll -A'
 alias ld='ll -rct'
 alias lz='ll -rS'                   # sort by size
@@ -240,7 +243,7 @@ alias cal="cal -3"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
-alias youtube-dl-mp3="youtube-dl -x --audio-format mp3"
+alias youtube-dl-mp3="youtube-dl -x --audio-format mp3 --add-metadata --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias o='xdg-open'
 alias iv='sxiv'
 
@@ -265,8 +268,8 @@ alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{p
 # safety features
 alias cp="cp -i"
 alias mv="mv -i"
-#alias rm="rm -i"
-alias rm='echo "This is not the command you are looking for."; false'
+alias rm="rm -i"
+#alias rm='echo "This is not the command you are looking for."; false'
 
 # trash
 alias tp="trash-put"
@@ -307,7 +310,7 @@ mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
 mkzip() { zip -r "${1%%/}.zip" "${1%%/}/"; }
 
 # Simple fuzzy search in current directory
-ffind() { find . -name "*$1*"; }
+ffind() { find . -iname "*$1*"; }
 
 if [[ "$TERM" == *"-256color" ]]; then
     # Mode indicator
@@ -361,3 +364,5 @@ if (( $+commands[trash-empty] )); then
     fi
   }
 fi
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

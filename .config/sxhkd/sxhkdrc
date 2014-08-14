@@ -22,7 +22,7 @@ super + {space,f,shift+p,p}
 super + t
     bspc desktop -l next
 
-## rotate desktop
+# rotate desktop
 super + Tab
     bspc desktop -R 90
 
@@ -124,10 +124,10 @@ super + o
     urxvtc -g 150x60+820+150 -name ncmpcpp -e ncmpcpp
 
 super + {KP_Add,KP_Subtract}
-    amixer set Master 2%{+,-}
+    amixer set Master 5%{+,-}
 
 XF86Audio{Raise,Lower}Volume
-    amixer set Master 2%{+,-}
+    amixer set Master 5%{+,-}
 
 super + KP_Enter
     amixer -q set Master toggle

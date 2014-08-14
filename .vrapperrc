@@ -3,6 +3,7 @@ set smartcase
 set autoindent
 set smartindent
 set number
+set incsearch
 
 nnoremap <space> za
 vnoremap <space> zf
@@ -24,3 +25,7 @@ nnoremap ,a :findref<CR>
 eclipseaction eclipserename org.eclipse.jdt.ui.edit.text.java.rename.element
 au "Dart Editor" eclipseaction eclipserename com.google.dart.tools.ui.edit.text.dart.rename.element
 nnoremap ,r :eclipserename<cr>
+
+" Folding
+nnoremap <space> za
+vnoremap <space> zf
