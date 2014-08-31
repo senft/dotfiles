@@ -10,6 +10,9 @@ super + shift + q
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,window -d} ^{1-9,10}
 
+super + Tab
+    bspc desktop -f last
+
 # close window
 super + Escape
     bspc window -c
@@ -23,7 +26,7 @@ super + t
     bspc desktop -l next
 
 # rotate desktop
-super + Tab
+super + shift + Tab
     bspc desktop -R 90
 
 super + {_,shift} + BackSpace
@@ -118,7 +121,8 @@ super + c
     xcmenuctrl
 
 super + shift + z
-    i3lock -u -i /home/jln/.bg.png -t
+    ~/.bin/i3-exit
+    #i3lock -u -i /home/jln/.bg.png -t
 
 super + o
     urxvtc -g 150x60+820+150 -name ncmpcpp -e ncmpcpp
