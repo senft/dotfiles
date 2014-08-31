@@ -88,6 +88,7 @@ setopt   notify globdots correct cdablevars autolist
 setopt   extended_glob
 setopt   autocd recexact longlistjobs nohup incappendhistory sharehistory extendedhistory
 setopt   menucomplete extendedglob rcquotes mailwarning
+setopt   NO_NOMATCH # pass bad match onto the command
 unsetopt bgnice autoparamslash
 
 # Autoload zsh modules when they are referenced
