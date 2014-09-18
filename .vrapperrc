@@ -18,6 +18,13 @@ nnoremap ]] :eclipsenextmember<cr>
 eclipseaction eclipseprevmember org.eclipse.jdt.ui.edit.text.java.goto.previous.member
 nnoremap [[ :eclipseprevmember<cr>
 
+eclipseaction openimplementation org.eclipse.jdt.ui.edit.text.java.open.implementation
+nnoremap ,i :openimplementation<cr>
+
+" open declaration
+eclipseaction opendeclaration org.eclipse.jdt.ui.edit.text.java.open.editor
+nnoremap ,d :opendeclaration<cr>
+
 eclipseaction findref org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace
 nnoremap ,a :findref<CR>
 

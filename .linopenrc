@@ -25,10 +25,11 @@ interm=ranger
 # image/png:sxiv
 # video/mp4:mplayer
 # text/plain:vim
+application/pdf:zathura
 
 # 3. Mime category
 image:sxiv
-video:mplayer
+video:vlc
 audio:mplayer->interm # you can also specify the interm rule explictly after '->'
 text:vim
 

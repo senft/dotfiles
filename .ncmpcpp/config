@@ -43,7 +43,7 @@ visualizer_output_name = "FIFO output"
 #visualizer_type = "wave"
 visualizer_type = "spectrum"
 
-display_bitrate="true"
+#display_bitrate="true"
 
 
 #song_list_format ="{ $8%a $1» $2}{%t} $R$1%b" 
