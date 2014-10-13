@@ -10,7 +10,7 @@ source /usr/bin/virtualenvwrapper_lazy.sh
 
 export EDITOR=vim
 export VISUAL=vim
-export BROWSER=chromium
+export BROWSER=firefox
 export PAGER=less
 export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
 
@@ -25,6 +25,9 @@ export py=~/Code/Python
 export lso=~/Code/Java/Uni/lso
 export pfs=~/Code/Java/Uni/simonstrator-overlays/
 export pfss=~/Code/Java/Uni/simonstrator-simrunner/
+
+# temporary
+alias paper="vim ~/Dropbox/Uni/HiWi-Julius/paper-btlive-simulation/README.md"
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
