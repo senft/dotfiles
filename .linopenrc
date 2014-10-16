@@ -31,6 +31,8 @@ image:sxiv-rifle
 video:mplayer
 audio:mplayer->interm # you can also specify the interm rule explictly after '->'
 text:vim
+application/pdf:zathura
+application/vnd.ms-office:soffice
 
 # 4. Regexp
 # Match some protocols by default

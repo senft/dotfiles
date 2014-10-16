@@ -27,7 +27,7 @@ export pfs=~/Code/Java/Uni/simonstrator-overlays/
 export pfss=~/Code/Java/Uni/simonstrator-simrunner/
 
 # temporary
-alias paper="vim ~/Dropbox/Uni/HiWi-Julius/paper-btlive-simulation/README.md"
+alias paper="vim ~/Dropbox/Uni/HiWi-Julius/paper-btlive-simulation/"
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
