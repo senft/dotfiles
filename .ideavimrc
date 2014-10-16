@@ -1,0 +1,6 @@
+let mapleader=","
+
+set hlsearch
+set smartcase
+
+map <C-w> :q<CR>

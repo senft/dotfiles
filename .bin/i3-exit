@@ -1,0 +1,118 @@
+#!/usr/bin/env python2
+
+# Copyright (c) 2013 Artem Shinkarov <artyom.shinkaroff@gmail.com>
+#
+# Permission to use, copy, modify, and distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+# Changes by senft:
+#   - Added more actions
+#   - Changed programs
+
+import shlex
+from subprocess import Popen, PIPE
+
+l_reboot =    "Reboot    (r)"
+l_shutdown =  "Shutdown  (s)"
+l_suspend =   "Suspend   (p)"
+l_hibernate = "Hibernate (h)"
+l_logout =    "Logout    (l)"
+l_lock =      "Lock      (o)"
+l_cancel =    "Cancel    (c)"
+
+
+def exec_dzen():
+    # TODO get screen size
+    menu_width = 200
+    menu_lines = 8
+    menu_x = (1366 - menu_width) / 2
+    menu_y = 100
+
+    b_reboot = l_reboot
+    b_shutdown = l_shutdown
+    b_suspend = l_suspend
+    b_hibernate = l_hibernate
+    b_logout = l_logout
+    b_lock = l_lock
+    b_cancel = l_cancel
+
+    font_width = 16
+
+    font_header = "lime.se"
+    font_menu = "lime.se"
+    font_size = "11"
+
+    onstart = "onstart=uncollapse,grabkeys"
+    button1 = "button1=ungrabkeys,menuprint,exit"
+    escape = "key_Escape=exit"
+    keyr = "key_r=ungrabkeys,print:%(b_reboot)s,exit"
+    keyR = "key_R=ungrabkeys,print:%(b_reboot)s,exit"
+    keyl = "key_l=ungrabkeys,print:%(b_logout)s,exit"
+    keyL = "key_L=ungrabkeys,print:%(b_logout)s,exit"
+    keys = "key_s=ungrabkeys,print:%(b_shutdown)s,exit"
+    keyS = "key_S=ungrabkeys,print:%(b_shutdown)s,exit"
+    keyp = "key_p=ungrabkeys,print:%(b_suspend)s,exit"
+    keyP = "key_P=ungrabkeys,print:%(b_suspend)s,exit"
+    keyh = "key_h=ungrabkeys,print:%(b_hibernate)s,exit"
+    keyH = "key_H=ungrabkeys,print:%(b_hibernate)s,exit"
+    keyo = "key_o=ungrabkeys,print:%(b_lock)s,exit"
+    keyO = "key_O=ungrabkeys,print:%(b_lock)s,exit"
+    keyq = "key_q=ungrabkeys,print:%(b_cancel)s,exit"
+    keyQ = "key_Q=ungrabkeys,print:%(b_cancel)s,exit"
+    keyc = "key_c=ungrabkeys,print:%(b_cancel)s,exit"
+    keyC = "key_C=ungrabkeys,print:%(b_cancel)s,exit"
+
+    cmd = "dzen2 -p -m -l %(menu_lines)i -x %(menu_x)i -y %(menu_y)i " +\
+        "-w %(menu_width)i -sa c -fn %(font_menu)s:pixelsize=%(font_size)s -bg \"#121212\" -fg \"#eddcd3\" " + \
+          "-e \"" + ";".join((onstart, button1, escape, keyq, keyQ, keyr, keyR, keyo, keyO, keyp, keyP, keyh, keyH,
+                              keyl, keyL, keys, keyS, keyc, keyC)) +\
+          "\""
+    cmd = cmd % locals()
+    args = shlex.split(cmd)
+
+    p = Popen(args, stdin=PIPE, stdout=PIPE)
+
+    msg = "\n%(b_shutdown)s\n%(b_reboot)s\n%(b_suspend)s\n%(b_hibernate)s\n%(b_lock)s\n%(b_logout)s\n%(b_cancel)s"
+    msg = msg % locals()
+    print >>p.stdin, msg
+    p.stdin.close()
+
+    res = p.stdout.readlines()
+    p.stdout.close()
+    if res == []:
+        return ""
+    else:
+        return res[0].strip()
+
+
+def action(cmd):
+    if cmd == l_reboot:
+        cmd = "reboot"
+    elif cmd == l_suspend:
+        cmd = "sudo systemctl suspend"
+    elif cmd == l_hibernate:
+        cmd = "sudo systemctl hibernate"
+    elif cmd == l_logout:
+        cmd = "bspc quit"
+    elif cmd == l_lock:
+        cmd = "i3lock -u -i /home/jln/.bg.png -t"
+    elif cmd == l_shutdown:
+        cmd = "sudo shutdown -h now"
+    else:
+        return
+
+    args = shlex.split(cmd)
+    Popen(args)
+
+if __name__ == "__main__":
+    a = exec_dzen()
+    action(a)
