@@ -54,6 +54,9 @@ URxvt*perl-ext:	            selection,clipboard
 URxvt*saveLines:	        12000
 URxvt*cutchars:	            `""()'*'<>[]{|}
 URxvt*internalBorder:	    4
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
 
 URxvt*transparent:          true
 URxvt*shading:              10
@@ -66,3 +69,4 @@ Xft.antialias:	            true
 Xft.hinting:	            slight
 Xft.dpi:	                96
 Xft.lcdfilter:	            lcddefault
+
