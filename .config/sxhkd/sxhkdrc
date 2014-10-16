@@ -149,7 +149,7 @@ Print
     xfce4-screenshooter
 
 super + e
-    eclipse
+    eclipse -nosplash
 
 # make sxhkd reload its configuration files:
 super + q

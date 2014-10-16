@@ -29,12 +29,8 @@ URxvt.colorUL:	    #424d17
 URxvt*colorUL:	    2
 URxvt.colorBD:	    #989584
 
-!URxvt.font:	        -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-!URxvt.boldFont:	        -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-
 URxvt.font:	        -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
 URxvt.boldFont:	    -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
-
 
 URxvt*url-select.launcher:	firefox
 URxvt*url-select.underline:	true
@@ -59,10 +55,10 @@ URxvt*saveLines:	        12000
 URxvt*cutchars:	            `""()'*'<>[]{|}
 URxvt*internalBorder:	    4
 
-URxvt.transparent:          true
-URxvt.shading:              10
-!URxvt.blurRadius:           10
-URxvt.fading:               20
+URxvt*transparent:          true
+URxvt*shading:              10
+URxvt*blurRadius:           10
+URxvt*fading:               20
 
 !Xft.rgba:	                rgb
 !Xft.autohint:	            0

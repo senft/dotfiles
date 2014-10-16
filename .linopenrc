@@ -29,6 +29,7 @@ application/pdf:zathura
 
 # 3. Mime category
 image:sxiv
+image:sxiv-rifle
 video:vlc
 audio:mplayer->interm # you can also specify the interm rule explictly after '->'
 text:vim
@@ -40,6 +41,7 @@ text:vim
 ?'^www.':$BROWSER
 ?'^dvd:\/\/':mplayer
 ?'^cdda:\/\/':mplayer->interm
+?'\.mp3$':mplayer->interm
 
 # Directory rule for directories
 # ideally you want to use file manager
