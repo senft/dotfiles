@@ -69,3 +69,5 @@ discard_colors_if_item_is_selected = "yes"
 progressbar_color = "red"
 progressbar_elapsed_color = "white"
 progressbar_boldness = "no"
+
+ask_before_clearing_playlists = no

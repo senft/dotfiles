@@ -40,7 +40,7 @@ bspc rule -a                              Geary desktop=msg
 # LSO
 bspc rule -a lso-stream-VlcStreamRTP floating=false desktop=misc
 bspc rule -a lso-runner-Peer floating=false desktop=misc
-#bspc rule -a sun-awt-X11-XFramePeer floating=false desktop=misc
+bspc rule -a sun-awt-X11-XFramePeer floating=false desktop=misc
 
 # PFS
 bspc rule -a de-tudarmstadt-maki-simonstrator-peerfact-GUIRunner floating=true
