@@ -49,7 +49,7 @@ bspc rule -a de-tudarmstadt-maki-simonstrator-peerfact-GUIRunner floating=true
 # Autostart
 #
 
-compton &
+#compton &
 urxvtc &
 firefox &
 tint2 &
