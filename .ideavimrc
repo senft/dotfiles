@@ -4,3 +4,9 @@ set hlsearch
 set smartcase
 
 map <C-w> :q<CR>
+
+" Change tab/buffer
+map H gT
+map L gt
+
+map <C-d> dd

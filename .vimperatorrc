@@ -63,7 +63,11 @@ nnoremap <c-t> :buffer!
 noremap <leader>bm :bmark -folder TOOLBAR/Mukke<CR>
 noremap <leader>bc :bmark -folder TOOLBAR/Code<CR>
 
+" Duplicate tab
 noremap <C-d> yP
+
+" Open link in new tab
+noremap <C-g> <C-c>P
 
 noremap <C-S-b> :sidebar bookmarks<CR>
 noremap <C-S-h> :sidebar history<CR>
