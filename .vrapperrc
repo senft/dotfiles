@@ -8,9 +8,11 @@ set incsearch
 nnoremap <space> za
 vnoremap <space> zf
 
+" Change tab/buffer
 nnoremap H :bp<CR>
 nnoremap L :bn<CR>
 
+" Save
 nnoremap ,w :w<CR>
 
 eclipseaction eclipsenextmember org.eclipse.jdt.ui.edit.text.java.goto.next.member

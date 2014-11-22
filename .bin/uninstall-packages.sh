@@ -13,7 +13,6 @@ do
     if grep -Fxq "$package" $SKIP_FILE
     then
         # Skip package
-        echo
     else
         # Don't skip package
         echo "$(pacman -Qi "$package" | grep "Required By\|Name\|Version\|Description\|Depends On\|Installed Size")"
@@ -32,8 +31,7 @@ do
             echo "N - (N)o, don't uninstall package and never ask for this package again"
             echo "s - recur(s)ive, uninstall package and all of its dependencies that are no longer needed and have not been installed as explicit"
             echo "r - (r)ecursive, uninstall package and all of its dependencies that are no longer needed"
-            echo "? - Show this help"
-            # TODO show current again
+            echo "? - Show this help" # TODO show current again on help
 
         elif [[ $REPLY =~ ^[Yy]$ ]]
         then
