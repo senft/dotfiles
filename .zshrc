@@ -27,7 +27,7 @@ export pfs=~/Code/Java/Uni/simonstrator-overlays/
 export pfss=~/Code/Java/Uni/simonstrator-simrunner/
 
 # temporary
-alias paper="vim ~/Dropbox/Uni/HiWi-Julius/paper-btlive-simulation/"
+alias paper="cd ~/Dropbox/Uni/HiWi-Julius/paper-btlive-simulation/; vim ."
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
@@ -264,7 +264,7 @@ alias back="cd -"
 alias ..="cd .."
 
 # vim shortcuts
-alias vv="vim ~/.vim/vimrc ~/.vimperatorrc"
+alias vv="vim ~/.vim/vimrc ~/.vimperatorrc ~/.vrapperrc ~/.ideavimrc"
 alias vz="vim ~/.zshrc"
 alias vx="vim ~/.Xdefaults ~/.xinitrc"
 alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
@@ -289,6 +289,8 @@ alias -g C="| xclip"
 alias gs="git status"
 alias gb="git branch"
 alias gd="git diff"
+alias ga="git add"
+alias gap="git add -p"
 alias gc="git commit"
 alias gca="git commit --amend"
 alias gcm="git commit -m"
