@@ -18,16 +18,16 @@ export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-t
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
 export PATH=$PATH:/opt/omnetpp/
 
-export LADSPA_PATH="/usr/lib/ladspa/"
-
 # commonly used directorys
 export py=~/Code/Python
-export lso=~/Code/Java/Uni/lso
-export pfs=~/Code/Java/Uni/simonstrator-overlays/
-export pfss=~/Code/Java/Uni/simonstrator-simrunner/
 
 # temporary
 alias paper="cd ~/Dropbox/Uni/HiWi-Julius/paper-btlive-simulation/; vim ."
+export ndn=~/Code/C++/ndnSIM/ns-3
+export lso=~/Code/Java/Uni/lso
+export pfs=~/Code/Java/Uni/simonstrator-overlays/
+export pfss=~/Code/Java/Uni/simonstrator-simrunner/
+export plots=~/Code/Java/Uni/plottingplatform/
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
@@ -242,7 +242,7 @@ alias reboot="sudo reboot"
 alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
 alias wcli='wicd-curses'
-alias vpn-uni="sudo openconnect https://vpn.hrz.tu-darmstadt.de/"
+alias vpn-uni="sudo openconnect --authgroup extern https://vpn.hrz.tu-darmstadt.de/"
 alias cal="cal -3"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
@@ -289,6 +289,7 @@ alias -g C="| xclip"
 alias gs="git status"
 alias gb="git branch"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias ga="git add"
 alias gap="git add -p"
 alias gc="git commit"

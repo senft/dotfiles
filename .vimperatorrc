@@ -47,6 +47,7 @@ noremap <leader>i :tabopen http://imgur.com/<CR>
 noremap <leader>b :tabopen http://bitbucket.org<CR>
 noremap <leader>p :tabopen http://getpocket.com/a/queue/<CR>
 noremap <leader>v :tabopen http://discogs.com<CR>
+noremap <leader>s :tabopen http://soundcloud.com<CR>
 
 " Save to feedly
 nnoremap <C-r> :open javascript:void(window.open('http://www.feedly.com/home#subscription/feed/'+document.location.href));<CR>
@@ -97,7 +98,7 @@ noremap $ :blast<CR>
 inoremap <C-a> <Ins><C-a><Ins>
 
 " sourcing .vimperatorrc
-noremap <Leader>s :source ~/.vimperatorrc<CR>
+" noremap <Leader>s :source ~/.vimperatorrc<CR>
 
 :style -name=yourUglyStatusline * #liberator-statusline { font-family: "tamzen" !important; }  }
 
