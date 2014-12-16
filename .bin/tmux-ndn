@@ -1,0 +1,28 @@
+#!/bin/bash
+
+SESSION="ndnSIM"
+DIR="/home/jln/Code/C++/ndnSIM/ns-3"
+
+tmux has-session -t $SESSION 2>/dev/null
+
+if [ "$?" -eq 1 ] ; then
+
+    tmux new-session -d -s $SESSION
+    tmux rename-window "dev"
+    tmux send-keys "cd $DIR" "C-m" "C-l"
+
+    tmux split-window -h -p 55
+    tmux send-keys "cd $DIR" "C-m" "C-l"
+    tmux send-keys "vim ." "C-m"
+
+    tmux select-pane -t 0
+
+    tmux new-window -n "git"
+    tmux send-keys "cd $DIR" "C-m" "C-l"
+
+    tmux select-window -t 1
+    tmux select-pane -t 1
+    tmux send-keys ",vp ./run.sh --vis" "C-m"
+fi
+
+tmux attach-session -t $SESSION
