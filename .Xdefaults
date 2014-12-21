@@ -71,3 +71,80 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
+! ! --- special colors ---
+!
+*background: #191919
+*foreground: #bcbcaf
+!
+! --- standard colors ---
+!
+! black
+*color0:    #191919
+!
+! bright_black
+*color8:    #46423b
+!
+! red
+*color1:    #a04363
+!
+! bright_red
+*color9:    #ae837a
+!
+! green
+*color2:    #9b9329
+!
+! bright_green
+*color10:   #b4aa30
+!
+! yellow
+*color3:    #bf7a29
+!
+! bright_yellow
+*color11:   #c7a551
+!
+! blue
+*color4:    #6a8c8c
+!
+! bright_blue
+*color12:   #74999e
+!
+! magenta
+*color5:    #856774
+!
+! bright_magenta
+*color13:   #9c818e
+!
+! cyan
+*color6:    #757978
+!
+! bright_cyan
+*color14:   #9fa590
+!
+! white
+*color7:    #bcbcaf
+!
+! bright_white
+*color15:   #bcbcaf
+
+
+! auch schön
+
+*foreground: #abacae
+*background: #17181a
+
+*color0: #17181a
+*color1: #983327
+*color2: #284f28
+*color3: #a36028
+*color4: #3c3c49
+*color5: #ffffff
+*color6: #3d4b58
+*color7: #9a9a9a
+*color8: #3a3a3a
+*color9: #a3443a
+*color10: #526130
+*color11: #a9854f
+*color12: #97979c
+*color13: #d3d3d3
+*color14: #425b62
+*color15: #dddddd
