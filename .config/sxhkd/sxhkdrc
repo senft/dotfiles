@@ -10,6 +10,10 @@ super + shift + q
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,window -d} ^{1-9,10}
 
+# toggle border on focused window
+super + b
+    bspc-toggle-border
+
 super + Tab
     bspc desktop -f last
 
@@ -148,8 +152,8 @@ super + shift + {KP_Add,KP_Subtract}
 Print
     xfce4-screenshooter
 
-super + e
-    eclipse -nosplash
+super + a
+    pavucontrol
 
 # make sxhkd reload its configuration files:
 super + q

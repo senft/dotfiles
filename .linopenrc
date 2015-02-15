@@ -36,6 +36,7 @@ text:vim
 application/pdf:zathura
 application/vnd.ms-office:soffice
 application/vnd.openxmlformats-officedocument.wordprocessingml.document:soffice
+application/vnd.oasis.opendocument.text:soffice
 
 # 4. Regexp
 # Match some protocols by default

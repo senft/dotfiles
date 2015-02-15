@@ -12,7 +12,8 @@ export EDITOR=vim
 export VISUAL=vim
 export BROWSER=firefox
 export PAGER=less
-export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
+#export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
+export PATH=$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
 
 # omnetpp
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc

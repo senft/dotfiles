@@ -1,5 +1,4 @@
 #! /bin/sh
-
 bspc config border_width                  1
 bspc config window_gap                    30
 bspc config split_ratio                   0.50
@@ -27,20 +26,21 @@ bspc desktop ^2 -l monocle
 bspc config focused_border_color          "#fdf6e3"
 bspc config normal_border_color           "#121212"
 
+bspc rule -a                              Pavucontrol floating=true
 bspc rule -a                              Chromium desktop=^2
 bspc rule -a                              Firefox desktop=^2
 bspc rule -a                              Eclipse desktop=^3
 bspc rule -a                              jetbrains-idea-ce desktop=^3
+bspc rule -a                              jetbrains-idea-ce desktop=dev
 bspc rule -a                              Gimp desktop=^4
 bspc rule -a                              Steam desktop=^4
 bspc rule -a                              Skype desktop=^5
 bspc rule -a                              Toplevel desktop=^4 floating=true
-bspc rule -a                              Geary desktop=msg
 
 # LSO
-bspc rule -a lso-stream-VlcStreamRTP floating=false desktop=misc
-bspc rule -a lso-runner-Peer floating=false desktop=misc
-bspc rule -a sun-awt-X11-XFramePeer floating=false desktop=misc
+#bspc rule -a lso-stream-VlcStreamRTP floating=false desktop=misc
+#bspc rule -a lso-runner-Peer floating=false desktop=misc
+#bspc rule -a sun-awt-X11-XFramePeer floating=false desktop=misc
 
 # PFS
 bspc rule -a de-tudarmstadt-maki-simonstrator-peerfact-GUIRunner floating=true

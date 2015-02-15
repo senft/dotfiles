@@ -73,6 +73,9 @@ noremap <C-d> yP
 " Open link in new tab
 noremap <C-g> <C-c>P
 
+" Select all on ctrl-a
+noremap <C-a> <Ins><C-a><Ins>
+
 noremap <C-S-b> :sidebar bookmarks<CR>
 noremap <C-S-h> :sidebar history<CR>
 
