@@ -21,7 +21,7 @@ bspc config top_padding $((PANEL_HEIGHT+PANEL_Y))
 #bspc config bottom_padding $PANEL_HEIGHT
 
 bspc control --subscribe > "$PANEL_FIFO" &
-#xtitle -sf 'T%s' > "$PANEL_FIFO" &
+xtitle -sf 'X%s' > "$PANEL_FIFO" &
 clock -s -i 30 -f "T%a %d.%m  %H:%M" > "$PANEL_FIFO" &
 conky -c ~/.conkyrc-bspwm > "$PANEL_FIFO" &
 
