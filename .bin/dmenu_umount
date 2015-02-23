@@ -8,5 +8,5 @@ fi
 
 result=$(mount | eval $DMENU_VERT -p umount -l 20 | awk '{print $3}')
 if [ -n "$result" ]; then
-    udiskie-umount "$result" 
+    udiskie-umount -l "$result" 
 fi
