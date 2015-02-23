@@ -1,9 +1,21 @@
-let mapleader=","
+"let mapleader=","
 
 set hlsearch
-set smartcase
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+
+set so=1                        " Keep cursor away from edges of screen.
+
+if has('unnamedplus')
+    set clipboard=unnamedplus
+else
+    set clipboard=unnamed
+endif
 
 map <C-w> :q<CR>
+
+" Goto "definition"
+map ,d <C-]>
 
 " Change tab/buffer
 map H gT

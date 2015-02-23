@@ -5,6 +5,8 @@ set smartindent
 set number
 set incsearch
 
+set clipboard=unnamed
+
 nnoremap <space> za
 vnoremap <space> zf
 

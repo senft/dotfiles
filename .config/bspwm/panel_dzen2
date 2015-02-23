@@ -38,6 +38,11 @@ while read -r line ; do
             time="${line#?}"
             ;;
 
+        X*)
+            # xtitle output
+            title="^fg($COLOR_OCCUPIED_FG)  ${line#?}^fg()"
+            ;;
+
         W*)
             # bspwm internal state
             wm_infos=""
@@ -68,7 +73,6 @@ while read -r line ; do
                             o*)
                                 # occupied desktop
                                 FG=$COLOR_OCCUPIED_FG
-                                #title="^ro(8x8)"
                                 ;;
                             f*)
                                 # free desktop
@@ -92,11 +96,12 @@ while read -r line ; do
                 esac
                 shift
             done
+            wm_infos="${wm_infos}"
             IFS=$NORMIFS
             ;;
     esac
 
-    set -- $(printf '%s\0%s\0%s' "$wm_infos" "$time" "$sys_infos" | sed 's/\^[a-z]\+([^)]*)//g' | xargs -0 txtw -f "$font_family" -s "$font_size")
+    set -- $(printf '%s%s\0%s\0%s' "$wm_infos" "$title" "$time" "$sys_infos" | sed 's/\^[a-z]\+([^)]*)//g' | xargs -0 txtw -f "$font_family" -s "$font_size")
     left_width=$1
     center_width=$2
     right_width=$3
@@ -105,6 +110,6 @@ while read -r line ; do
     center_indent=$(((screen_width - center_width) / 2))
     right_indent=$((screen_width - right_width+10))
 
-    printf "%s\n" "^pa($left_indent)$wm_infos^pa($center_indent)$time^pa($right_indent)$sys_infos"
+    printf "%s\n" "^pa($left_indent)$wm_infos$title^pa($center_indent)$time^pa($right_indent)$sys_infos"
 
 done
