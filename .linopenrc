@@ -26,6 +26,8 @@ interm=ranger
 # video/mp4:mplayer
 # text/plain:vim
 application/pdf:zathura
+text/plain:vim
+inode/x-empty:vim
 
 # 3. Mime category
 image:sxiv

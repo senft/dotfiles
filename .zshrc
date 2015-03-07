@@ -220,7 +220,8 @@ alias ld='ll -rct'
 alias lz='ll -rS'                   # sort by size
 
 alias du="du -ch"
-alias df="df -h"
+# alias df="df -h"
+alias df="dfc"
 
 # pacman
 alias pacman='sudo pacman'
