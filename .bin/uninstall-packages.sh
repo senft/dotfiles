@@ -13,6 +13,7 @@ do
     if grep -Fxq "$package" $SKIP_FILE
     then
         # Skip package
+        ;
     else
         # Don't skip package
         echo "$(pacman -Qi "$package" | grep "Required By\|Name\|Version\|Description\|Depends On\|Installed Size")"
