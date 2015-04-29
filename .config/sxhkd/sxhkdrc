@@ -112,7 +112,7 @@ alt + shift + Right
 # wm independent hotkeys
 #
 
-super + shift + Return
+super + Return
     urxvtc
 
 super + r
@@ -142,6 +142,10 @@ super + KP_Enter
 
 XF86AudioMute
     amixer -q set Master toggle
+
+
+{XF86AudioPlay, XF86Back, XF86Forward}
+    mpc {toggle,prev,next}
 
 super + {x,Left,Right}
     mpc {toggle,prev,next}

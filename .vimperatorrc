@@ -24,6 +24,7 @@ set! browser.download.manager.showWhenStarting=false
 set! browser.tabs.loadDivertedInBackground=false
 
 set editor="urxvt -e vim"
+
 " don't display tab numbers in statusline
 set status=input,location,bookmark,history,position,ssl
 

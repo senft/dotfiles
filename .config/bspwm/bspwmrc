@@ -36,13 +36,6 @@ bspc rule -a                              Gimp desktop=^4
 bspc rule -a                              Steam desktop=^4
 bspc rule -a                              Skype desktop=^5
 bspc rule -a                              Toplevel desktop=^4 floating=true
-
-# LSO
-#bspc rule -a lso-stream-VlcStreamRTP floating=false desktop=misc
-#bspc rule -a lso-runner-Peer floating=false desktop=misc
-#bspc rule -a sun-awt-X11-XFramePeer floating=false desktop=misc
-
-# PFS
 bspc rule -a de-tudarmstadt-maki-simonstrator-peerfact-GUIRunner floating=true
 
 #

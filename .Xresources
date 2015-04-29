@@ -28,3 +28,58 @@
 ! white
 *color7: #707880
 *color15: #C5C8C6 
+
+*cursorColor:   	#eddcd3
+
+*TkTheme:	        clearlooks
+
+URxvt*foreground:	#eddcd3
+URxvt*background:	#121212
+URxvt.colorIT:	    #627A92
+URxvt.colorUL:	    #424d17
+URxvt*colorUL:	    2
+URxvt.colorBD:	    #989584
+
+URxvt.font:	        -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
+URxvt.boldFont:	    -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
+
+URxvt*url-select.launcher:	firefox
+URxvt*url-select.underline:	true
+URxvt*matcher.button:	    1
+URxvt*keysym.M-u:	        perl:url-select:select_next
+URxvt*keysym.M-Escape:	    perl:keyboard-select:activate
+URxvt*keysym.M-s:	        perl:keyboard-select:search
+URxvt*externalBorder:	    0
+URxvt*perl-lib:	            /usr/lib/urxvt/perl/
+URxvt*loginShell:	        true
+URxvt*underlineURLs:	    true
+URxvt*buffered:	            false
+URxvt.perl-ext-common:	    default,url-select,keyboard-select
+URxvt*termName:	            rxvt-256color
+URxvt*urgentOnBell:	        true
+URxvt*print-pipe:	        cat > $(echo URxvt**.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*scrollBar:	        false
+URxvt.xftAntialias:	        false
+URxvt*visualBell:	        true
+URxvt*perl-ext:	            selection,clipboard
+URxvt*saveLines:	        12000
+URxvt*cutchars:	            `""()'*'<>[]{|}
+URxvt*internalBorder:	    4
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+
+URxvt*transparent:          false
+!URxvt*shading:              10
+!URxvt*blurRadius:           10
+
+! unfourtenatley fading breaks ranger/w3m image preview
+!URxvt*fading:               20
+
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb

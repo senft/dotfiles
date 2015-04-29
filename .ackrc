@@ -1,0 +1,11 @@
+--smart-case
+--color
+
+--ignore-dir=tmp
+--ignore-dir=.idea/
+--ignore-dir=.ropeproject/
+
+--ignore-file=is:.tags
+--ignore-file=ext:aux
+--ignore-file=ext:fdb_latexmk
+--ignore-file=ext:pdf

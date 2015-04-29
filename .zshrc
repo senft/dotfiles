@@ -23,7 +23,7 @@ export PATH=$PATH:/opt/omnetpp/
 export py=~/Code/Python
 
 # temporary
-alias paper="cd ~/Dropbox/Uni/HiWi-Julius/paper-btlive-simulation/; vim ."
+alias paper="cd ~/Dropbox/Uni/Julius/btlive/paper-btlive-simulation/; vim ."
 export ndn=~/Code/C++/ndnSIM/ns-3
 export lso=~/Code/Java/Uni/lso
 export pfs=~/Code/Java/Uni/simonstrator-overlays/
@@ -70,10 +70,6 @@ autoload      edit-command-line
 zle -N        edit-command-line
 bindkey '^v'  edit-command-line
 bindkey -M vicmd v edit-command-line
-
-bindkey -s '^P' 'dmenu_open\n' # dmenu_open on ctrl+space
-bindkey -s '^f' 'ranger-cd\n'
-bindkey -s '^t' 'urxvtc &\n'
 
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
@@ -225,14 +221,14 @@ alias df="dfc"
 
 # pacman
 alias pacman='sudo pacman'
-alias syu='packer -Syu'
+alias syu='pacaur -Syu'
 alias rs='pacman -Rs'
-alias pas='packer -S'
+alias pas='pacaur -S'
+alias pass='pacaur -Ss'
 alias paqs='pacman -Qs'
 alias paql='pacman -Ql'
 alias paqo='pacman -Qo'
 alias paqi='pacman -Qi'
-alias pass='packer -Ss'
 alias pau='pacman -U'
 
 compdef packer='pacman'
@@ -241,6 +237,7 @@ compdef packer='pacman'
 alias shutdown="sudo shutdown"
 alias off="shutdown -h now"
 alias reboot="sudo reboot"
+alias win="sudo win"
 alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
 alias wcli='wicd-curses'
@@ -250,13 +247,13 @@ alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias youtube-dl-mp3="youtube-dl -x --audio-format mp3 --add-metadata --audio-quality 0 -o '%(title)s.%(ext)s'"
-alias o='xdg-open'
 alias iv='sxiv'
+alias z='zathura --fork'
 
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
 alias ta="t add"
 alias td="t do"
-alias tv="t e" # edit todo.txt in $EDITOR
+alias tv="t e"
 
 # cd
 alias home="cd ~"
@@ -268,14 +265,13 @@ alias ..="cd .."
 # vim shortcuts
 alias vv="vim ~/.vim/vimrc ~/.vimperatorrc ~/.vrapperrc ~/.ideavimrc"
 alias vz="vim ~/.zshrc"
-alias vx="vim ~/.Xdefaults ~/.xinitrc"
+alias vx="vim ~/.Xresources ~/.xinitrc"
 alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
 
 # safety features
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
-#alias rm='echo "This is not the command you are looking for."; false'
 
 # trash
 alias tp="trash-put"
@@ -292,8 +288,10 @@ alias gs="git status"
 alias gb="git branch"
 alias gd="git diff"
 alias gdc="git diff --cached"
+alias gds="git diff --stat"
 alias ga="git add"
 alias gap="git add -p"
+alias gcp="git checkout -p"
 alias gc="git commit"
 alias gca="git commit --amend"
 alias gcA="git commit --amend --reuse-message=HEAD"
@@ -351,7 +349,6 @@ precmd() {
     vcs_info
 }
 
-
 RPROMPT='%F{cyan}%~%f%b'
 if [ $(id -u) -eq 0 ]; then
     PS1='${vcs_info_msg_0_}%F{red}$ssh_info%F{red}# %f'
@@ -377,3 +374,13 @@ if (( $+commands[trash-empty] )); then
     fi
   }
 fi
+
+source /etc/profile.d/fzf.zsh
+source /etc/profile.d/fzf-extras.sh
+source /etc/profile.d/fzf-extras.zsh
+
+bindkey -s '^f' 'ranger-cd\n'
+bindkey -s '^t' 'urxvtc &\n'
+bindkey -s '^P' 'fo\n' # dmenu_open on ctrl+space
+
+alias v='vim'
