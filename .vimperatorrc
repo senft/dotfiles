@@ -71,8 +71,14 @@ noremap <leader>bc :bmark -folder TOOLBAR/Code<CR>
 " Duplicate tab
 noremap <C-d> yP
 
-" Open link in new tab
+" Open selected text in new tab
 noremap <C-g> <C-c>P
+
+" Open selected text in new tab (but stay on current tab)
+noremap <C-S-g> <C-c>P<C-6>
+
+" Search for selected text on youtube
+noremap <C-y> <C-c>t y<C-v><CR>
 
 " Select all on ctrl-a
 noremap <C-a> <Ins><C-a><Ins>

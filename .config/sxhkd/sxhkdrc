@@ -10,6 +10,10 @@ super + shift + q
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,window -d} ^{1-9,10}
 
+# switch/move window to workspace
+mode_switch + {1-9,0}
+    bspc desktop -f ^{1-9,10}
+
 # toggle border on focused window
 super + b
     bspc-toggle-border
@@ -126,13 +130,9 @@ super + c
 
 super + shift + z
     ~/.bin/i3-exit
-    #i3lock -u -i /home/jln/.bg.png -t
 
 super + o
     urxvtc -g 150x60+820+150 -name ncmpcpp -e ncmpcpp
-
-super + {KP_Add,KP_Subtract}
-    amixer set Master 5%{+,-}
 
 XF86Audio{Raise,Lower}Volume
     amixer set Master 5%{+,-}
@@ -159,6 +159,6 @@ Print
 super + a
     pavucontrol
 
-# make sxhkd reload its configuration files:
+# make sxhkd reload its configuration files
 super + q
     pkill -USR1 -x sxhkd

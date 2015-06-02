@@ -376,7 +376,7 @@ if (( $+commands[trash-empty] )); then
 fi
 
 source /etc/profile.d/fzf.zsh
-source /etc/profile.d/fzf-extras.sh
+source /etc/profile.d/fzf-extras.bash
 source /etc/profile.d/fzf-extras.zsh
 
 bindkey -s '^f' 'ranger-cd\n'
