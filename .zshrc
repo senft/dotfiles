@@ -200,7 +200,7 @@ zstyle ':completion:*:ssh:*' tag-order users 'hosts:-host hosts:-domain:domain h
 zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
-zstyle ':vcs_info:git*' formats "%b %a %c%u%f "
+zstyle ':vcs_info:git*' formats " %b %a %c%u%f "
 zstyle ':vcs_info:*' stagedstr '%F{4}S%f'
 zstyle ':vcs_info:*' unstagedstr '%F{1}U%f'
 zstyle ':vcs_info:*' check-for-changes true
@@ -291,6 +291,7 @@ alias gdc="git diff --cached"
 alias gds="git diff --stat"
 alias ga="git add"
 alias gap="git add -p"
+alias grp="git reset HEAD -p"
 alias gcp="git checkout -p"
 alias gc="git commit"
 alias gca="git commit --amend"
@@ -382,5 +383,3 @@ source /etc/profile.d/fzf-extras.zsh
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 bindkey -s '^P' 'fo\n' # dmenu_open on ctrl+space
-
-alias v='vim'
