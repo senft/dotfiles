@@ -17,7 +17,6 @@ bspc config presel_border_color "#705D22"
 bspc config focused_private_border_color "#88a1ba"
 bspc config active_private_border_color "#88a1ba"
 bspc config normal_private_border_color "#627a92"
-
 bspc monitor -d term www dev misc msg 6 7 8
 
 # set monocle layout for browser workspace
@@ -53,7 +52,7 @@ unclutter -idle 3 &
 xcmenu --daemon &
 
 xscreensaver -no-splash &
-dropbox start &
+dropbox-cli start &
 
 #numlockx &
 #xflux -l "51.514115" -r 1 &
