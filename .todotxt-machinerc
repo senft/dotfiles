@@ -1,0 +1,4 @@
+[settings]
+file = ~/Dropbox/.todo/todo.txt
+archive = ~/Dropbox/.todo/done.txt
+colorscheme = solarized-dark
