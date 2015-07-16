@@ -251,6 +251,7 @@ alias iv='sxiv'
 alias z='zathura --fork'
 
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
+alias tm="todotxt-machine"
 alias ta="t add"
 alias td="t do"
 alias tv="t e"
