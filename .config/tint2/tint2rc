@@ -13,6 +13,7 @@ panel_dock = 1
 wm_menu = 0
 panel_layer = top
 panel_background_id = 1
+strut_policy = none
 
 # Panel Autohide
 autohide = 1
