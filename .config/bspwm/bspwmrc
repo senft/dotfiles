@@ -37,27 +37,16 @@ bspc rule -a libreoffice-startcenter desktop=^4
 #
 # Autostart
 #
-
 /home/jln/.config/bspwm/panel &
-
-#compton &
 urxvtc &
-#firefox &
 tint2 &
 xsetroot -cursor_name left_ptr &
-xset m 2 0 &
-
-unclutter -idle 3 &
-
 xcmenu --daemon &
-
 xscreensaver -no-splash &
 dropbox-cli start &
-
-#numlockx &
-#xflux -l "51.514115" -r 1 &
-
-xfce4-power-manager &
-dunst &
-
 ~/.bin/java_nonreparenting_wm_hack.sh &
+dunst &
+unclutter -idle 3 &
+auto-xflux &
+
+~/.bin/autostart.local.sh

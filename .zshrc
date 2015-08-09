@@ -257,7 +257,7 @@ alias td="t do"
 alias tv="t e"
 
 # cd
-alias home="cd ~"
+alias gh="cd ~"
 alias dl="cd ~/Downloads/"
 alias uni="cd ~/Uni/"
 alias back="cd -"
