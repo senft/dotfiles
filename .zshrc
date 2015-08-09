@@ -293,6 +293,7 @@ alias gds="git diff --stat"
 alias ga="git add"
 alias gap="git add -p"
 alias grp="git reset HEAD -p"
+alias gco="git checkout"
 alias gcp="git checkout -p"
 alias gc="git commit"
 alias gca="git commit --amend"
@@ -377,9 +378,10 @@ if (( $+commands[trash-empty] )); then
   }
 fi
 
-source /etc/profile.d/fzf.zsh
+# source /etc/profile.d/fzf.zsh
 source /etc/profile.d/fzf-extras.bash
 source /etc/profile.d/fzf-extras.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
