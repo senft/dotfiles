@@ -12,7 +12,6 @@ export EDITOR=vim
 export VISUAL=vim
 export BROWSER=firefox
 export PAGER=less
-#export PATH=$PATH:$HOME/.bin/:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
 export PATH=$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
 
 # omnetpp
@@ -24,15 +23,13 @@ export py=~/Code/Python
 
 # temporary
 alias paper="cd ~/Dropbox/Uni/Julius/btlive/paper-btlive-simulation/; vim ."
-export ndn=~/Code/C++/ndnSIM/ns-3
-export lso=~/Code/Java/Uni/lso
 export pfs=~/Code/Java/Uni/simonstrator-overlays/
 export pfss=~/Code/Java/Uni/simonstrator-simrunner/
 export plots=~/Code/Java/Uni/plottingplatform/
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.xrender=true"
 
 export LANG=en_US.utf8
 export LC_MESSAGES="en_US.utf8"
@@ -130,9 +127,6 @@ autoload -U compinit
 compinit
 
 bindkey "^r" history-incremental-search-backward
-
-# bindkey "^[[A" history-search-backward
-# bindkey "^[[B" history-search-forward
 
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST

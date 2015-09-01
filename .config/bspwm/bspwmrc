@@ -43,7 +43,6 @@ tint2 &
 xsetroot -cursor_name left_ptr &
 xcmenu --daemon &
 xscreensaver -no-splash &
-dropbox-cli start &
 ~/.bin/java_nonreparenting_wm_hack.sh &
 dunst &
 unclutter -idle 3 &
