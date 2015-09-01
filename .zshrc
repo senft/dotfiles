@@ -200,11 +200,19 @@ zstyle ':completion:*:ssh:*' tag-order users 'hosts:-host hosts:-domain:domain h
 zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
 
-zstyle ':vcs_info:git*' formats " %b %a %c%u%f "
+zstyle ':vcs_info:*' formats " %b %a %c%u%f%m "
 zstyle ':vcs_info:*' stagedstr '%F{4}S%f'
 zstyle ':vcs_info:*' unstagedstr '%F{1}U%f'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:git*+set-message:*' hooks git-stash
+
+# show stash existence (%m)
++vi-git-stash() {
+    if [[ -s ${hook_com[base]}/.git/refs/stash ]]; then
+        hook_com[misc]+="%B%F{14}#%b%f"
+    fi
+}
 
 # ls
 #alias ls='ls -hF --color=always'
@@ -354,6 +362,7 @@ precmd() {
 
 RPROMPT='%F{cyan}%~%f%b'
 if [ $(id -u) -eq 0 ]; then
+    # root
     PS1='${vcs_info_msg_0_}%F{red}$ssh_info%F{red}# %f'
 else
     PS1='${vcs_info_msg_0_}%F{magenta}$ssh_info%F{white}» %f'
