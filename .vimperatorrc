@@ -112,12 +112,12 @@ inoremap <C-a> <Ins><C-a><Ins>
 
 :style -name=yourUglyStatusline * #liberator-statusline { font-family: "tamzen" !important; }  }
 
-highlight CmdLine>* font-family: "tamzen"; font-size: 13px; transition: all 0.25s;
-highlight CompItem font-family: "tamzen"; font-size: 13px;
-highlight CompTitle font-family: "tamzen"; font-size: 13px;
-highlight StatusLine font-family: "tamzen"; font-size: 13px; max-height: 9px;
-highlight InfoMsg font-family: "tamzen"; font-size: 13px; max-height: 9px; color: #87FF00;
-highlight Hint font-family: "tamzen"; font-size: 13px; text-transform: uppercase; color: black; background-color: yellow; border-color: ButtonShadow; border-width: 1px; border-style: solid; border-color: black; padding: 1px 3px 0px 3px; opacity: 0.9;
+highlight CmdLine>* font-family: "tamzenforpowerline"; font-size: 13px; transition: all 0.25s;
+highlight CompItem font-family: "tamzenforpowerline"; font-size: 13px;
+highlight CompTitle font-family: "tamzenforpowerline"; font-size: 13px;
+highlight StatusLine font-family: "tamzenforpowerline"; font-size: 13px; max-height: 9px;
+highlight InfoMsg font-family: "tamzenforpowerline"; font-size: 13px; max-height: 9px; color: #87FF00; 
+highlight Hint font-family: "Nimbus"; font-size: 13px; text-transform: uppercase; color: black; background-color: #F0C674; border: 1px solid black; padding: 1px 3px 0px 3px; opacity: 0.9;
 highlight HintElem background-color: ;
 
 " vim: set ft=vim:
