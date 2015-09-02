@@ -381,10 +381,9 @@ if (( $+commands[trash-empty] )); then
   }
 fi
 
-# source /etc/profile.d/fzf.zsh
+source /etc/profile.d/fzf.zsh
 source /etc/profile.d/fzf-extras.bash
 source /etc/profile.d/fzf-extras.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
