@@ -1,5 +1,5 @@
-keysym e = e E e E EuroSign
-keysym s = s S s S ssharp
+keysym e = e E EuroSign
+keysym s = s S ssharp
 
 ! Caps-Lock to Esc
 clear Lock
