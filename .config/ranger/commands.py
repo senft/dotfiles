@@ -1509,14 +1509,14 @@ class compress(Command):
         """ Compress marked files to current directory """
         import os
         from ranger.core.loader import CommandLoader
-        cwd = self.fm.env.cwd
+        cwd = self.fm.thisdir
         marked_files = cwd.get_selection()
 
         if not marked_files:
             return
 
         def refresh(_):
-            cwd = self.fm.env.get_directory(original_path)
+            cwd = self.fm.get_directory(original_path)
             cwd.load_content()
 
         original_path = cwd.path
@@ -1534,7 +1534,7 @@ class compress(Command):
         """ Complete with current folder name """
 
         extension = ['.zip', '.tar.gz', '.rar', '.7z']
-        return ['compress ' + os.path.basename(self.fm.env.cwd.path) + ext for ext in extension]
+        return ['compress ' + os.path.basename(self.fm.thisdir.path) + ext for ext in extension]
 
 
 class extracthere(Command):
@@ -1552,7 +1552,7 @@ class extracthere(Command):
             cwd.load_content()
 
         one_file = copied_files[0]
-        cwd = self.fm.env.cwd
+        cwd = self.fm.thisdir
         original_path = cwd.path
         au_flags = ['-X', cwd.path]
         au_flags += self.line.split()[1:]
