@@ -5,10 +5,10 @@ border_color = #000000 0
 
 # Panel
 panel_monitor = LVDS
-panel_position = bottom right horizontal
+panel_position = top right horizontal
 panel_size = 100% 14
 panel_margin = 0 0
-panel_padding = 0 0 0
+panel_padding = 2 0 0
 panel_dock = 1
 wm_menu = 0
 panel_layer = top
