@@ -23,6 +23,7 @@ export py=~/Code/Python
 
 # temporary
 alias paper="cd ~/Dropbox/Uni/Julius/btlive/paper-btlive-simulation/; vim ."
+alias thesis="cd ~/Dropbox/Uni/ma-thesis/thesis_; tmux-dev;"
 export pfs=~/Code/Java/Uni/simonstrator-overlays/
 export pfss=~/Code/Java/Uni/simonstrator-simrunner/
 export plots=~/Code/Java/Uni/plottingplatform/
