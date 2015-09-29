@@ -10,7 +10,7 @@ if [ "$?" -eq 1 ] ; then
 
     tmux new-session -d -s $SESSION
     tmux rename-window "dev"
-    tmux send-keys "vim ." "C-m"
+    tmux send-keys "fo" "C-m"
 
     tmux new-window -n "git"
 
