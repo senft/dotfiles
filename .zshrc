@@ -23,10 +23,11 @@ export py=~/Code/Python
 
 # temporary
 alias paper="cd ~/Dropbox/Uni/Julius/btlive/paper-btlive-simulation/; vim ."
-alias thesis="cd ~/Dropbox/Uni/ma-thesis/thesis_; tmux-dev;"
+alias thesis="mendeleydesktop >/dev/null 2>&1 &;cd ~/Code/TeX/thesis-ma/; tmux-dev;"
 export pfs=~/Code/Java/Uni/simonstrator-overlays/
-export pfss=~/Code/Java/Uni/simonstrator-simrunner/
 export plots=~/Code/Java/Uni/plottingplatform/
+alias ov="cd ~/Code/Java/Uni/simonstrator-overlays/"
+alias sr="cd "~/Code/Java/Uni/simonstrator-simrunner/""
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
