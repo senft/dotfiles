@@ -21,4 +21,5 @@ map ,d <C-]>
 map H gT
 map L gt
 
+" Delete line
 map <C-d> dd

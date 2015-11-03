@@ -16,7 +16,7 @@ panel_background_id = 1
 
 # Panel Autohide
 autohide = 1
-autohide_show_timeout = 0.0
+autohide_show_timeout = 0.2
 autohide_hide_timeout = 0.0
 autohide_height = 0
 strut_policy = follow_size
