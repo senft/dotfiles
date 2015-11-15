@@ -8,8 +8,8 @@ export PROJECT_HOME=$HOME/Code/Python
 export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
 source /usr/bin/virtualenvwrapper_lazy.sh
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 export BROWSER=firefox
 export PAGER=less
 export PATH=$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
