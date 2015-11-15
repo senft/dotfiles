@@ -65,9 +65,6 @@ noremap <leader>a :addons<CR>
 nnoremap b :bmarks!
 nnoremap <c-t> :buffer!
 
-noremap <leader>bm :bmark -folder TOOLBAR/Mukke<CR>
-noremap <leader>bc :bmark -folder TOOLBAR/Code<CR>
-
 " Duplicate tab
 noremap <C-d> yP
 

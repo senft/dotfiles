@@ -41,7 +41,8 @@ bspc rule -a libreoffice-startcenter desktop=^4
 # Autostart
 #
 /home/jln/.config/bspwm/panel &
-urxvtc &
+urxvtc -e htop &
+bspc window -t private
 tint2 &
 xsetroot -cursor_name left_ptr &
 xcmenu --daemon &
