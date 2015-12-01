@@ -268,10 +268,10 @@ alias back="cd -"
 alias ..="cd .."
 
 # vim shortcuts
-alias vv="vim ~/.vim/vimrc ~/.vimperatorrc ~/.vrapperrc ~/.ideavimrc"
-alias vz="vim ~/.zshrc"
-alias vx="vim ~/.Xresources ~/.xinitrc"
-alias vb="vim ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
+alias vv="$EDITOR ~/.vim/vimrc ~/.vimperatorrc ~/.vrapperrc ~/.ideavimrc"
+alias vz="$EDITOR ~/.zshrc"
+alias vx="$EDITOR ~/.Xresources ~/.xinitrc"
+alias vb="$EDITOR ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
 
 # safety features
 alias cp="cp -i"
@@ -390,3 +390,10 @@ source /etc/profile.d/fzf-extras.zsh
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 bindkey -s '^P' 'fo\n' # dmenu_open on ctrl+space
+bindkey -s '^G' 'fcd\n' # goto predefined directories
+
+# fcd - change to dir from a list of predefined dirs
+fcd() {
+  DIR=`cat ~/.dirs | fzf-tmux` \
+    && cd "$DIR"
+}
