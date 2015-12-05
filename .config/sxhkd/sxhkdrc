@@ -24,9 +24,10 @@ super + Tab
 super + Escape
     bspc window -c
 
-# toggle window state (floating,fullscreen)
-super + {space,f,shift+p,p}
-    bspc window -t {floating,fullscreen,pseudo_tiled,private}
+super + {space,f,p}
+    state={floating,fullscreen,private}; \
+    bspc query -W -w "focused.$\{state\}" && state=tiled; \
+    bspc window -t "$state"
 
 # toggle layout (tiled, monocle)
 super + t
