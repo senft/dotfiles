@@ -6,6 +6,9 @@
 --ignore-dir=.ropeproject/
 
 --ignore-file=is:.tags
+
 --ignore-file=ext:aux
 --ignore-file=ext:fdb_latexmk
 --ignore-file=ext:pdf
+--ignore-file=ext:out
+--ignore-file=ext:toc

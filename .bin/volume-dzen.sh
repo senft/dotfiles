@@ -7,7 +7,7 @@ vol=`amixer get Master | egrep -o "[0-9]+%" | head -1 | sed 's/%//'`
 mute=`amixer get Master | grep "\[on\]"`
 
 if [ -n "$mute" ]; then
-    if [ $vol -gt 50 ]; then
+    if [ "$vol" -gt 50 ]; then
         printf "^i(/home/jln/.icons/xbm8x8/spkr_01.xbm) "
     else
         printf "^i(/home/jln/.icons/xbm8x8/spkr_01_low.xbm) "
@@ -15,4 +15,4 @@ if [ -n "$mute" ]; then
 else
     printf "^i(/home/jln/.icons/xbm8x8/spkr_01_mute.xbm) "
 fi
-echo $vol | gdbar -h $BAR_HEIGHT -w $BAR_MAX_WIDTH -fg $COLOR_ON -bg $COLOR_OFF
+echo "$vol" | gdbar -h $BAR_HEIGHT -w $BAR_MAX_WIDTH -fg $COLOR_ON -bg $COLOR_OFF
