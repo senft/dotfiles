@@ -27,13 +27,13 @@
 *color14: #8ABEB7
 ! white
 *color7: #707880
-*color15: #C5C8C6 
+*color15: #C5C8C6
 
-*cursorColor:   	#eddcd3
-
+*cursorColor:   	#9e918b
 *TkTheme:	        clearlooks
 
-URxvt*foreground:	#eddcd3
+! URxvt*foreground:	#eddcd3
+URxvt*foreground:   #b3a39d
 URxvt*background:	#121212
 URxvt.colorIT:	    #627A92
 URxvt.colorUL:	    #424d17
