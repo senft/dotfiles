@@ -130,7 +130,7 @@ super + {m,shift+m,s,u,shift+r}
     ~/.bin/dmenu_{mpd,playlist,solve,umount,remind}
 
 super + c
-    xcmenuctrl
+    ~/.bin/cal-popup.sh
 
 super + shift + z
     ~/.bin/i3-exit

@@ -261,6 +261,7 @@ alias tv="t e"
 
 # cd
 alias gh="cd ~"
+alias gm="/var/run/media/$(whoami)"
 alias dl="cd ~/Downloads/"
 alias uni="cd ~/Uni/"
 alias back="cd -"

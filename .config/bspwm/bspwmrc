@@ -23,7 +23,7 @@ bspc monitor -d term www dev misc msg 6 7 8
 bspc desktop www -l monocle
 bspc desktop dev -l monocle
 
-bspc rule -a Pavucontrol floating=true
+bspc rule -a Pavucontrol state=floating
 bspc rule -a Chromium desktop=^2
 bspc rule -a Firefox desktop=^2
 bspc rule -a Eclipse desktop=^3
@@ -31,10 +31,7 @@ bspc rule -a jetbrains-idea-ce desktop=^3
 bspc rule -a Gimp desktop=^4
 bspc rule -a Steam desktop=^4 border=off
 bspc rule -a Skype desktop=^5
-bspc rule -a Toplevel desktop=^4 floating=true
 bspc rule -a Mendeleydesktop.x86_64 desktop=^4
-
-
 bspc rule -a libreoffice-startcenter desktop=^4
 
 #
