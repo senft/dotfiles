@@ -3,13 +3,16 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
+# Fixes nvim bug where <C-h> mapping does not work
+export TERMINFO="$HOME/.terminfo"
+
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code/Python
 export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
 source /usr/bin/virtualenvwrapper_lazy.sh
 
-export EDITOR=nvim
 export VISUAL=nvim
+export EDITOR="$VISUAL"
 export BROWSER=firefox
 export PAGER=less
 export PATH=$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
@@ -284,9 +287,10 @@ alias tre="trash-empty"
 alias trl="trash-list"
 alias trr="trash-restore"
 
-#alias -g G="| grep"
-alias -g G="| ack"
+# alias -g G="| ack"
+alias -g G="| grep"
 alias -g C="| xclip"
+alias -g V="| vim -"
 
 # git
 alias gs="git status"
