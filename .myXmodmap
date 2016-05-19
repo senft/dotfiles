@@ -4,4 +4,5 @@ keysym s = s S ssharp
 ! Caps-Lock to Esc
 clear Lock
 keycode 66 = Escape NoSymbol Escape NoSymbol Escape
+
 add Control = Control_L
