@@ -275,6 +275,7 @@ alias vv="$EDITOR ~/.vim/vimrc ~/.vimperatorrc ~/.vrapperrc ~/.ideavimrc"
 alias vz="$EDITOR ~/.zshrc"
 alias vx="$EDITOR ~/.Xresources ~/.xinitrc"
 alias vb="$EDITOR ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
+alias ww="cd ~/Dropbox/wiki/;$EDITOR index.wiki"
 
 # safety features
 alias cp="cp -i"
@@ -387,7 +388,7 @@ if (( $+commands[trash-empty] )); then
   }
 fi
 
-source /etc/profile.d/fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
 source /etc/profile.d/fzf-extras.bash
 source /etc/profile.d/fzf-extras.zsh
 
