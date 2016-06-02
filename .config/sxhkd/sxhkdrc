@@ -39,17 +39,17 @@ super + {_,shift} + BackSpace
 
 # focus window
 super + h
-    bspc node -f west || bspc node -f next || bspc node -f east
+    bspc node -f west.local || bspc node -f next.local || bspc node -f east.local
 super + l
-    bspc node -f east || bspc node -f prev || bspc node -f west
+    bspc node -f east.local || bspc node -f prev.local || bspc node -f west.local
 super + j
-    bspc node -f south || bspc node -f north || bspc node -f next
+    bspc node -f south.local || bspc node -f north.local || bspc node -f next.local
 super + k
-    bspc node -f north || bspc node -f south || bspc node -f prev
+    bspc node -f north.local || bspc node -f south.local || bspc node -f prev.local
 
 # focus next/prev window
 super + {n,shift+n}
-    bspc node -f {next,prev}.floating || bspc node -f {next,prev}
+    bspc node -f {next.local,prev.local}.floating || bspc node -f {next.local,prev.local}
 
 # move window
 super + shift + h
