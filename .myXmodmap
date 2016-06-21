@@ -1,8 +1,11 @@
-keysym e = e E EuroSign
-keysym s = s S ssharp
-
 ! Caps-Lock to Esc
 clear Lock
 keycode 66 = Escape NoSymbol Escape NoSymbol Escape
 
-add Control = Control_L
+! add Control = Control_L
+! Umlaut on Alt-Gr + Vowel
+keysym a = a A adiaeresis Adiaeresis
+keysym o = o O odiaeresis Odiaeresis
+keysym u = u U udiaeresis Udiaeresis
+keysym e = e E EuroSign
+keysym s = s S ssharp

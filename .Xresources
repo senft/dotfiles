@@ -71,9 +71,9 @@ URxvt*scrollTtyOutput:      false
 URxvt*scrollWithBuffer:     true
 URxvt*scrollTtyKeypress:    true
 
-URxvt*transparent:          false
-!URxvt*shading:              10
-!URxvt*blurRadius:           10
+URxvt*transparent:          true
+URxvt*shading:              10
+URxvt*blurRadius:           10
 
 ! unfourtenatley fading breaks ranger/w3m image preview
 !URxvt*fading:               20
