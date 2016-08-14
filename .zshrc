@@ -252,7 +252,7 @@ alias cal="cal -3"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
 alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
-alias youtube-dl-mp3="youtube-dl -x --audio-format mp3 --add-metadata --audio-quality 0 -o '%(title)s.%(ext)s'"
+alias youtube-dl-mp3="youtube-dl -i -x --audio-format mp3 --add-metadata --audio-quality 0 -o '%(title)s.%(ext)s'"
 alias iv='sxiv'
 alias z='zathura --fork'
 
