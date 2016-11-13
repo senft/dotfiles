@@ -145,12 +145,14 @@ super + o
 XF86Audio{Raise,Lower}Volume
     amixer set Master 5%{+,-}
 
+super + {KP_Add,KP_Subtract}
+    amixer set Master 5%{+,-}
+
 super + KP_Enter
     amixer -q set Master toggle
 
 XF86AudioMute
     amixer -q set Master toggle
-
 
 {XF86AudioPlay, XF86Back, XF86Forward}
     mpc {toggle,prev,next}
