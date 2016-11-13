@@ -21,6 +21,10 @@ export PATH=$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/an
 export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
 export PATH=$PATH:/opt/omnetpp/
 
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # commonly used directorys
 export py=~/Code/Python
 
