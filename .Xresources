@@ -43,7 +43,7 @@ URxvt.colorBD:	    #989584
 URxvt.font:	        -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
 URxvt.boldFont:	    -*-tamzenforpowerline-medium-*-*-*-12-*-*-*-*-*-*-*
 
-URxvt*lineSpace: 1
+URxvt*lineSpace: 2
 
 URxvt*url-select.launcher:	firefox
 URxvt*url-select.underline:	true
