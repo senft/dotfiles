@@ -15,31 +15,17 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export BROWSER=firefox
 export PAGER=less
-export PATH=$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/17.0.0
-
-# omnetpp
-export OMNETPP_CONFIGFILE=/opt/omnetpp/Makefile.inc
-export PATH=$PATH:/opt/omnetpp/
+# export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"
 
 # Setting ag as the default source for fzf
 export FZF_DEFAULT_COMMAND='ag -l -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# commonly used directorys
-export py=~/Code/Python
-
-# temporary
-alias paper="cd ~/Dropbox/Uni/Julius/btlive/paper-btlive-simulation/; vim ."
-# alias thesis="mendeleydesktop >/dev/null 2>&1 &;cd ~/Code/TeX/thesis-ma/; tmux-dev;"
-alias thesis="cd ~/Code/TeX/thesis-ma/; tmux-dev;"
-export pfs=~/Code/Java/Uni/simonstrator-overlays/
-export plots=~/Code/Java/Uni/plottingplatform/
-
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export JAVA_FONTS=/usr/share/fonts/TTF
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.xrender=true"
 
-export LANG=en_US.utf8
+export LANG="en_US.utf8"
 export LC_MESSAGES="en_US.utf8"
 export LC_NUMERIC="de_DE.utf8"
 export LC_TIME="de_DE.utf8"
@@ -53,8 +39,6 @@ export LC_MEASUREMENT="de_DE.utf8"
 export LC_IDENTIFICATION="de_DE.utf8"
 export LC_CTYPE="de_DE.utf8"
 export LC_ALL=
-
-export PYTHONDOCS=/usr/share/doc/python/html/
 
 eval $(dircolors -b $HOME/.dircolors)
 
@@ -250,14 +234,10 @@ alias reboot="sudo reboot"
 alias win="sudo win"
 alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
-alias wcli='wicd-curses'
-alias vpn-uni="sudo openconnect --authgroup extern https://vpn.hrz.tu-darmstadt.de/"
 alias cal="cal -3"
 alias ipy='ipython -i'
 alias ipy2='ipython2 -i'
-alias vnc="x11vnc -rfbauth ~/.vnc/pw -display :0 -clip 1920x1080+0+0 -auth ~/.Xauthority -many"
 alias youtube-dl-mp3="youtube-dl -i -x --audio-format mp3 --add-metadata --audio-quality 0 -o '%(title)s.%(ext)s'"
-alias iv='sxiv'
 alias z='zathura --fork'
 
 alias t="todo.sh -d ~/Dropbox/.todo/todo.cfg -c"
@@ -270,8 +250,6 @@ alias tv="t e"
 alias gh="cd ~"
 alias gm="/var/run/media/$(whoami)"
 alias dl="cd ~/Downloads/"
-alias uni="cd ~/Uni/"
-alias back="cd -"
 alias ..="cd .."
 
 # vim shortcuts
@@ -279,7 +257,6 @@ alias vv="$EDITOR ~/.vim/vimrc ~/.vimperatorrc ~/.vrapperrc ~/.ideavimrc"
 alias vz="$EDITOR ~/.zshrc"
 alias vx="$EDITOR ~/.Xresources ~/.xinitrc"
 alias vb="$EDITOR ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
-alias ww="cd ~/Dropbox/wiki/;$EDITOR index.wiki"
 
 # safety features
 alias cp="cp -i"
@@ -392,17 +369,10 @@ if (( $+commands[trash-empty] )); then
   }
 fi
 
-source /usr/share/fzf/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /etc/profile.d/fzf-extras.bash
 source /etc/profile.d/fzf-extras.zsh
 
 bindkey -s '^f' 'ranger-cd\n'
 bindkey -s '^t' 'urxvtc &\n'
 bindkey -s '^P' 'fo\n' # dmenu_open on ctrl+space
-bindkey -s '^G' 'fcd\n' # goto predefined directories
-
-# fcd - change to dir from a list of predefined dirs
-fcd() {
-  DIR=`cat ~/.dirs | fzf-tmux` \
-    && cd "$DIR"
-}

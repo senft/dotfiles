@@ -43,10 +43,7 @@ set! browser.tabs.closeButtons=2
 noremap <leader>f :tabopen http://facebook.com<CR>
 noremap <leader>r :tabopen http://reddit.com<CR>
 noremap <leader>n :tabopen http://feedly.com<CR>
-noremap <leader>g :tabopen http://github.com/senft<CR>
 noremap <leader>i :tabopen http://imgur.com/<CR>
-noremap <leader>b :tabopen http://bitbucket.org<CR>
-noremap <leader>p :tabopen http://getpocket.com/a/queue/<CR>
 noremap <leader>v :tabopen http://discogs.com<CR>
 noremap <leader>s :tabopen http://soundcloud.com<CR>
 
@@ -101,5 +98,8 @@ highlight StatusLine font-family: "tamzenforpowerline"; font-size: 13px; max-hei
 highlight InfoMsg font-family: "tamzenforpowerline"; font-size: 13px; max-height: 9px; color: #87FF00; 
 highlight Hint font-family: "Nimbus"; font-size: 13px; text-transform: uppercase; color: black; background-color: #F0C674; border: 1px solid black; padding: 1px 3px 0px 3px; opacity: 0.9;
 highlight HintElem background-color: ;
+
+" https://github.com/vimperator/vimperator-labs/issues/590
+js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
 
 " vim: set ft=vim:
