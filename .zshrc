@@ -258,8 +258,6 @@ alias vz="$EDITOR ~/.zshrc"
 alias vx="$EDITOR ~/.Xresources ~/.xinitrc"
 alias vb="$EDITOR ~/.config/bspwm/bspwmrc ~/.config/sxhkd/sxhkdrc ~/.config/bspwm/{panel,panel_dzen2,panel_colors}"
 
-alias v="vim"
-alias sv="sudo vim"
 
 # safety features
 alias cp="cp -i"
